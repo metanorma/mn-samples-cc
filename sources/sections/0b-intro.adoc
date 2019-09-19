@@ -1,0 +1,15 @@
+[[introduction]]
+:sectnums!:
+== Introduction
+
+<<ISO8601>> has been the international standard for date and time representations
+and is applied widely, including in the <<RFC5545>> and <<RFC6350>> standards.
+
+However, the representations provided in <<ISO8601>> require
+fixed-length digits for time scale components, such as the
+4-digit year, does not accept negative values, and does not
+allow omission of a time scale component that has a zero value.
+
+This document extends the "`duration`" representation
+defined in <<ISO8601>> to fulfill the need of a flexible-length
+representation, called the "`explicit form`".

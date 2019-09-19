@@ -1,0 +1,8 @@
+---
+metanorma:
+  deploy:
+    email: "travis-ci@metanorma.org"
+relaton:
+  collection:
+    organization: "CalConnect"
+    name: "CalConnect Standards in Metanorma"

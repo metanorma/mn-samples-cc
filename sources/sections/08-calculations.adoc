@@ -1,0 +1,407 @@
+
+[[evaluation]]
+== Evaluation of date and time with duration
+
+=== General
+
+A date and time representation is modified by a duration
+in many cases, including the calculation for:
+
+* time intervals when given duration as a start or end;
+* boundaries of grouped time scale units (<<grouping>>);
+* conversion between of UTC of day and local time of day via time shifts; and
+* occurrences of recurring time intervals.
+
+This clause provides methods to calculate a consistent result
+date and time, given an origin date and time ("`origin`")
+and a duration time scale component (duration) to apply.
+
+Modification of a date and time representation with
+a duration is described using the following representation,
+called a "`date time formula`".
+
+[source]
+----
+resolve(date, duration)
+----
+
+or
+
+[source]
+----
+date + duration
+----
+
+
+[example]
+`2018Y9M10D + P1D` is a date time formula.
+
+
+=== Prerequisite mechanisms
+
+==== Carry-over of overflow in time scale components
+
+An "`overflow`" of a date and time expression is defined as assigning a
+value exceeding the maximum value accepted by the time scale component.
+
+[example]
+An increase of `P1M` (duration) to `2018Y12M` (date) will result in the expression
+`2018Y13M`, where the month component is overflowed with value `13`.
+
+An overflow is considered resolved once the overflowed time scale unit
+has transferred its excess to the immediate higher order time scale
+component.
+
+[example]
+The overflowed expression `2018Y13M` can be resolved to `2019Y1M`.
+
+An overflow can cause multiple carry-overs when the overflow not only
+causes the immediate higher order time scale component to overflow, but
+also subsequent higher order components.
+
+[example]
+The overflowed expression `2018Y12M366D` can be resolved to `2018Y24M1D`
+(which still contains an overflow), which can be resolved to
+`2019Y12M1D` (where there is no more overflow).
+
+
+==== Truncation at time scale component boundaries
+
+A modification made to a higher order time scale component may
+cause the value of a lower order time scale component to go beyond
+its value boundaries. This condition is described as
+"`out of bounds`" of a date and time expression.
+
+This situation occurs when a modification is made to the values of
+certain time scale components, because a lower order component
+always has its maximum value bound by its immediate higher order
+component:
+
+* clock minute (clock second value of `60` is only valid for a leap
+second);
+
+* calendar month (calendar day values `29`, `30`, `31` are invalid for
+some months); and
+
+* calendar year (ordinal day value of `366` and calendar month/day
+combination of February 29th is only valid for a leap year).
+
+
+[example]
+An increase of `P1M` (duration) to `2018Y1M31D` (date) will result in
+the expression `2018Y2M31D`, which is an invalid date representation
+as the calendar day value of `31` has exceeded the boundary of its
+immediate higher order component, the month `2` (February).
+
+[example]
+An increase of `P1Y` (duration) to `2016Y12M31DT23H59M60S` (date) will result in
+the expression `2017Y12M31DT23H59M60S`, which is an invalid date representation
+as the clock second value of `60` has exceeded the boundary of its
+immediate higher order component, the clock minute with its last second
+at `59`.
+
+An out of bounds situation is considered resolved once the excess
+value is truncated at the violating (lower order) time scale component.
+
+[example]
+The out of bounds expression `2019Y2M29D`" can be truncated to `2019Y2M28D`.
+
+[example]
+The out of bounds expression `2020Y366O`" can be truncated to `2020Y365O`.
+
+
+////
+A truncation can cause multiple carry-overs when the overflow not only
+causes the immediate higher order time scale component to overflow, but
+also subsequent higher order components.
+////
+
+
+[[calculation-simple]]
+=== Simple duration
+
+A simple duration is a duration expression with only
+a single time scale component.
+
+Evaluation of a date time formula that contains a simple duration
+is to directly apply the durational unit to the corresponding
+time scale component of the date and time representation
+and applying carry-over.
+
+The steps are as follows:
+
+. Take the value of the time scale component in the simple duration,
+  directly modify the value of the corresponding time scale component
+  in the date and time representation.
+
+. In the resulting date and time representation, start from the
+  lowest order overflowed time scale component, perform carry-over
+  until there is no more overflow in the representation.
+
+. If any time scale components have become invalid, apply
+  truncation to them.
+
+. The resulting date and time representation is complete.
+
+[example]
+====
+Calculation of `2022Y2M28D + P3D`:
+
+. Direct modification of date and time representation, obtains `2022Y2M31D`.
+
+. Apply carry-over to overflowed components, obtains `2022Y3M02D`.
+====
+
+
+[[calculation-composite]]
+=== Composite duration
+
+The method of evaluating of a date time formula with a
+composite duration (<<duration-composite>>) is to directly
+apply the durational units to the date and time representation
+without truncation, and only applying carry-over at the end.
+
+The steps are as follows:
+
+. For all values of time scale components in the composite duration,
+  directly modify the values of the corresponding time scale components
+  in the date and time representation.
+
+. In the resulting date and time representation, start from the
+  lowest order overflowed time scale component, perform carry-over
+  on all overflowed time scale components, until there is no more
+  overflow in the representation.
+
+. If any time scale components have become invalid, apply
+  truncation to them.
+
+. The resulting date and time representation is complete.
+
+[example]
+====
+Calculation of `2022Y2M30D + P1Y3M2D`:
+
+. Direct modification of date and time representation, obtains `2023Y5M32D`.
+
+. Apply carry-over to overflowed components, obtains `2023Y6M31D`.
+
+. The resulting representation is `2023Y6M31D`.
+====
+
+[[calculation-precedence]]
+=== Precedence duration
+
+The method of evaluating of a date time formula with a
+precedence duration (<<duration-precedence>>) is to apply the
+durational units one by one to the date and time representation
+with truncation and carry-over at every step.
+
+The steps are as follows:
+
+. Starting at the left side of the precedence duration expression,
+  process every durational unit one by one as follows:
+
+.. Use the durational unit (which only contains one time scale
+  component), to modify the corresponding time scale component (the "`target component`")
+  in the date and time representation.
+
+.. If the target component has overflowed in the previous step,
+  perform carry-over (to higher order time scale components),
+  until there is no more overflow in the representation.
+
+.. If any time scale components of lower order than the
+  target component have become invalid, apply truncation
+  to them.
+
+. Once all durational units have been processed, the
+  resulting date and time representation is complete.
+
+
+[example]
+====
+Calculation of `2022Y2M29D + P1YP3MP2D`:
+
+. Process the first durational unit: `(2022Y2M29D + P1Y) + P3MP2D`.
+
+. Apply the first durational unit to the date and time representation:
+  `2023Y2M29D + P3MP2D`.
+
+. No carry-over is necessary since there is no overflow.
+
+. Since `29D` is of lower order than the target component (calendar
+  year), the representation is truncated: `2023Y2M28D + P3MP2D`.
+
+. Process the second durational unit: `(2023Y2M28D + P3M) + P2D`.
+
+. Apply the second durational unit to the date and time representation:
+  `2023Y5M28D + P2D`.
+
+. No carry-over is necessary since there is no overflow.
+
+. No component of lower order than the target component is invalid,
+  hence truncation is not necessary.
+
+. Process the third durational unit: `2023Y5M28D + P2D`.
+
+. Apply the third durational unit to the date and time representation:
+  `2023Y5M31D`.
+
+. No carry-over is necessary since there is no overflow.
+
+. No component of lower order than the target component is invalid,
+  hence truncation is not necessary.
+
+. The resulting date and time representation is `2023Y5M31D`.
+====
+
+
+
+[example]
+====
+Calculation of `2022Y2M29D + P2DP3MP1Y`:
+
+. Process the first durational unit: `(2022Y2M29D + P2D) + P3MP1Y`.
+
+. Apply the first durational unit to the date and time representation:
+  `2022Y2M31D + P3MP1Y`.
+
+. Carry-over is necessary since there is the target component has overflowed:
+  `2022Y3M2D + P3MP1Y`.
+
+. No component of lower order than the target component is invalid,
+  hence truncation is not necessary.
+
+. Process the second durational unit: `(2022Y3M2D + P3M) + P1Y`.
+
+. Apply the second durational unit to the date and time representation:
+  `2022Y6M2D + P1Y`.
+
+. No carry-over is necessary since there is no overflow.
+
+. No component of lower order than the target component is invalid,
+  hence truncation is not necessary.
+
+. Process the third durational unit: `2022Y6M2D + P1Y`.
+
+. Apply the third durational unit to the date and time representation:
+  `2023Y6M2D`.
+
+. No carry-over is necessary since there is no overflow.
+
+. No component of lower order than the target component is invalid,
+  hence truncation is not necessary.
+
+. The resulting date and time representation is `P1Y`.
+====
+
+
+=== Involving fractional duration
+
+When fractional duration (<<duration-fractional>>) is applied
+to context-dependent durational units (<<duration-contextual>>),
+it is necessary to resolve the fractional duration in context.
+
+[example]
+The expression `P0.5M` ("`half a month`") is ambiguous because
+the exact duration of a calendar month depends on its context,
+and that the context for which `P0.5M` is anchored to is unclear.
+
+The duration of a fractional, context-dependent, durational unit
+can be obtained by first calculating a single unit of the durational
+unit in context, such that, the exact duration for the durational
+unit in whole (e.g. "`P1M`") becomes known. Once the exact duration
+of a single unit is known, the duration of the fractional unit can
+be calculated.
+
+[source]
+----
+date + frac-dur =
+  duration(date + unit(frac-dur), date) × value(frac-dur) + date
+----
+
+Where,
+
+* `unit(frac-dur)` is the value of a single unit used in the duration `frac-dur`;
+
+* `value(frac-dur)` is the fractional value used with the duration `frac-dur`;
+
+* `duration(date1, date2)` is a function to calculate the duration between two dates or times,
+such as <<calculation-composite>> or <<calculation-precedence>>.
+
+
+Given that "`date + unit(frac-dur)`" can be calculated, this
+method always produces a consistent value.
+
+[example]
+====
+Given the expression: `2018-01-23 + P0.5M`:
+
+. It is rephrased as `duration(2018-01-23 + P1M, 2018-01-23) × 0.5 + 2018-01-23`.
+
+. It is reduced to `duration(2018-02-23, 2018-01-23)`.
+
+. Then `P31D × 0.5 + 2018-01-23`.
+
+. Then `P15.5D + 2018-01-23`.
+
+. Since `P15.5D` is an exact duration (duration of calendar day is
+  known), `P15.5D + 2018-01-23`" is resolvable and gives the final result
+  `2018-02-07T12:00:00`.
+====
+
+
+=== Involving speculative duration
+
+As described in <<duration-speculative>>, there is no universal
+rule to calculate leap seconds in advance, since the decision
+to insert a leap second is driven by a number of dynamic
+factors and only known when announced by the BIPM.
+
+The rules specified in <<duration-speculative>> are used
+to evaluate a date time formula that involves leap seconds.
+
+[example]
+====
+This example applies identically with or without a leap second. Given the expression: `2018-12-31T23:59:59 + PT1M`:
+
+. Apply the durational unit clock minute directly to the representation: `2018-12-31T23:60:59`
+
+. Since `59` is the last clock minute, treat the overflow with carry-over: `2018-12-31T24:00:59`
+
+. Since `23` is the last clock hour, treat the overflow with carry-over: `2018-12-32T00:00:59`
+
+. Since `31` is the last calendar day of year, treat the overflow with carry-over: `2018-13-01T00:00:59`
+
+. Since `13` is the last calendar month, treat the overflow with carry-over: `2019-01-01T00:00:59`
+
+. The resulting expression is `2019-01-01T00:00:59`.
+====
+
+[example]
+====
+Given the expression containing a leap second: `2016-12-31T23:59:60 + PT1M`:
+
+. Apply the durational unit clock minute directly to the representation: `2016-12-31T23:60:60`
+
+. Since `59` is the last clock minute, treat the overflow with carry-over: `2016-12-31T24:00:60`
+
+. Since `23` is the last clock hour, treat the overflow with carry-over: `2016-12-32T00:00:60`
+
+. Since `31` is the last calendar day of year, treat the overflow with carry-over: `2016-13-01T00:00:60`
+
+. Since `13` is the last calendar month, treat the overflow with carry-over: `2017-01-01T00:00:60`
+
+. The clock second `60` is out of bounds, it is truncated to the maximum value: `2017-01-01T00:00:59`
+
+. The resulting expression is `2017-01-01T00:00:59`.
+====
+
+
+[example]
+====
+Given the expression containing a leap second: `2016-12-31T23:59:59 + PT1S`:
+
+. Apply the durational unit clock second directly to the representation: `2016-12-31T23:59:60`
+
+. The resulting expression is `2016-12-31T23:59:60`.
+====

@@ -1,0 +1,479 @@
+[[AnnexA]]
+[appendix,subtype=informative]
+== Example date and time expressions, and representations
+
+=== Date and time expressions
+
+==== Date
+
+===== Calendar date
+
+.Expression for 12 April 1985
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|19850412 |1985-04-12 |Complete
+
+|===
+
+===== Ordinal date
+
+.Expression for 12 April 1985
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|1985102 |1985-102 |Complete
+
+|===
+
+===== Week date
+
+.Expression for Friday 12 April 1985
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|1985W155 |1985-W15-5 |Complete
+
+|===
+
+===== Calendar week
+
+.Expression for 15th week of 1985
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|1985W15 |1985-W15 |Reduced precision
+
+|===
+
+===== Calendar month
+
+.Expression for April 1985
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|1985-04 |N/A |Reduced precision
+
+|===
+
+===== Calendar year
+
+.Expression for 1985
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|1985 |N/A |Reduced precision
+
+|===
+
+===== Calendar date, expanded
+
+.Expression with a six-digit year for 12 April 16808
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|+0168080412 |+016808-04-12 |Complete
+
+|===
+
+
+===== Calendar date, negative date
+
+.Expression for 12 April in the second year before the year [0000]
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|-00020412 |-0002-04-12 |Complete
+
+|===
+
+
+==== Time of day
+
+===== Local time of day
+
+.Expression for 27 minutes and 46 seconds past 15 hours
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|152746 |15:27:46 |Complete
+|1528 |15:28 |Reduced precision with only hour and minute
+|15 |N/A |Reduced precision with only hour
+
+|===
+
+===== Local time of day with decimal fractions
+
+.Expression for 27 minutes and 35 and a half second past 15 hours
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|152735,5 |15:27:35,5 |Complete, fraction with decimal
+
+|===
+
+
+===== Beginning of day
+
+.Expression for beginning of day
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|000000 |00:00:00 |Complete
+|0000 |00:00 |Hour and minute only
+
+|===
+
+===== UTC of day
+
+.Expression for 20 minutes and 30 seconds past 23 hours
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|232030Z |23:20:30Z |Complete
+|2320Z |23:20Z |Reduced precision with only hour and minute
+|23Z |N/A |Reduced precision with only hour
+
+|===
+
+
+===== Time shift between local time scale and UTC
+
+.Expression for one hour ahead of UTC
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|+0100 |+01:00 |Complete
+|+01 |+01 |Time shift expressed in hours only
+
+|===
+
+
+.Expression for five hours behind UTC
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|-0500 |-05:00 |Complete
+|-05 |-05 |Time shift expressed in hours only
+
+|===
+
+
+===== Local time of day with the time shift between local time scale and UTC
+
+.Expression for 27 minutes 46 seconds past 15 hours locally in Geneva (one hour ahead of UTC)
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|152746+0100 |15:27:46+01:00 |Complete
+|152746+01 |15:27:46+01 |Time shift expressed in hours only
+
+|===
+
+
+.Expression for 27 minutes 46 seconds past 15 hours locally in New York (five hours behind UTC)
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|152746-0500 |15:27:46-05:00 |Complete
+|152746-05 |15:27:46-05 |Time shift expressed in hours only
+
+|===
+
+
+==== Date and time of day
+
+===== Combinations of calendar date and local time of day
+
+.Expression for 12 April 1985, 10:15:30 in local time
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|19850412T101530 |1985-04-12T10:15:30 |Complete
+
+|===
+
+
+===== Combinations of ordinal date and UTC of day
+
+.Expression for 12 April 1985, 23:50:30 in UTC
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|1985102T235030Z |1985-102T23:50:30Z |Complete
+
+|===
+
+
+===== Combinations of week date and local time of day
+
+.Expression for the Friday of the 15th week of 1985, 23:15:30 in local time
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|1985W155T235030 |1985-W15-5T23:50:30 |Complete
+
+|===
+
+
+==== Time interval
+
+===== Defined by start and end
+
+.Expression for a time interval starting at 20 minutes and 50 seconds past 23 hours on 12 April 1985, and ending at 30 minutes past 10 hours on 25 June 1985
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|19850412T232050/19850625T103000 |1985-04-12T23:20:50/1985-06-25T10:30:00
+
+|===
+
+
+.Expression for a time interval starting at 12 April 1985 and ending on 25 June 1985
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|19850412/19850625 |1985-04-12/1985-06-25
+
+|===
+
+
+===== Defined by start and duration
+
+.Expression for a time interval of 1 year, 2 months, 15 days and 12 hours, beginning on 12 April 1985 at 20 minutes past 23 hours
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|19850412T232000/P1Y2M15DT12H |1985-04-12T23:20:00/P1Y2M15DT12H
+
+|===
+
+
+===== Defined by duration and end
+
+.Expression for a time interval of 1 year, 2 months, 15 days and 12 hours, ending on 12 April 1985 at 20 minutes past 23 hours
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|P1Y2M15DT12H/19850412T232000 |P1Y2M15DT12H/1985-04-12T23:20:00
+
+|===
+
+
+==== Recurring time interval
+
+===== Defined by recurrences, start and end
+
+.Expression for fifteen recurrences of a time interval, where the first occurrence starts at 20 minutes and 50 seconds past 23 hours on 12 April 1985, and ends at 30 minutes past 10 hours on 25 June 1985
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|R15/19850412T232050/19850625T103000 |R15/1985-04-12T23:20:50/1985-06-25T10:30:00
+
+|===
+
+
+.Expression for an unbounded number of recurrences of a time interval, where the first occurrence starts at 20 minutes and 50 seconds past 23 hours on 12 April 1985, and the first occurrence ends at 30 minutes past 10 hours on 25 June 1985
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|R/19850412T232050/19850625T103000 |R/1985-04-12T23:20:50/1985-06-25T10:30:00
+
+|===
+
+
+===== Defined by recurrences, start and duration
+
+.Expression for two recurrences of a time interval of 1 year and 6 months, where the first occurrence starts at 20 minutes and 50 seconds past 23 hours on 12 April 1985, and ends one year and six months later
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|R2/19850412T232050/P1Y6M |R2/1985-04-12T23:20:50/P1Y6M
+|R2/19850412T232050/P0001-06 |R2/1985-04-12T23:20:50/P0001-06
+
+|===
+
+
+.Expression for eight recurrences of a time interval of 72 hours, where the first occurrence starts at 20 minutes and 50 seconds past 23 hours on 2 April 1985, and ends 72 hours later
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|R8/19850412T232050/PT72H |R8/1985-04-12T23:20:50/PT72H
+
+|===
+
+
+===== Defined by recurrences, duration and end
+
+.Expression for an unbounded number of occurrences of a time interval of 1 year, 2 months, 15 days and 12 hours of which the first occurrence ends at 12 April 1985 at 20 minutes and 50 seconds past 23 hours
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|R/P1Y2M15DT12H/19850412T232050 |R/P1Y2M15DT12H/1985-04-12T23:20:50
+
+|===
+
+
+=== Date and time representations
+
+==== Date
+
+.Representations for calendar date
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|YYYYMMDD |YYYY-MM-DD |complete calendar date
+|±YYYYYYDDD |±YYYYYY-DDD |expanded ordinal date with two digits added
+|YYYY"`W`"ww |YYYY-"`W`"ww |week date with precision reduced to week
+
+|===
+
+
+==== Time of day
+
+.Representations for time of day
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|hhmmss |hh:mm:ss |complete local time of day
+|hhmm,mZ |hh:mm,mZ |reduced precision UTC of day with one-digit decimal fraction for minutes
+|hhmm±hhmm |hh:mm±hh:mm |local time of day with the time shift between local time scale and UTC -- reduced precision omitting seconds in the local time of day
+
+|===
+
+
+==== Date and time of day
+
+.Representations for the combination of date and time of day
+[cols='1,1,1',options="header"]
+|===
+|Basic format
+|Extended format
+|Explanation
+
+|YYYYDDD"`T`"hhmm |YYYY-DDD"`T`"hh-mm |complete ordinal date -- reduced precision time of day
+|YYYYMMDDhhmm,m |YYYY-MM-DDhh:mm,m |complete calendar date -- reduced precision time of day with one-digit decimal fraction for minute -- time designator omitted
+|YYYY"`W`"wwD"`T`"hh,hhZ |YYYY-"`W`"ww-D"`T`"hh,hhZ |complete week date -- reduced precision UTC of day with two-digit decimal fraction for the hour
+
+|===
+
+
+==== Time interval
+
+.Representation for time intervals by start and end -- complete calendar date -- reduced precision UTC of day with one-digit decimal fraction
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|YYYYMMDD"`T`"hhmm,mZ/YYYYMMDD"`T`"hhmm,m |YYYY-MM-DD"`T`"hh:mm,mZ/YYYY-MM-DD"`T`"hh:mm,m
+
+|===
+
+
+
+
+==== Recurring time interval
+
+.Representation for time interval by number of recurrences, start and end -- recurrence specified through a positive integer (or left absent to signify an unbounded number) -- start and end by week date with reduced precision
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|Rn/YYYY"`W`"ww/YYYY"`W`"ww |Rn/YYYY-"`W`"ww/YYYY-"`W`"ww
+
+|===
+
+.Representation for time interval by number of recurrences, begin and duration -- recurrence specified through a positive integer (or left absent to signify an unbounded number) -- start by complete ordinal date -- duration by a number of days, where the number is a positive integer
+[cols='1,1',options="header"]
+|===
+|Basic format
+|Extended format
+
+|Rn/YYYYDDD/PiD |Rn/YYYY-DDD/PiD
+
+|===
+
+

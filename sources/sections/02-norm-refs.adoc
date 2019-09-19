@@ -1,0 +1,5 @@
+
+[bibliography]
+== Normative References
+
+* [[[ISO8601-1,ISO 8601-1:--]]] footnote:[Under preparation. (Stage at the time of publication ISO/FDIS 8601-1)], _Date and time -- Representation for information interchange -- Part 1: Basic rules_

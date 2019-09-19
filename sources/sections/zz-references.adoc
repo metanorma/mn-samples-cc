@@ -1,0 +1,13 @@
+
+[bibliography]
+== Bibliography
+
+* [[[ISOIEC646,ISO/IEC 646]]], _Information technology -- ISO 7-bit coded character set for information interchange_
+
+* [[[ISO8601,ISO 8601:2004]]], _Date and time -- Representation for information interchange_
+
+* [[[ISO8601-2,ISO 8601-2:--]]] footnote:[Under preparation. (Stage at the time of publication ISO/FDIS 8601-2)], _Date and time -- Representation for information interchange -- Part 2: Extensions_
+
+* [[[RFC5545,IETF RFC 5545]]], _AUTOFILL_
+
+* [[[RFC6350,IETF RFC 6350]]], _AUTOFILL_

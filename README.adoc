@@ -1,0 +1,13 @@
+= Metanorma-CSD sample documents
+
+image:https://travis-ci.com/metanorma/mn-samples-cc.svg?branch=master["Build Status", link="https://travis-ci.com/metanorma/mn-samples-cc"]
+
+== Purpose
+
+This repository provides Metanorma-CalConnect documents in sample form.
+
+== Access
+
+Documents in this repository are available through the deployed mini-site:
+
+* https://metanorma.github.io/mn-samples-cc/[Metanorma-CalConnect documents]

@@ -1,0 +1,24 @@
+
+:sectnums:
+[[scope]]
+== Scope
+
+The purpose of this document is to provide:
+
+* a standard, declarative representation of date and time and time
+  scale components called the "`explicit form`";
+
+* a grouped time scale unit mechanism for grouping of date and time;
+  and
+
+* new duration representations and mechanics for the calculation of
+  date time formulas involving duration.
+
+This document only supports date elements from the Gregorian calendar and
+times from the 24-hour clock.
+
+Date and time format representations described in this document
+utilizes numbers, alphabets and symbols defined in <<ISOIEC646>>.
+These representations are meant to be both human recognizable and
+machine readable. Character encoding of the representations is
+not covered in this document.

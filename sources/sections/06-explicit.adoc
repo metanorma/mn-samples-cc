@@ -1,0 +1,394 @@
+
+[[explicit]]
+== Explicit representations
+
+=== General
+
+This section provides date and time representations using explicit form.
+
+[[date-rep]]
+=== Date
+
+[[date-format]]
+==== General
+
+The representations provided in this clause are collectively denoted as `[dateE]`.
+
+[[calendar-date]]
+==== Calendar date
+
+The complete representation of a calendar date shall be as follows.
+
+[source]
+----
+[yearE][monthE][dayE]
+----
+
+
+[example]
+'1985Y4M12D', calendar year 1985, April 12th.
+
+
+[[ordinal-date]]
+==== Ordinal date
+
+A complete representation of an ordinal date shall be as follows.
+
+[source]
+----
+[yearE][dayoE]
+----
+
+[example]
+'1985Y102O', calendar year 1985, ordinal day 102 of year.
+
+
+[[week-date]]
+==== Week date
+
+A complete representation of a week date shall be as follows.
+
+[source]
+----
+[yearE][weekE][daykE]
+----
+
+[example]
+'1985Y15W5K', calendar year 1985, Friday of the calendar week 15.
+
+
+[[time-of-day]]
+=== Time of day
+
+[[local-time-of-day]]
+==== Local time of day
+
+Representations of local time of day as defined below make no
+provisions to prevent ambiguities in expressions that result from
+discontinuities in the local time scale (e.g. daylight-saving time).
+When the need arises to prevent these ambiguities, the representations
+provided in <<local-time-shift>> may serve useful.
+
+A complete representation of local time of day shall be as follows.
+This representation shall be denoted as [timeE].
+
+[source]
+----
+["T"][hourE][minE][secE]
+----
+
+
+[example]
+'T23H20M50S', a local time of day expression describing the fiftieth
+seconds of the twentieth minute of the twenty-third clock hour.
+
+
+==== Beginning of the day
+
+The complete representation of beginning of day in explicit form shall
+be as follows.
+
+[source]
+----
+T0H0M0S
+----
+
+Applying the rule of omitting zero-valued time scale components, it can also
+be represented as:
+
+[source]
+----
+T0S
+----
+
+There is no representation of end of day to prevent ambiguity of the
+overlapping end of day and the beginning of the next day.
+
+
+[[time-shift]]
+=== Time shift
+
+A time shift is used to represent the shift of local standard time
+against UTC.
+
+The complete representation of time shift in explicit form is represented
+as follows, and is denoted as [shiftE] within this document.
+
+[source]
+----
+["Z"][!]["-"][timeE]
+----
+
+Where,
+
+* ["Z"] is the time shift designator;
+
+* the leading minus sign (["-"]) is only applied when the time shift
+  expressed is behind UTC, it shall be omitted if the time shift is
+  ahead of or equal to UTC;
+
+* the expression [timeE] indicates the actual time shift from UTC.
+
+In accordance with <<representations-omission>>, zero-valued
+time scale components may be omitted in [timeE].
+
+[example]
+'Z-5H', the time shift is 5 hours behind UTC.
+
+[example]
+'Z8H', the time shift is 8 hours ahead of UTC.
+
+[example]
+'Z6H0M', the time shift is six hours ahead of UTC; the expression '0M' may be omitted
+in accordance with <<representations-omission>>.
+
+[example]
+'Z8H30M10S', the time shift is eight hours, thirty minutes and ten seconds ahead of UTC.
+
+
+A single ["Z"] with the [timeE] portion empty, in accordance with the
+rules specified in <<representations-omission>>, indicates that the
+time shift from UTC of day is zero, and is functionally equivalent to
+the representation 'Z0H0M'.
+
+[source]
+----
+["Z"]
+----
+
+[example]
+'Z', UTC where the time shift is zero.
+
+[example]
+'Z0H0M', UTC where the time shift is zero.
+
+
+
+=== Date with shift
+
+The complete representation for date with a time shift is as follows.
+
+[source]
+----
+[dateE][shiftE]
+----
+
+[example]
+'1985Y4M12DZ-5H', calendar year 1985, April 12th with a time shift of 5 hours behind UTC.
+
+
+[[local-time-shift]]
+=== Time of day with time shift
+
+The complete representation for time of day with a time shift is as follows.
+
+[source]
+----
+[timeE][shiftE]
+----
+
+[example]
+'T23H20M50SZ', 23:20:50 at UTC of day.
+
+[example]
+'T23H20M50SZ-5H0M', 23:20:50 at local time, which is 5 hours behind UTC.
+
+[example]
+'T23H20M50SZ8H', 23:20:50 at local time, which is 8 hours ahead of UTC.
+
+
+
+[[date-and-time-of-day]]
+=== Date and time of day
+
+A time can be expressed by combining a date expression (<<date-rep>>)
+with a time of day expression (<<time-of-day>>).
+
+The date part of a date and time expression must be complete. The time
+may be incomplete (<<representations-reduced-precision>>).
+
+The representations provided in this clause are collectively denoted as
+[datetimeE].
+
+==== Date and time only
+
+The complete representation for date and time only is as follows.
+
+[source]
+----
+[dateE][timeE]
+----
+
+
+[example]
+'1985Y4M12DT23H20M30S', calendar year 1985, April 12th, 23:20:30.
+
+
+==== Date and time with shift
+
+The complete representation for date with time and a time shift is as follows.
+
+[source]
+----
+[dateE][timeE][shiftE]
+----
+
+[example]
+'1985Y4M12DT23H20M30SZ8H', calendar year 1985, April 12th, 23:20:30, 8 hours ahead of UTC.
+
+
+=== Decade
+
+The complete representation for decade is as follows.
+
+[source]
+----
+[decE]
+----
+
+[example]
+'1880', the decade 1880s, spanning years from 1880 to 1889.
+
+
+=== Century
+
+The complete representation for century is as follows.
+
+[source]
+----
+[centE]
+----
+
+[example]
+'1300', the century 1300s, spanning years from 1300 to 1399.
+
+
+
+[[representations-omission]]
+=== Omission of zero valued components
+
+Time scale components within an explicit form that has a value of `0` may be omitted entirely with its corresponding designator, except when the omission of it affects the indication of precision.
+
+In the representations given in this clause, if a time scale component of a higher order (compared to the lowest order component specified in the representation) is omitted, it is assumed to have the value "`0`" as long as the time scale component accepts the value "`0`" (<<ISO8601-1,clause 4.3>>).
+
+[example]
+'1985Y4M15DT15H0M10S' and '1985Y4M15DT15H10S' can be both used to express
+the time 3:00:10 p.m. on April 15th, 1985 in the Gregorian calendar.
+
+[example]
+'1988Y3M1DT2H0M0S' and '1988Y3M1DT2H' are unequal representations where the former expression has seconds precision, and the latter expression has hour precision.
+
+[example]
+'`2018Y8M8DT30M0SZ`': indicates the date 8th August 2018 at time 00:30:00 in UTC time of day Since the "`hour`" component is omitted and "`seconds`" included, the hour is assumed to be zero, and the expression has seconds precision. This is equivalent to the expression '`2018Y08M08DT30M0SZ`' in which zero padding is applied to calendar month and calendar day.
+
+
+[[representations-precision]]
+=== Indication of precision
+
+The lowest denoted time scale component in a date and time representation
+indicates the precision level of the representation.
+
+[example]
+'1985Y4M' has calendar month precision.
+
+[example]
+'1985Y4M12DT2H' has clock hour precision.
+
+[example]
+'1985Y4M12DT30M' has clock minute precision, where the clock hour time
+scale component is a zero-valued omission.
+
+[[representations-decimal]]
+=== Decimal fractions for time
+
+A decimal fraction of hour, minute or second may be included in an expression in accordance with <<ISO8601-1,clause 5.2.1.4>>.
+
+[example]
+'`2018Y8M8DT0,5H`': indicates the date 8th August 2018 at time 00:30 with minutes precision.
+
+[example]
+'`2018Y8M8DT10H30.5M`': indicates the date 8th August 2018 at time 10:30:30 with seconds precision.
+
+[example]
+'`2018Y8M8DT10H30M15,3S`': indicates the date 8th August 2018 at time 10:30:15 plus 300ms with sub-second precision.
+
+
+
+[[representations-reduced-precision]]
+=== Representations other than complete
+
+Any of the representations given in this clause may be modified for reduced precision
+(<<representations-precision>>) and decimal representation (<<representations-decimal>>).
+
+[example]
+'`2018Y8M`': indicates the date August 2018 with calendar month precision.
+
+[example]
+'`2018Y8M8DT30M`': indicates the date 8th August 2018 at time 00:30 with minute precision. Since the "`hour`" component is omitted, it is assumed to be zero because it is of a higher order than the lowest order component specified in the representation (here, "`minutes). The omitted "`second`" component does not form part of the representation because it is of a lower order than the lowest order component.
+
+
+
+
+
+[[time-interval]]
+=== Time interval
+
+==== General
+
+A time interval shall be expressed by a start and an end date.
+A solidus ["/"] is used as a separator to separate the two start and
+end dates.
+
+The complete representation of a time interval is defined as follows.
+
+[source]
+----
+[datetimeE]["/"][datetimeE]
+----
+
+[example]
+'1985Y4M12DT23H20M50S/1985Y6M25DT10H30M0S', time interval beginning at
+20 minutes and 50 seconds past 23 hours on 12 April 1985 local time of
+day and ending at 30 minutes past 10 hours on 25 June 1985 local time
+of day.
+
+
+==== Duration substitution
+
+Providing a duration as an alternative to either a start or end date is
+acceptable, given the start and end dates can be inferred from the given
+duration of the time interval.
+
+[example]
+'1985Y4M12DT23H20M50S/P3D'
+
+[example]
+'P3D/1985Y4M12DT23H20M50S'
+
+==== Time scale component order
+
+For expression of a time interval by a start and an end, higher order
+time scale components may be omitted from the "`end of time interval`",
+provided that the resulting expression is unambiguous. In this case the
+omitted higher order components from the "start of time interval"
+expression apply.
+
+[example]
+'2018Y1M15D/2M20D' represents '2018Y1M15D/2018Y2M20D' as the expression
+'2M20D' unambiguously refers to the calendar month and calendar day
+components, and the higher order components can be inherited from the
+start date expression.
+
+==== Time shift indication
+
+Representations for time zones and UTC included with the component
+preceding the separator shall be assumed to apply to the component
+following the separator, unless a corresponding alternative is included.
+
+[example]
+'2018Y1M15DZ5Y0M/2018Y2M20D' is equivalent to
+'2018Y1M15DZ5Y0M/2018Y2M20DZ5Y0M' as the 'Z5H0M' time shift also
+applies to the expression after the separator.
+
+
+

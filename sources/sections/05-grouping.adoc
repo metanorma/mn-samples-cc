@@ -1,0 +1,301 @@
+
+[[grouping]]
+== Grouped time scale units
+
+=== General
+
+A time scale unit can be grouped into a larger composite unit that
+can each be specifically referred to using representations provided
+in this clause.
+
+
+[[group-unit-definition]]
+=== Unit definition
+
+A grouped time scale unit ("grouped unit") defines a time scale unit
+that is a composite of smaller time scale units.
+Its representation is provided as follows
+and is denoted as [groupUnit] in this document.
+
+[source]
+----
+["G"][durationUnits]["U"]
+----
+
+////
+A time scale unit, expressed as a time scale component value, can be replaced with the following syntax  providing compact forms of otherwise verbose expressions such as of sets of dates  (see 6.6 example 3):
+////
+
+Where,
+
+* ["G"] is the grouping prefix designator;
+
+* ["U"] is the grouping suffix designator;
+
+* [durationUnits], one or more time scale components for
+  expressing positive duration as specified in
+  <<duration-general>>.
+
+
+The definition of a grouped unit is a continuous one, such that there is no gap between two adjacent grouped units.
+
+[example]
+'G10DU', every unit of the grouped unit is of ten days duration.
+
+[example]
+'GT30MU', every unit of the grouped unit is of thirty minutes duration.
+
+[example]
+'G2DT6HU', every unit of the grouped unit is of two days and six hours duration.
+
+
+[[group-unit-value]]
+=== Unit value
+
+The value of a grouped time scale unit is given with
+the following representation.
+This representation is denoted as [group] in this document.
+
+[source]
+----
+group = [i][groupUnit]
+----
+
+Where,
+
+* [i] indicates the coefficient value of the grouped time scale unit;
+
+* [groupUnit] denotes an expression for a grouped time scale unit
+  (<<group-unit-definition>>).
+
+
+[example]
+'5G10DU', the fifth unit of ten-day groups.
+
+[example]
+'20GT30MU', the twentieth unit of thirty-minute groups.
+
+[example]
+'2G2DT6HU', the second unit of two-day groups.
+
+[example]
+'`2018-02-GP14D2I`' and '`2018Y02MGP14D2ID`' are complete date representations that indicates "`the second fortnight of February 2018`", as specified by the rule "`group every 14 days, second group`".
+
+[example]
+'`2018-03-GP10D3I`' and '`2018Y03MGP10D3ID`' are complete date representations that indicates "`the third 10-day block of March in 2018`", as specified by the rule "group every 10 days, third group". A 10-day block is a time grouping commonly used in East Asia.
+
+[example]
+`'16:GPT15M1I:00`' and '`T16HGPT15M1I0S`' are complete time representations that indicates "`the first quarter-hour of 16:00`", as specified by the rule "`group every 15 minutes, first group`".
+
+[example]
+'`2018-GP6M1I`' and '`2018YGP6M1IM`' are date expressions (implied and explicit formats, respectively) of monthly precision that indicates "`the first half of 2018`", as specified by the rule "`group every 6 months, first group`", and therefore the grouping is specified in the [month] field. The resulting time interval is equivalent to the time interval expression '`2018-01-01/2018-06-30`'.
+
+
+
+[[representations-grouped-general]]
+=== Application within representations
+
+==== General
+
+Grouped time scale units can be applied to date and time representations as
+replacements for any time scale unit components as
+long as the resulting expression is a valid one.
+
+[example]
+`2018Y3G60DU6D` is a valid date expression that refers to the date
+year 2018, ordinal day of year 186 (which is July 5th).
+
+[example]
+`2018Y9M2DT2GT8HU0H30M` is a valid date and time expression that
+refers to the date year 2018, September 2nd, 16:30.
+
+
+==== Use of grouped units
+
+Date and time representations can incorporate the grouped
+time scale units by applying rules from <<group-unit-definition>>
+and <<group-unit-value>> to a date and time representation
+described by this document and <<ISO8601-1>>, by
+replacing a time scale unit component in the representations
+with [group].
+
+The following representation is used for date and time
+representations (complete representation, reduced precision)
+that incorporate grouped time scale units. This
+representation is denoted as [groupDateTime] in this document.
+
+[source]
+----
+[higher-order-units][group][lower-units]
+----
+
+Where,
+
+* [higher-order-units] contains time scale units (and their
+values) that are of higher order compared to the highest order time
+scale unit within the group unit;
+
+* [lower-order-units] is optional, it contains time scale
+units (and their values) that are of equal or lower order compared to
+the lowest order time scale unit within the group unit.
+
+
+[example]
+`[monthE][group][yearE]` is an invalid date and time representation
+as [monthE] has a lower order than that of [yearE].
+
+
+When [lower-order-units] is omitted, the expression refers
+to a unit of the grouped time scale unit.
+
+[example]
+`[centE][group]` is a valid date and time representation,
+expressing in units of the grouped time scale unit.
+
+[example]
+'`2018Y1G60DU`' represents the first 60-day group of the
+year 2018.
+
+
+[example]
+'`2018Y2M2G14DU`' refers to the second 14-day group
+in February of year 2018, which is in effect referring to
+"the second fortnight of February 2018".
+
+[example]
+'`2018Y3M3G10DU`' refers to the third 10-day block of March
+in 2018. A 10-day block is a time grouping commonly used
+in East Asia.
+
+[example]
+'`T16H1GT15MU`' refers to the first quarter-hour of 16:00.
+
+
+
+When [lower-order-units] is present, the expression refers
+to a date and time using the lowest time scale unit in the
+[lower-order-units] expression.
+
+Time scale components placed to the right of a grouped
+time scale unit behaves identically to those after a typical
+time scale component, such that the component to the right
+refers to an instance or time interval "`within`" the
+component at the left.
+
+[example]
+`[yearE][group][dayE]` is a valid date and time representation,
+expressing in the calendar day time scale unit. The `[dayE]`
+points to a calendar day within the expression `[yearE][group]`.
+
+//It is
+//considered a "complete representation" for date since it specifies
+//a specific calendar day.
+
+[example]
+`[decE][group][timeE]` is a valid date and time representation,
+expressing in the lowest order time scale units specified in
+[timeE], which is the clock second time scale unit. The `[timeE]`
+points to a clock time within the expression `[decE][group]`.
+
+[example]
+'`2018Y3G60DU6D`' represents the sixth day of the third
+60-day group of the year 2018.
+
+[example]
+'`2018Y20GT12HU3H`' represents the third hour within the
+twentieth 12-hour group of the year 2018.
+
+
+==== Adherence to grouped unit boundaries
+
+Time scale unit values provided in [lower-order-units] must
+not fall outside of the value bounds set by the group time scale unit
+(the [group] expression).
+
+[example]
+'`2018Y1G2MU30D`' refers to the thirtieth day of the first
+two-month group in year 2018. Since the first two-month group
+of 2018 contains 59 days, the subsequent expression `30D` falls
+within the same grouped time scale unit.
+
+[example]
+'`2018Y1G2MU60D`' refers to the sixtieth day of the first
+two-month group in year 2018. It is an invalid expression
+as the first two-month group of 2018 only contains 59 days,
+the expression `60D` falls outside of the same grouped
+time scale unit.
+
+
+==== Representation with time shift
+
+A representation using grouped time scale units can be represented
+with a time shift as:
+
+[source]
+----
+[groupDateTime][shiftE]
+----
+
+[example]
+'`2018Y1G60DUZ-5H`', the first 60-day group of the year 2018,
+five hours behind UTC.
+
+[example]
+'`2018Y3G60DU6DZ8H`' represents the sixth day of the third
+60-day group of the year 2018, eight hours ahead of UTC.
+
+
+
+
+==== Conversion to basic time scale units
+
+===== General
+
+When an expression referring to a grouped time scale
+unit has to be converted to use basic time scale units
+(time scale units that are defined in <<time-scale-components>>),
+it can be converted into a time interval.
+
+[example]
+'`2018Y1G6MU`' refers to the first 6-month group of year 2018.
+The resulting time interval is equivalent to that of the time interval
+expression '`2018Y1M/2018Y6M`'.
+
+
+===== Truncation of partial units
+
+When the duration of a grouped time scale unit does not cleanly
+divide the original time scale component, the duration of
+the last unit of the grouped time scale is only partially
+located within the boundaries specified by the original time scale component.
+
+In this case, the particular grouped time scale unit refers only
+to the duration that is within bounds of the original time
+scale component. The remaining duration that are out
+of bounds shall be truncated.
+
+[example]
+`2018Y9M4G8DU` refers to the
+"`fourth 8-day grouping of September of year 2018`",
+but the fourth grouped unit only has 6 days within September
+and 2 days in October. According to the truncation rule, only
+the first 6 days belong to this grouped unit, and the resulting
+time interval is `2018-09-25/2018-09-30`.
+
+===== Spanning grouped unit boundaries
+
+In order to express a time interval covered by the grouped
+unit without regard to the boundaries of the original time component,
+the same expression can be provided using time interval representation.
+
+[example]
+`2018Y9M4G8DU`, "`fourth 8-day grouping of September of year 2018`",
+the start date of the fourth grouped unit can be found as `2018Y9M25D`.
+Therefore, the expression of `2018Y9M25D/P8D` provides the full 8-day
+duration of the unit, in the interval `2018Y9M25D/2018Y10M2`.
+
+////
+[example]
+`3M1D/P40D` in a yearly context represents
+"`time interval from March 1st to 40 days after`". Notice it has overflowed.
+////

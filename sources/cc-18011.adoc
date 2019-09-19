@@ -1,0 +1,45 @@
+= CalConnect Standard: Date and time -- Explicit representation
+:title: Date and time -- Explicit representation
+:docnumber: 18011
+:status: final-draft
+:doctype: standard
+:edition: 1
+:copyright-year: 2018
+:revdate: 2018-02-10T00:00:00Z
+:published-date: 2018-02-10T00:00:00Z
+:language: en
+:technical-committee: DATETIME
+:draft:
+:toc:
+:stem:
+:xrefstyle: short
+:imagesdir: images
+:docfile: cc-18011.adoc
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+include::sections/0a-foreword.adoc[]
+
+include::sections/0b-intro.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-norm-refs.adoc[]
+
+include::sections/03-termsdef.adoc[]
+
+include::sections/04-fundamental-principles.adoc[]
+
+include::sections/05-grouping.adoc[]
+
+include::sections/06-explicit.adoc[]
+
+include::sections/07-duration.adoc[]
+
+include::sections/08-calculations.adoc[]
+
+//include::sections/a1-annex.adoc[]
+
+include::sections/zz-references.adoc[]

@@ -1,0 +1,197 @@
+
+[[tda]]
+[source=ISO8601-1]
+== Terms, definitions, symbols and abbreviations
+
+=== Terms and definitions
+
+[[term-explicit]]
+==== explicit form
+
+date and time representation that uses designator symbols to delimit time scale components
+
+[[term-designator]]
+==== designator symbols
+
+characters used to denote units of a time scale component
+
+[[term-date-time-formula]]
+==== date time formula
+
+expression that specifies modification of a _date and time expression_ (<<ISO8601-1,clause 3.1.3.1>>) with a _duration_ (<<ISO8601-1,clause 3.1.1.8>>)
+
+[[term-durational-unit]]
+==== durational unit
+
+_time scale component_ (<<ISO8601-1,clause 3.1.3.3>>) that compose the _duration_ (<<ISO8601-1,clause 3.1.1.8>>) _date and time representation_ (<<ISO8601-1,clause 3.1.3.2>>)
+
+[[term-grouped-unit]]
+==== grouped time scale unit
+
+_time scale unit_ (<<ISO8601-1,clause 3.1.1.7>>) composed of a _duration_ (<<ISO8601-1,clause 3.1.1.8>>) expressed by one or more _durational units_ (<<term-durational-unit>>)
+
+
+
+
+[[symbols]]
+=== Symbols
+
+[[symbols-general]]
+==== General
+
+Representations specified in this document make use of symbols given in <<ISO8601-1>> and the following.
+
+
+[[symbols-time-scale-component]]
+==== Time scale component symbols
+
+c(feat)::
+the left side of representation statement where "`c`" is a time scale component (e.g. "`year`") and "`feat`" is a feature, for example, "`m`" for a time scale component that accepts negative values
+
+yearE::
+time scale component calendar year in explicit form
+
+monthE::
+time scale component calendar month in explicit form
+
+weekE::
+time scale component calendar week of year in explicit form
+
+dayE::
+time scale component calendar day of month in explicit form
+
+daykE::
+time scale component calendar day of week in explicit form
+
+dayoE::
+time scale component calendar day of year in explicit form
+
+hourE::
+time scale component clock hour in explicit form
+
+minE::
+time scale component clock minute in explicit form
+
+secE::
+time scale component clock second in explicit form
+
+decE::
+time scale component decade in explicit form
+
+centE::
+time scale component century in explicit form
+
+
+[[symbols-composite]]
+==== Composite component symbols
+
+dateE::
+the composite time scale components for the complete representation of a date as determined in <<date-format>>
+
+timeE::
+the composite time scale components for the complete representation of a time of day as determined in <<local-time-of-day>>
+
+shiftE::
+the composite time scale component for time shift in basic form with hours and minutes, as determined in <<time-shift>>
+
+durationE::
+the composite time scale units for the representation of a duration as determined in <<ISO8601>>
+
+
+[[symbols-inplace]]
+==== Symbols used in place of digits or signs
+
+These symbols are used to represent characters in the date and time representations. They are used in representations only, and are replaced by one or more characters, as described, in expressions:
+
+!::
+indicates that the token following this symbol is optional (may be omitted)
+
+n::
+a positive integer or value, may be left absent to signify an unbounded value
+
+i::
+a positive integer
+
+negi::
+a positive or negative integer; equivalent to `[!]["-"][i]`
+
+[[symbols-designator]]
+==== Designator symbols
+
+These symbols are used to represent designators in the date and time expressions:
+
+"`-`"::
+a minus sign represented by the character "`-"` to indicate a negative value
+
+"`K`"::
+the calendar day of week designator, represented by the character "K", preceding a data element which represents the ordinal number of a calendar day within a calendar week
+
+"`J`"::
+the decade designator, represented by the character "`J`", preceding a data element which represents the number of decades
+
+"`Y`"::
+the year designator, represented by the character "`Y`", preceding a data element which represents the number of years
+
+"`M`"::
+the month or minute designator, represented by the character "`M`", preceding a data element which represents the number of months or minutes
+
+"`W`"::
+the week designator, represented by the character "`W`", preceding a data element which represents the ordinal number of a calendar week within the calendar year
+
+"`O`"::
+the calendar day of year designator, represented by the character "`O`", preceding a data element which represents the ordinal number of a calendar day within a calendar year
+
+"`D`"::
+the day of month designator, represented by the character "`D`", preceding a data element which represents the number of days in a month
+
+"`H`"::
+the hour designator, represented by the character "`H`", preceding a data element which represents the number of hours
+
+"`S`"::
+the second designator, represented by the character "`S`", preceding a data element which represents the number of seconds
+
+"`T`"::
+the time designator, represented by character "`T`", indicates:
++
+** the start of the representation of local time of day to designate local time of day expressions as such,
+** the start of the representation of the time of day in date and time of day expressions,
+** the start of the representation of the number of hours, minutes or seconds in expressions of duration
+
+"`P`"::
+the duration designator, represented by the character "`P`", preceding the component which represents the duration
+
+"`B`"::
+the suffix designator to represent years before year one, represented by the character "`B`", placed after the time scale components of calendar year, decade and century.
+
+"`Z`"::
+the UTC designator, represented by the character "`Z`", added to the end of a time representation to indicate that a time of day is represented as UTC of day.
+
+"`G`"::
+the grouped time scale unit prefix designator, represented by the character "`G`", indicates a grouping calculation applies to the subsequent time scale components until encountering the corresponding suffix designator.
+
+"`U`"::
+the grouped time scale unit suffix designator, represented by the character "`U`", indicates a grouping calculation applies to the preceding time scale components from the corresponding prefix designator.
+
+"`_x_`"::
+the representation of any character "`_x_`" as according to the textual representation of "`_x_`" in the <<ISOIEC646>> repertoire
+
+NOTE: Although "`M`" can be used to designate months or for minutes, its meaning is unambiguous in expressions because the time portion shall always be preceded by the time designator "`T`".
+
+NOTE: The designator symbol "`J`" is assigned from its ordinal position
+being the tenth letter of the English alphabet.
+
+NOTE: The "`G`" and "`U`" designator symbols are used to demarcate the
+"grouped time scale unit" time scale components as they form the
+initial letters of the words "group" and "unit".
+
+
+[[symbols-separator]]
+==== Separator symbols
+
+In date and time expressions and date and time representations, the following characters are used as separators.
+
+"`/`" (solidus)::
+the "`/`" solidus character separates start and end times in the representation of a time interval, as well as the symbol '`R`' from the remainder of a recurring time interval representation. A solidus may be replaced with a double hyphen ["`--`"] by mutual agreement of the communicating partners.
+
+"`.`" (period) and "`,`" (comma)::
+the "`.`" period and "`,`" comma characters are decimal signs used to separate the integer part from the decimal fraction of a number.

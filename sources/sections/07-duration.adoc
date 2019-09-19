@@ -1,0 +1,254 @@
+
+[[duration]]
+== Explicit duration
+
+=== General
+
+Duration can be expressed by a combination of time scale units
+in explicit form --
+years, months, weeks, days, hours, minutes, and seconds.
+
+These time scale components are specified in
+<<time-scale-components>>, and are used to specify
+positive duration.
+
+
+[[duration-combined]]
+=== Durational units
+
+Time scale unit components are used to compose a duration expression,
+and are defined as "`durational units`".
+
+The following time scale components can be combined
+to form a representation denoted as [durationUnits]
+for the expression of duration.
+
+[source]
+----
+[yearE][monthE][weekE][dayE]["T"][hourE][minuteE][secondE]
+----
+
+Where,
+
+* each time scale component acting as a durational unit
+  (such as [monthE]) may be omitted;
+
+* the time designator symbol ["T"] is used to separate
+the time scale components relating to the clock from those of
+the calendar.
+
+Within [durationUnits], time scale components of higher order
+shall be expressed before those of lower order.
+
+=== Representations
+
+==== General
+
+The following representations are both considered complete
+representations of duration.
+
+[[duration-composite]]
+==== Composite representation
+
+The composite representation of a duration, fully accepting
+expressions of the duration representation given in
+<<ISO8601-1,clause 5.2.3>>, is given as follows.
+
+[source]
+----
+[!]["-"]["P"][durationUnits]
+----
+
+Where,
+
+* `[durationUnits]` contains time scale components for expressing
+  positive duration.
+
+
+[example]
+'P3D', duration of three days.
+
+[example]
+'P3W2D', duration of three weeks and two days, which is 23 days, as
+equivalent to the expression of 'P23D'.
+
+[example]
+'P180Y800D', duration of one-hundred-and-eighty years and eight-hundred days.
+
+NOTE:	The exact duration for some time scale components can only be
+known when placed on the actual time scale.
+
+
+[[duration-precedence]]
+==== Precedence representation
+
+The precedence representation of a duration is used for specifying
+author intent in the evaluation order of time scale components within
+a duration.
+
+The representation of calendar duration time scale components
+(denoted as [calendarD]) is provided as follows.
+
+[source]
+----
+["P"][calendarDU]
+----
+
+Where,
+
+* [calendarDU] is one of [yearE], [monthE], [weekE], [dayE].
+
+[example]
+`P3D` describes a duration of three days, in accordance with [calendarD].
+
+
+The representation of clock duration time scale components
+(denoted as [clockD]) is provided as follows.
+
+[source]
+----
+["P"]["T"][clockDU]
+----
+
+Where,
+
+* [clockDU] is one of [hourE], [minuteE], [secondE].
+
+
+[example]
+`PT8H` describes a duration of eight hours, in accordance with [clockD].
+
+
+The duration precedence representation is described as follows,
+denoted as [durationP].
+
+[source]
+----
+[!]["-"][durC-1][durC-2]...[durC-n]
+----
+
+Where,
+
+* [durC-i] is either [calendarD] or [clockD];
+
+* the order of the [durC-i] components is used to determine the
+evaluation precedence order of the duration statement [durationP].
+
+[example]
+`P1YP3MP2D` describes a duration of one year, three months
+and two days, to be evaluated in the order as described.
+
+[example]
+`P2DP3MP1Y` describes a duration of two days, three months
+and one year, to be evaluated in the order as described.
+
+[example]
+`PT10HP2DP3MP1Y` describes a duration of ten hours, two days, three months
+and one year, to be evaluated in the order as described.
+
+
+=== Negative duration
+
+A duration with a negative value represents a duration in the reverse
+direction of the proceeding time scale.
+
+[example]
+`-P20Y3M` describes a negative duration of twenty years and three months ago.
+
+[example]
+`-P2DP3MP1Y` describes a negative duration of two days, three months
+and one year, to be evaluated in the order as described.
+
+
+[[duration-fractional]]
+=== Fractional duration
+
+A duration representation can be modified to accept a fractional value
+in place of any [i] specified in a durational time scale component.
+
+
+=== Exact duration
+
+==== General
+
+This clause describes methods to resolve exact duration in
+face of ambiguities.
+
+[[duration-contextual]]
+==== Context-dependent duration
+
+The exact duration of some time scale units can only be known
+when placed on the actual time scale.
+
+[example]
+'P1Y' duration could be 365 or 366 calendar days depending on
+whether the year is a leap year.
+
+[example]
+'P3M' duration could be 90, 91, 92 days depending on the actual
+calendar months and calendar year.
+
+[example]
+'PT1M' duration is normally 60 seconds, but when the minute is the
+last minute of the year, it could be 59, 60 or 61 seconds long
+depending on whether a leap second is applied.
+
+[example]
+'P1Y2M15DT12H30M', duration of 1 year, 2 months, 15 days, 12 hours
+and 30 minutes. The actual duration of the involved calendar months can
+only be known when the duration is placed on an actual start date.
+
+
+[[duration-speculative]]
+==== Speculative duration
+
+The exact duration of certain time scale unit may only be known
+after an event occurs.
+
+There is no universal rule to calculate leap seconds in advance, since
+the decision to insert a leap second is driven by a number of dynamic
+factors and only known when announced by the BIPM.
+
+Specifically, the exact duration of the last clock minute of a
+calendar year can only be known after it is announced by the BIPM,
+whether a leap second has or will occur (in UTC).
+This event is described in this document to occur at the
+"`leap second horizon date`" for a calendar year.
+
+The exact duration of the last clock minute in a calendar year
+is one of the following duration:
+
+* when there is a positive leap second, 61 clock seconds;
+* when there is no leap second, 60 clock seconds; and
+* when there is a negative leap second, 59 clock seconds.
+
+For the accuracy of general purposes, it is acceptable to assume
+the last clock minute always contains 60 clock seconds, just like
+any other clock minute.
+
+For cases where durational accuracy at the clock second level is
+of importance, the following steps shall be taken:
+
+* When calculating exact duration prior to the leap second horizon
+date of a specific calendar year involved, the last clock
+minute is assumed to have no leap second, such that `59` is always
+the last second of the year;
+
+* When calculating exact duration after the leap second horizon
+date of a specific calendar year involved, the last clock
+minute shall reflect the actual duration.
+
+
+[example]
+'P3000Y12M31DT23H59M' is considered to have a duration of 60 clock seconds,
+as the calendar year 3000's leap second horizon date has not yet
+occurred.
+
+[example]
+'P2016Y12M31DT23H59M' is considered to have a duration of 61 clock seconds,
+since the leap second horizon date has already occurred, and it is known
+that a positive leap second assigned to the calendar year 2016.
+
+
+
+

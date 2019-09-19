@@ -1,0 +1,422 @@
+
+
+
+[[time-scale-components]]
+== Time scale components and units
+
+=== General
+
+Additional properties and the explicit forms of time scale units are
+represented in this clause.
+
+
+=== Order of time scale units
+
+This document refers to an "`order`" amongst time scale units, which is
+defined by the duration of a time scale unit relative to other time
+scale units. For example, since a single calendar month has a duration
+always greater than a single unit of calendar day, the former is
+considered of a higher order time scale unit than calendar day, and
+therefore the latter is also considered of a lower order time scale
+unit than the former.
+
+The relative order of commonly used time scale units is specified
+below, with the higher listed entry considered a higher order time
+scale unit than a lower listed entry:
+
+. calendar century
+. calendar decade
+. calendar year
+. calendar month
+. calendar week
+. calendar day
+. clock hour
+. clock minute
+. clock second
+
+NOTE: a higher order time scale does not necessarily mean its duration
+can be expressed as an integer multiple of a lower order time scale,
+for example, in the case of calendar month (28, 29, 30 or 31 days)
+and calendar week (7 days).
+
+
+[[duration-general]]
+=== Explicit forms
+
+
+[[value-restriction]]
+==== Value prefixing
+
+Prefixing of the value with one or more "`0`"s (the number zero) to the
+integer [i] is allowed in the explicit forms of time scale components.
+
+[example]
+'1M', '01M', and '0001M' all describe the calendar month January.
+
+
+
+==== Calendar year and years duration
+
+The calendar year and years duration is represented as follows:
+
+[source]
+----
+[i]["Y"]
+----
+
+[example]
+'12Y', duration, twelve years
+
+[example]
+'12Y', date, year 12.
+
+
+==== Calendar month and months duration
+
+The calendar month and months duration is represented as follows:
+
+[source]
+----
+[i]["M"]
+----
+
+[example]
+'6M', duration, 6 months.
+
+[example]
+'8M', date, the month of August.
+
+
+==== Calendar week of year and weeks duration
+
+The calendar week of year number and weeks duration is represented as
+follows:
+
+[source]
+----
+[i]["W"]
+----
+
+
+[example]
+'10W', duration, ten weeks.
+
+[example]
+'22W', date, the twenty-second calendar week of a calendar year.
+
+
+
+==== Calendar day of month and days duration
+
+The calendar day of month and days duration is represented as follows:
+
+[source]
+----
+[i]["D"]
+----
+
+
+[example]
+'130D', duration, 130 days.
+
+[example]
+'25D', date, the twenty-fifth (25) calendar day of a calendar month.
+
+
+==== Calendar day of week
+
+The calendar day of week is represented as the following time scale component:
+
+[source]
+----
+[i]["K"]
+----
+
+Where,
+
+* [i] represents the ordinal day number in the calendar week;
+valid values of [i] are the integers 1 to 7, representing Monday to Sunday,
+in accordance with "The week calendar" specified in <<ISO8601-1,clause 4.2.2>>.
+
+
+[example]
+'1K', calendar day of week Monday
+
+[example]
+'3K', calendar day of week Wednesday
+
+[example]
+'7K', calendar day of week Sunday
+
+
+==== Calendar day of year
+
+The calendar day of year is represented as the following time scale component:
+
+[source]
+----
+[i]["O"]
+----
+
+
+[example]
+'351O', ordinal day 351 of the calendar year
+
+
+==== Clock hour and hours duration
+
+Clock hour and hours duration is represented as follows:
+
+[source]
+----
+[i]["H"]
+----
+
+
+[example]
+'36H', duration, thirty-six hours.
+
+[example]
+'6H', time, the sixth clock hour.
+
+
+==== Clock minute and minutes duration
+
+Clock minute and minutes duration is represented as follows:
+
+[source]
+----
+[i]["M"]
+----
+
+
+[example]
+'72M', duration, 72 minutes.
+
+[example]
+'56M', time, the fifty-sixth clock minute.
+
+
+==== Clock second and seconds duration
+
+Clock second and seconds duration is represented as follows:
+
+[source]
+----
+[i]["S"]
+----
+
+
+[example]
+'300S', duration, 300 seconds
+
+[example]
+'28S', duration, the twenty-eighth clock second.
+
+
+==== Decade
+
+The decade is represented as the following time scale component:
+
+[source]
+----
+[i]["J"]
+----
+
+
+[example]
+'196J' in explicit form represents the decade of the 1960s, spanning the calendar years 1960 to 1969.
+
+[example]
+'0J' in explicit form represents the decade spanning calendar years 0 to 9.
+
+
+==== Century
+
+The century is represented as the following time scale component:
+
+[source]
+----
+[i]["C"]
+----
+
+
+[example]
+'16C', in explicit form represents the century of 1600s, spanning the calendar years 1600 to 1699.
+
+[example]
+'0C', in explicit form represents the century spanning the calendar years 00 to 99.
+
+
+
+[[negative-values]]
+=== Negative values
+
+==== General
+
+Certain time scale components are allowed to accept a negative integer as their value. The following representation is used for value that accepts a positive or negative integer.
+
+[source]
+----
+negi = [!]["`-`"][i]
+----
+
+In order to convert a time scale component to accept negative values, the following representation is used, where `c` is a time scale component unit. If the time scale component accepts an integer value of '`0`', the value of the expression '`-0`' (negative zero) is considered equivalent to that of '`0`'.
+
+[source]
+----
+c(m) = [negi][c]
+----
+
+
+Where,
+
+* [c] is the time scale component representation that accepts only positive [i];
+
+* [m] is a feature label indicating that the time scale component [c] accepts negative values.
+
+This representation only applies to time scale components that describe a time scale unit. Specifically, it does not apply to durations, time intervals, and repeating time intervals.
+
+[example]
+If "`c`" is the time scale component yearE in explicit form (see Part 1 4.3.2 b)), c(m) means "`calendar year accepting a negative value`". The explicit year representation [i]["`Y`"] becomes [negi]["`Y`"] when [i] is replaced with [negi], and expands to [!]["`-`"]][i]["`Y`"], which accepts the representations [i][`"Y`"] or ["`-"`][i]`"Y`"]. In this expression, the value of [i] or ["`-"`][i] represents an integer whose value identifies a calendar year.
+
+
+==== Calendar year
+
+When a negative calendar year represents a date, the negative value is
+to represent the number of years prior to year zero (0).
+
+The representation for calendar year that accepts a negative value is as follows.
+
+[source]
+----
+year(m)
+----
+
+[example]
+'-12Y' in date represents the the calendar year -12.
+
+[example]
+'`-1Y`' in date represents the year immediately preceding year 0.
+
+NOTE: Year zero is expressed as '`0Y`' in explicit form.
+
+
+==== Calendar week of year
+
+When a negative calendar week of year represents a date, the negative
+value is to represent the number of weeks counting in reverse from the
+end of the calendar year, where the last week of the year is
+represented by the integer value '-1'.
+
+The representation for calendar week of year that accepts a negative value is as follows.
+
+[source]
+----
+week(m)
+----
+
+[example]
+'-10W' in date represents the tenth last week of the year.
+
+[example]
+'`-3W`' in date represents the third last week of the year.
+
+==== Calendar day of month
+
+When a negative calendar day of month represents a date, the negative
+value is to represent the number of days counting in reverse from the
+end of the calendar month, where the last day of the month is
+represented by the integer value '-1'.
+
+The representation for calendar day of month that accepts a negative value is as follows.
+
+[source]
+----
+day(m)
+----
+
+[example]
+'`-1D`' in date represents the last day of the month.
+
+[example]
+'`-5D`' in date represents the fifth last day of the month.
+
+
+==== Calendar day of year
+
+When a negative calendar day of year represents a date, the negative value is to represent the number of days counting in reverse from the end of the calendar year, where the last day of the year is represented by the integer value '`-1`'.
+
+The representation for calendar day of year that accepts a negative value is as follows.
+
+[source]
+----
+dayo(m)
+----
+
+[example]
+'`-7O`' in date represents the seventh last day of the calendar year, which is always December 25th.
+
+[example]
+'`-306O`' in date represents February 29th for a leap year, February 28th otherwise.
+
+
+
+==== Duration
+
+A duration in the reverse direction, called a "`negative duration`" in
+this document, can be expressed using the following representation
+based on the duration representation specified in
+<<ISO8601-2,clause 5.4.2>>.
+In this case, all time scale component within the duration
+representation must be positive.
+
+[source]
+----
+duration(m) = [!]["`-"`][positive-duration]
+----
+
+Where,
+
+* [positive-duration] is the [duration] representation that contains only time scale components that have positive [i].
+
+[example]
+'`-P100D`' in date represents the duration of 100 days in the reverse direction.
+
+[example]
+'`-P1Y3D`' in date represents the duration of one years and three days in the reverse direction.
+
+[example]
+'`-P20Y3M`' describes a negative duration of twenty years and three months ago.
+
+
+==== Calendar year before year one
+
+A suffix addition to time scale components for calendar year, decade and century
+allows representation of calendar years before year one (1).
+
+The representation is given as follows.
+
+[source]
+----
+[c]["B"]
+----
+
+Where,
+
+* [c] is one of [yearE], [decE], [centE].
+
+[example]
+'1YB' the first year before year one, equivalent to the effect of '0Y'.
+
+[example]
+'12YB' the twelfth year before year one, equivalent to the effect of '-11Y'.
+
+[example]
+'12JB' the twelfth decade before year one, equivalent to the effect of time interval
+'-119/-110'.
+
+[example]
+'12CB' the twelfth century before year one, equivalent to the effect of time interval
+'-1190/-1100'.
+
