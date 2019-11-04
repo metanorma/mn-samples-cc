@@ -20,8 +20,6 @@ PDF  := $(patsubst %.xml,%.pdf,$(XML))
 TXT  := $(patsubst %.xml,%.txt,$(XML))
 NITS := $(patsubst %.adoc,%.nits,$(wildcard sources/draft-*.adoc))
 WSD  := $(wildcard sources/models/*.wsd)
-XMI	 := $(patsubst sources/models/%,sources/xmi/%,$(patsubst %.wsd,%.xmi,$(WSD)))
-PNG	 := $(patsubst sources/models/%,sources/images/%,$(patsubst %.wsd,%.png,$(WSD)))
 
 ifdef METANORMA_DOCKER
   PREFIX_CMD := echo "Running via docker..."; docker run -v "$$(pwd)":/metanorma/ $(METANORMA_DOCKER)
@@ -37,7 +35,7 @@ all: documents.html
 documents:
 	mkdir -p $@
 
-documents/%.xml: documents sources/images sources/%.xml
+documents/%.xml: documents sources/%.xml
 	export GLOBIGNORE=sources/$*.adoc; \
 	mv sources/$(addsuffix .*,$*) documents; \
 	unset GLOBIGNORE
@@ -71,16 +69,6 @@ documents.html: documents.rxl
 %.adoc:
 
 nits: $(NITS)
-
-sources/images: $(PNG)
-
-sources/images/%.png: sources/models/%.wsd
-	plantuml -tpng -o ../images/ $<
-
-sources/xmi: $(XMI)
-
-sources/xmi/%.xmi: sources/models/%.wsd
-	plantuml -xmi:star -o ../xmi/ $<
 
 define FORMAT_TASKS
 OUT_FILES-$(FORMAT) := $($(shell echo $(FORMAT) | tr '[:lower:]' '[:upper:]'))
@@ -136,7 +124,7 @@ endef
 
 $(foreach FORMAT,$(FORMATS),$(eval $(WATCH_TASKS)))
 
-serve: $(NODE_BIN_DIR)/live-server revealjs-css reveal.js sources/images
+serve: $(NODE_BIN_DIR)/live-server revealjs-css reveal.js
 	export PORT=$${PORT:-8123} ; \
 	port=$${PORT} ; \
 	for html in $(HTML); do \
