@@ -1,6 +1,7 @@
 = Metanorma-CSD sample documents
 
-image:https://travis-ci.com/metanorma/mn-samples-cc.svg?branch=master["Build Status", link="https://travis-ci.com/metanorma/mn-samples-cc"]
+image:https://github.com/metanorma/mn-samples-cc/workflows/publish/badge.svg["Build Status", link="https://github.com/metanorma/mn-samples-cc/actions?workflow=publish"]
+
 
 == Purpose
 
