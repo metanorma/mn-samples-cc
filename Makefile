@@ -7,6 +7,9 @@ SRC := $(shell yq r metanorma.yml metanorma.source.files | cut -c 3-999)
 ifeq ($(SRC),ll)
 SRC := $(filter-out README.adoc, $(wildcard sources/*.adoc))
 endif
+ifeq ($(SRC),)
+SRC := $(filter-out README.adoc, $(wildcard sources/*.adoc))
+endif
 
 FORMAT_MARKER := mn-output-
 FORMATS := $(shell grep "$(FORMAT_MARKER)" $(SRC) | cut -f 2 -d ' ' | tr ',' '\n' | sort | uniq | tr '\n' ' ')
