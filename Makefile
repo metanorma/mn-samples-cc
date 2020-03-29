@@ -30,6 +30,9 @@ else
 XML := $(patsubst sources/%,documents/%,$(BUILT))
 endif
 endif
+ifeq ($(SRC),)
+SRC := $(filter-out README.adoc, $(wildcard sources/*.adoc))
+endif
 
 FORMATS := $(shell yq r metanorma.yml metanorma.formats | tr -d '[:space:]' | tr -s '-' ' ')
 ifeq ($(FORMATS),)
