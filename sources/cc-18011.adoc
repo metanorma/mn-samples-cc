@@ -15,7 +15,7 @@
 :xrefstyle: short
 :imagesdir: images
 :docfile: cc-18011.adoc
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl,doc
 :local-cache-only:
 :data-uri-image:
