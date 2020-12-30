@@ -48,6 +48,9 @@ jobs:
         run: |
           pip install xml2rfc
 
+      - if: matrix.os == 'macos-latest'
+        run: brew install autoconf automake libtool
+
       - name: Install metanorma
         shell: python
         env:
@@ -67,10 +70,6 @@ jobs:
           os.system("gem install specific_install")
           os.system("gem specific_install -l https://github.com/{}.git -b {}".format(repo, branch))
 
-      - name: Setup Fonts
-        run: |
-          metanorma setup --agree-to-terms
-
       - name: Metanorma compile windows
         if: matrix.os == 'windows-latest'
         run: |
@@ -87,4 +86,4 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         run: |
           sudo snap install yq
-          env PATH="/snap/bin:$PATH" make clean all SKIP_BUNDLE=true
+          make clean all SKIP_BUNDLE=true
