@@ -1,0 +1,135 @@
+/__w/mn-samples-cc/mn-samples-cc/site/documents/cc-18011.err errors
+
+
+== Style
+
+(): Scope must occur before Terms and Definitions
+(): Scope must occur before Terms and Definitions
+(): Scope must occur before Terms and Definitions
+(): Scope must occur before Terms and Definitions
+(XML Line 000135): Only one Symbols and Abbreviated Terms section in the standard
+	<definitions id="symbols" type="symbols" obligation="normative"><title>Symbols</title><definitions id="symbols-general" obligation="normative">
+	<title>Symbols and abbreviated terms</title>
+	<p id="_238597e7-e5b6-46d1-b065-21197ffde951">Representations specified in this document make use of symbols given in <eref type="inline" bibitemid="ISO8601-1" citeas="ISO 8601-1:--"/> and the following.</p>
+	</definitions>
+	<definitions id="symbols-time-scale-component" obligation="normative">
+(XML Line 000135): Symbols and Abbreviated Terms can only contain a definition list
+	<definitions id="symbols" type="symbols" obligation="normative"><title>Symbols</title><definitions id="symbols-general" obligation="normative">
+	<title>Symbols and abbreviated terms</title>
+	<p id="_238597e7-e5b6-46d1-b065-21197ffde951">Representations specified in this document make use of symbols given in <eref type="inline" bibitemid="ISO8601-1" citeas="ISO 8601-1:--"/> and the following.</p>
+	</definitions>
+	<definitions id="symbols-time-scale-component" obligation="normative">
+(XML Line 000337): Hanging paragraph in clause
+	<clause id="time-scale-components" obligation="normative"><title>Time scale components and units</title><clause id="_general" obligation="normative">
+	<title>General</title>
+	<p id="_c907db5e-720b-46cb-b792-f75c44eac31e">Additional properties and the explicit forms of time scale units are
+	represented in this clause.</p>
+	</clause>
+(XML Line 000387): Hanging paragraph in clause
+	<clause id="duration-general" obligation="normative"><title>Explicit forms</title><clause id="value-restriction" obligation="normative"><title>Value prefixing</title><p id="_921fc30c-f227-416b-8eba-68f9d85c5205">Prefixing of the value with one or more “`0`”s (the number zero) to the
+	integer [i] is allowed in the explicit forms of time scale components.</p>
+	<example id="_a7b99c57-41bf-4ad2-a9dc-013f75c53488">
+	<p id="_0993b8c7-ec1a-4f9f-a253-14d74955912d">‘1M’, ‘01M’, and ‘0001M’ all describe the calendar month January.</p>
+	</example></clause>
+(XML Line 000500): Hanging paragraph in clause
+	<clause id="negative-values" obligation="normative"><title>Negative values</title><clause id="_general_2" obligation="normative"><title>General</title><p id="_44662ed1-1393-474b-a871-eb857a78bbf4">Certain time scale components are allowed to accept a negative integer as their value. The following representation is used for value that accepts a positive or negative integer.</p>
+	<sourcecode id="_99858f87-d39c-4b0f-aa76-1ed9594cd8a6">negi = [!]["`-`"][i]</sourcecode>
+	
+	<p id="_3d7d45c0-b5e2-43a0-8124-35a5e4ab982b">In order to convert a time scale component to accept negative values, the following representation is used, where <tt>c</tt> is a time scale component unit. If the time scale component accepts an integer value of ‘0’, the value of the expression ‘-0’ (negative zero) is considered equivalent to that of ‘0’.</p>
+	<sourcecode id="_43406bce-b7e4-4414-8b92-ae1f6556df66">c(m) = [negi][c]</sourcecode>
+(XML Line 000617): Hanging paragraph in clause
+	<clause id="grouping" obligation="normative"><title>Grouped time scale units</title><clause id="_general_3" obligation="normative">
+	<title>General</title>
+	<p id="_28ac6ae3-fc0e-482c-ac0d-3c4cd402c6e7">A time scale unit can be grouped into a larger composite unit that
+	can each be specifically referred to using representations provided
+	in this clause.</p>
+(XML Line 000689): Hanging paragraph in clause
+	<clause id="representations-grouped-general" obligation="normative"><title>Application within representations</title><clause id="_general_4" obligation="normative"><title>General</title><p id="_4692adae-5008-488d-800a-1da3994c5026">Grouped time scale units can be applied to date and time representations as
+	replacements for any time scale unit components as
+	long as the resulting expression is a valid one.</p>
+	<example id="_010002af-16f8-4ab2-890f-60a0fb53975d">
+	<p id="_29732f6b-1598-4e60-af05-03b95a5bc83a"><tt>2018Y3G60DU6D</tt> is a valid date expression that refers to the date
+(XML Line 000807): Hanging paragraph in clause
+	<clause id="_conversion_to_basic_time_scale_units" obligation="normative"><title>Conversion to basic time scale units</title><clause id="_general_5" obligation="normative"><title>General</title><p id="_500df763-6fe1-4a67-bb4f-4c9ba55484d4">When an expression referring to a grouped time scale
+	unit has to be converted to use basic time scale units
+	(time scale units that are defined in <xref target="time-scale-components"/>),
+	it can be converted into a time interval.</p>
+	<example id="_31481c76-5d7c-4d8b-a041-3f1c72b4700b">
+(XML Line 000841): Hanging paragraph in clause
+	<clause id="explicit" obligation="normative"><title>Explicit representations</title><clause id="_general_6" obligation="normative">
+	<title>General</title>
+	<p id="_7850c329-0edc-4840-b69d-fe4effd97c92">This section provides date and time representations using explicit form.</p>
+	</clause>
+	<clause id="date-rep" obligation="normative"><title>Date</title><clause id="date-format" obligation="normative">
+(XML Line 000845): Hanging paragraph in clause
+	<clause id="date-rep" obligation="normative"><title>Date</title><clause id="date-format" obligation="normative">
+	<title>General</title>
+	<p id="_79e4aa80-b978-47c3-ae15-c1c34d4e4648">The representations provided in this clause are collectively denoted as <tt>[dateE]</tt>.</p>
+	</clause>
+	<clause id="calendar-date" obligation="normative"><title>Calendar date</title><p id="_a7ea05c6-804b-4722-8450-86138a60d27c">The complete representation of a calendar date shall be as follows.</p>
+(XML Line 000867): Hanging paragraph in clause
+	<clause id="time-of-day" obligation="normative"><title>Time of day</title><clause id="local-time-of-day" obligation="normative"><title>Local time of day</title><p id="_6c191bba-b410-4362-8332-0daea278c525">Representations of local time of day as defined below make no
+	provisions to prevent ambiguities in expressions that result from
+	discontinuities in the local time scale (e.g. daylight-saving time).
+	When the need arises to prevent these ambiguities, the representations
+	provided in <xref target="local-time-shift"/> may serve useful.</p>
+(XML Line 000955): Hanging paragraph in clause
+	<clause id="date-and-time-of-day" obligation="normative"><title>Date and time of day</title><p id="_c5f637da-445f-4e4d-a6cc-3d872f0c5c28">A time can be expressed by combining a date expression (<xref target="date-rep"/>)
+	with a time of day expression (<xref target="time-of-day"/>).</p>
+	<p id="_9227d3e8-96a9-4727-8272-d0bded858a2e">The date part of a date and time expression must be complete. The time
+	may be incomplete (<xref target="representations-reduced-precision"/>).</p>
+	<p id="_2d13505e-5125-49f7-8c12-c29dbda1adad">The representations provided in this clause are collectively denoted as
+(XML Line 001027): Hanging paragraph in clause
+	<clause id="time-interval" obligation="normative"><title>Time interval</title><clause id="_general_7" obligation="normative"><title>General</title><p id="_43426f45-d722-4a30-a8a2-8edaff5e1f65">A time interval shall be expressed by a start and an end date.
+	A solidus [“/”] is used as a separator to separate the two start and
+	end dates.</p>
+	<p id="_b90ac215-6ae3-490f-88f4-1b8f328511d3">The complete representation of a time interval is defined as follows.</p>
+	<sourcecode id="_ecdc92bb-6b92-4436-9c4d-323a1a8a437b">[datetimeE]["/"][datetimeE]</sourcecode>
+(XML Line 001067): Hanging paragraph in clause
+	<clause id="duration" obligation="normative"><title>Explicit duration</title><clause id="_general_8" obligation="normative"><title>General</title><p id="_ba19bad1-90c2-46dc-bd19-dbab745cbf24">Duration can be expressed by a combination of time scale units
+	in explicit form — years, months, weeks, days, hours, minutes, and seconds.</p>
+	<p id="_102ccd35-daf2-4c0c-abdf-f8b8eca46637">These time scale components are specified in
+	<xref target="time-scale-components"/>, and are used to specify
+	positive duration.</p></clause>
+(XML Line 001093): Hanging paragraph in clause
+	<clause id="_representations" obligation="normative"><title>Representations</title><clause id="_general_9" obligation="normative">
+	<title>General</title>
+	<p id="_c86c934b-4af5-4aaa-a5e7-90adf7e18a22">The following representations are both considered complete
+	representations of duration.</p>
+	</clause>
+(XML Line 001193): Hanging paragraph in clause
+	<clause id="_exact_duration" obligation="normative"><title>Exact duration</title><clause id="_general_10" obligation="normative">
+	<title>General</title>
+	<p id="_d519074f-8ee7-40f7-b5b8-efe03b264dd7">This clause describes methods to resolve exact duration in
+	face of ambiguities.</p>
+	</clause>
+(XML Line 001269): Hanging paragraph in clause
+	<clause id="evaluation" obligation="normative"><title>Evaluation of date and time with duration</title><clause id="_general_11" obligation="normative"><title>General</title><p id="_eedc0224-a8ca-436a-8944-c50eb0a7676d">A date and time representation is modified by a duration
+	in many cases, including the calculation for:</p>
+	<ul id="_d04aff58-0115-4233-9919-5cacdf580c44">
+	<li>
+	<p id="_3117442a-8441-442f-a563-a4ed58c1b017">time intervals when given duration as a start or end;</p>
+(XML Line 001299): Hanging paragraph in clause
+	<clause id="_prerequisite_mechanisms" obligation="normative"><title>Prerequisite mechanisms</title><clause id="_carry_over_of_overflow_in_time_scale_components" obligation="normative"><title>Carry-over of overflow in time scale components</title><p id="_a16436c9-ace3-4531-b8fd-3704b6abddc2">An “overflow” of a date and time expression is defined as assigning a
+	value exceeding the maximum value accepted by the time scale component.</p>
+	<example id="_02f69a93-5bf1-4b77-bd49-b2c700d3dfe3">
+	<p id="_c452fea6-f1ef-4172-8252-4a8e489eca4e">An increase of <tt>P1M</tt> (duration) to <tt>2018Y12M</tt> (date) will result in the expression
+	<tt>2018Y13M</tt>, where the month component is overflowed with value <tt>13</tt>.</p>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000008:30): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000024:52): character content of element "revision-date" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 000145:41): element "eref" missing required attributes "citeas" and "type"
+(XML Line 000166:144): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "svgmap", "table" or "ul"
+(XML Line 000169:15): element "definitions" incomplete; missing required element "dl"
+(XML Line 000170:71): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "svgmap", "table" or "ul"
+(XML Line 000209:60): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "svgmap", "table" or "ul"
+(XML Line 000224:58): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "svgmap", "table" or "ul"
+(XML Line 000237:61): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "svgmap", "table" or "ul"
+(XML Line 000311:22): element "definitions" incomplete; missing required element "dl"
+(XML Line 000312:60): element "definitions" not allowed here; expected element "admonition", "bookmark", "dl", "example", "figure", "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "permission", "pre", "quote", "recommendation", "requirement", "review", "sourcecode", "svgmap", "table" or "ul"
+(XML Line 000318:39): element "definitions" incomplete; missing required element "dl"
+(XML Line 001663:11): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
+(XML Line 001678:15): character content of element "on" invalid; must be a string matching the regular expression "([\+\-]?\d{4})((-?)((0[1-9]|1[0-2])((-?)([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6]))))?"
