@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  pull-requests: write
   contents: write
   pages: write
   id-token: write
@@ -34,7 +35,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           agree-to-terms: true
-
+          destination: artifact
 
   deploy:
     runs-on: ubuntu-latest
