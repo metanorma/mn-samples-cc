@@ -1,6 +1,6 @@
 <bibdata type="standard">
 <title language="en" format="text/plain">Date and time — Explicit representation</title>
-<docidentifier type="CalConnect">CC/FDS 18011:2018</docidentifier><docnumber>18011</docnumber><date type="published"><on>2018-02-10T00:00:00Z</on></date><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="CalConnect">CC/FDS 18011:2018</docidentifier><docnumber>18011</docnumber><date type="published"><on>2018-02-10T00:00:00Z</on></date><contributor><role type="author"/><organization>
 <name>CalConnect</name>
 </organization></contributor><contributor><role type="publisher"/><organization>
 <name>CalConnect</name>

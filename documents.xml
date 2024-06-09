@@ -5,7 +5,7 @@
   <uri type="doc">documents/cc-18011.doc</uri>
   <uri type="html">documents/cc-18011.html</uri>
   <uri type="rxl">documents/cc-18011.rxl</uri>
-  <docidentifier type="CalConnect">CC/FDS 18011:2018</docidentifier>
+  <docidentifier type="CalConnect" primary="true">CC/FDS 18011:2018</docidentifier>
   <docnumber>18011</docnumber>
   <date type="published">
     <on>2018-02-10</on>
