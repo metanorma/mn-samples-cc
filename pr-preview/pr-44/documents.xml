@@ -1,13 +1,16 @@
-<relaton-collection xmlns="https://open.ribose.com/relaton-xml"><title>CalConnect Standards in Metanorma</title><contributor><role type='author'/><organization><name>CalConnect</name></organization></contributor><relation type='partOf'><bibdata type="standard" schema-version="v1.2.9">
-  <title type="main" language="en">Date and time — Explicit representation</title>
+<relaton-collection xmlns="https://open.ribose.com/relaton-xml"><title>CalConnect Standards in Metanorma</title><contributor><role type='author'/><organization><name>CalConnect</name></organization></contributor><relation type='partOf'><bibdata type="standard" schema-version="v1.5.6">
+  <title language="en" type="main">Date and time — Explicit representation</title>
   <uri type="xml">./documents/cc-18011.xml</uri>
   <uri type="pdf">./documents/cc-18011.pdf</uri>
   <uri type="doc">./documents/cc-18011.doc</uri>
   <uri type="html">./documents/cc-18011.html</uri>
   <uri type="rxl">./documents/cc-18011.rxl</uri>
-  <docidentifier type="CalConnect" primary="true">CC/FDS 18011:2018</docidentifier>
+  <docidentifier primary="true" type="CalConnect">CC/FDS 18011:2018</docidentifier>
   <docnumber>18011</docnumber>
   <date type="published">
+    <on>2018-02-10</on>
+  </date>
+  <date type="updated">
     <on>2018-02-10</on>
   </date>
   <contributor>
@@ -22,9 +25,9 @@
     </role>
     <organization>
       <name>CalConnect</name>
-      <subdivision>
-DATETIME
-</subdivision>
+      <subdivision type="Technical committee">
+        <name>DATETIME</name>
+      </subdivision>
     </organization>
   </contributor>
   <contributor>
@@ -34,9 +37,7 @@ DATETIME
     </organization>
   </contributor>
   <edition>1</edition>
-  <version>
-    <revision-date>2018-02-10T00:00:00Z</revision-date>
-  </version>
+  <version>2018-02-10T00:00:00Z</version>
   <language>en</language>
   <script>Latn</script>
   <status>
@@ -50,8 +51,9 @@ DATETIME
       </organization>
     </owner>
   </copyright>
-  <ext schema-version="v1.0.0">
+  <ext schema-version="v1.1.2">
     <doctype>standard</doctype>
+    <flavor>cc</flavor>
   </ext>
 </bibdata></relation>
 </relaton-collection>

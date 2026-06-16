@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.3" schema-version="v2.1.5" flavor="cc">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.8.6" schema-version="v2.1.6" flavor="cc">
 <bibdata type="standard">
 <title language="en" type="main">Date and time — Explicit representation</title>
-<docidentifier primary="true" type="CalConnect">CC/FDS 18011:2018</docidentifier><docnumber>18011</docnumber><date type="published"><on>2018-02-10T00:00:00Z</on></date><contributor><role type="author"/><organization>
+<docidentifier primary="true" type="CalConnect">CC/FDS 18011:2018</docidentifier><docnumber>18011</docnumber><date type="published"><on>2018-02-10T00:00:00Z</on></date><date type="updated"><on>2018-02-10T00:00:00Z</on></date><contributor><role type="author"/><organization>
 <name>CalConnect</name>
 </organization></contributor><contributor><role type="author"><description>committee</description></role><organization>
 <name>CalConnect</name>
@@ -10,7 +10,7 @@
 <name>DATETIME</name>
 </subdivision></organization></contributor><contributor><role type="publisher"/><organization>
 <name>CalConnect</name>
-</organization></contributor><edition>1</edition><version><revision-date>2018-02-10T00:00:00Z</revision-date></version><language>en</language><script>Latn</script><status><stage>final-draft</stage></status><copyright><from>2018</from><owner><organization>
+</organization></contributor><edition>1</edition><version>2018-02-10T00:00:00Z</version><language>en</language><script>Latn</script><status><stage>final-draft</stage></status><copyright><from>2018</from><owner><organization>
 <name>CalConnect</name>
 </organization></owner></copyright><ext><doctype>standard</doctype><flavor>cc</flavor></ext></bibdata>
 <termdocsource bibitemid="ISO8601-1"/><metanorma-extension><semantic-metadata><stage-published>false</stage-published></semantic-metadata>
@@ -79,7 +79,7 @@
 
 <p id="_0bbef31d-ef3d-6c55-ed24-c3d6f25c4425">This document only supports date elements from the Gregorian calendar and times from the 24-hour clock.</p>
 
-<p id="_2614a5d2-2081-085a-3c82-7877b8f75be6">Date and time format representations described in this document utilizes numbers, alphabets and symbols defined in  <eref type="inline" bibitemid="ISOIEC646" citeas="ISO/IEC 646"/>. These representations are meant to be both human recognizable and machine readable. Character encoding of the representations is not covered in this document.</p>
+<p id="_2614a5d2-2081-085a-3c82-7877b8f75be6">Date and time format representations described in this document utilizes numbers, alphabets and symbols defined in  <eref type="inline" bibitemid="ISOIEC646" citeas="ISO/IEC 646:1991"/>. These representations are meant to be both human recognizable and machine readable. Character encoding of the representations is not covered in this document.</p>
 </clause>
 
 
@@ -220,7 +220,7 @@
 </dd>
 <dt anchor="symbol-_W_" id="_a10d1ebf-5f8a-307e-b04d-26cfa77e4d7e">“<tt>W</tt>”</dt><dd id="_5f9a9f08-c298-f584-8fa7-2bf3f847942d"><p id="_503cd863-2056-877b-fa08-1d8987f28f57">the week designator, represented by the character “<tt>W</tt>”, preceding a data element which represents the ordinal number of a calendar week within the calendar year</p>
 </dd>
-<dt anchor="symbol-_x_" id="_b8db11e5-e7bd-e249-d30b-7a1ec6ba0172">“<tt><em>x</em></tt>”</dt><dd id="_a2d59a87-2c23-153d-c5c5-8b1019c3b9df"><p id="_4090f8d9-f9c1-27eb-d2ab-1ac5c556ee6e">the representation of any character “<tt><em>x</em></tt>” as according to the textual representation of “<tt><em>x</em></tt>” in the <eref type="inline" bibitemid="ISOIEC646" citeas="ISO/IEC 646"/> repertoire</p>
+<dt anchor="symbol-_x_" id="_b8db11e5-e7bd-e249-d30b-7a1ec6ba0172">“<tt><em>x</em></tt>”</dt><dd id="_a2d59a87-2c23-153d-c5c5-8b1019c3b9df"><p id="_4090f8d9-f9c1-27eb-d2ab-1ac5c556ee6e">the representation of any character “<tt><em>x</em></tt>” as according to the textual representation of “<tt><em>x</em></tt>” in the <eref type="inline" bibitemid="ISOIEC646" citeas="ISO/IEC 646:1991"/> repertoire</p>
 </dd>
 <dt anchor="symbol-_Y_" id="_ab6e15df-db7f-2658-2036-43fe3faa4daf">“<tt>Y</tt>”</dt><dd id="_2a1190c1-f74e-1c55-125f-dc1887da3059"><p id="_67e82076-e0f1-479d-70ff-6c19336d2e34">the year designator, represented by the character “<tt>Y</tt>”, preceding a data element which represents the number of years</p>
 </dd>
@@ -1619,25 +1619,37 @@
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-1)</note><language>en</language><script>Latn</script>
 </bibitem>
-</references><references id="_dce8c770-4781-a5ab-fe77-b7d2f33b3a98" normative="false" obligation="informative">
-<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_ce710290-f85a-d2e2-972d-7c8f02473b00" type="standard" schema-version="v1.2.9" anchor="ISOIEC646">
-  <fetched>2026-04-16</fetched>
+</references><references id="_ce8fc661-654e-57d4-428e-3587c673cf90" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_38bb8559-c501-7fe0-bee3-6f570876a004" type="standard" schema-version="v1.5.6" anchor="ISOIEC646">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-intro" format="text/plain" language="en" script="Latn">Information technology</title>
+<title language="en" script="Latn" type="title-intro">Information technology</title>
 
   
-<title type="title-main" format="text/plain" language="en" script="Latn">ISO 7-bit coded character set for information interchange</title>
+<title language="en" script="Latn" type="title-main">ISO 7-bit coded character set for information interchange</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">Information technology — ISO 7-bit coded character set for information interchange</title>
+<title language="en" script="Latn" type="main">Information technology — ISO 7-bit coded character set for information interchange</title>
+
+  
+<title language="fr" script="Latn" type="title-intro">Technologies de l’information</title>
+
+  
+<title language="fr" script="Latn" type="title-main">Jeu ISO de caractères codés à 7 éléments pour l’échange d’information</title>
+
+  
+<title language="fr" script="Latn" type="main">Technologies de l’information — Jeu ISO de caractères codés à 7 éléments pour l’échange d’information</title>
 
   <uri type="src">https://www.iso.org/standard/4777.html</uri>
   <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:4777:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/00/47/4777.detail.rss</uri>
-  <docidentifier type="ISO" primary="true">ISO/IEC 646</docidentifier>
-  <docidentifier type="iso-reference">ISO/IEC 646(E)</docidentifier>
+  <docidentifier type="ISO" primary="true">ISO/IEC 646:1991</docidentifier>
+  <docidentifier type="iso-reference">ISO/IEC 646:1991(E)</docidentifier>
   <docidentifier type="URN">urn:iso:std:iso-iec:646:stage-90.93</docidentifier>
   <docnumber>646</docnumber>
+  <date type="published">
+    <on>1991-12-16</on>
+  </date>
   <contributor>
     <role type="publisher"/>
     <organization>
@@ -1658,10 +1670,27 @@
       <uri>www.iec.ch</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="IEC">
+        
+<name>Coded character sets</name>
+
+        <identifier>ISO/IEC JTC 1/SC 2</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>3</edition>
   <language>en</language>
-  <language>fr</language>
   <script>Latn</script>
+  <abstract language="en" script="Latn">Specifies a set of 128 control and graphic characters such as letters, digits and symbols with their coded representation. Applies to alphabets of the Latin script.</abstract>
   <status>
     <stage>90</stage>
     <substage>93</substage>
@@ -1677,111 +1706,53 @@
     </owner>
   </copyright>
   <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 646:1983</formattedref>
+    <bibitem>
+      <formattedref>ISO 646:1983</formattedref>
       <docidentifier type="ISO" primary="true">ISO 646:1983</docidentifier>
-    </bibitem>
-
-  </relation>
-  <relation type="instanceOf">
-    <bibitem type="standard">
-      <fetched>2026-04-16</fetched>
-      
-<title type="title-intro" format="text/plain" language="en" script="Latn">Information technology</title>
-
-      
-<title type="title-main" format="text/plain" language="en" script="Latn">ISO 7-bit coded character set for information interchange</title>
-
-      
-<title type="main" format="text/plain" language="en" script="Latn">Information technology — ISO 7-bit coded character set for information interchange</title>
-
-      <uri type="src">https://www.iso.org/standard/4777.html</uri>
-      <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:4777:en</uri>
-      <uri type="rss">https://www.iso.org/contents/data/standard/00/47/4777.detail.rss</uri>
-      <docidentifier type="ISO" primary="true">ISO/IEC 646:1991</docidentifier>
-      <docidentifier type="iso-reference">ISO/IEC 646:1991(E)</docidentifier>
-      <docidentifier type="URN">urn:iso:std:iso-iec:646:stage-90.93</docidentifier>
-      <docnumber>646</docnumber>
       <date type="published">
-        <on>1991-12</on>
+        <on>1983-07-01</on>
       </date>
-      <contributor>
-        <role type="publisher"/>
-        <organization>
-          
-<name>International Organization for Standardization</name>
-
-          <abbreviation>ISO</abbreviation>
-          <uri>www.iso.org</uri>
-        </organization>
-      </contributor>
-      <contributor>
-        <role type="publisher"/>
-        <organization>
-          
-<name>International Electrotechnical Commission</name>
-
-          <abbreviation>IEC</abbreviation>
-          <uri>www.iec.ch</uri>
-        </organization>
-      </contributor>
-      <edition>3</edition>
-      <language>en</language>
-      <language>fr</language>
-      <script>Latn</script>
-      <abstract format="text/plain" language="en" script="Latn">Specifies a set of 128 control and graphic characters such as letters, digits and symbols with their coded representation. Applies to alphabets of the Latin script.</abstract>
-      <status>
-        <stage>90</stage>
-        <substage>93</substage>
-      </status>
-      <copyright>
-        <from>1991</from>
-        <owner>
-          <organization>
-            
-<name>ISO/IEC</name>
-
-          </organization>
-        </owner>
-      </copyright>
-      <relation type="obsoletes">
-        <bibitem type="standard">
-          <formattedref format="text/plain">ISO 646:1983</formattedref>
-          <docidentifier type="ISO" primary="true">ISO 646:1983</docidentifier>
-        </bibitem>
-
-      </relation>
-      <place>
-        <city>Geneva</city>
-      </place>
     </bibitem>
 
   </relation>
   <place>
     <city>Geneva</city>
   </place>
-</bibitem><bibitem id="_de0d29cd-b017-424b-d024-06df78364c9d" type="standard" schema-version="v1.2.9" anchor="ISO8601">
-  <fetched>2026-04-16</fetched>
+</bibitem><bibitem id="_9d4799d0-cac6-eca5-f828-99664a337627" type="standard" schema-version="v1.5.6" anchor="ISO8601">
+  <fetched>2026-06-16</fetched>
   
-<title type="title-intro" format="text/plain" language="en" script="Latn">Data elements and interchange formats</title>
+<title language="en" script="Latn" type="title-intro">Data elements and interchange formats</title>
 
   
-<title type="title-main" format="text/plain" language="en" script="Latn">Information interchange</title>
+<title language="en" script="Latn" type="title-main">Information interchange</title>
 
   
-<title type="title-part" format="text/plain" language="en" script="Latn">Representation of dates and times</title>
+<title language="en" script="Latn" type="title-part">Representation of dates and times</title>
 
   
-<title type="main" format="text/plain" language="en" script="Latn">Data elements and interchange formats — Information interchange — Representation of dates and times</title>
+<title language="en" script="Latn" type="main">Data elements and interchange formats — Information interchange — Representation of dates and times</title>
+
+  
+<title language="fr" script="Latn" type="title-intro">Éléments de données et formats d’échange</title>
+
+  
+<title language="fr" script="Latn" type="title-main">Échange d’information</title>
+
+  
+<title language="fr" script="Latn" type="title-part">Représentation de la date et de l’heure</title>
+
+  
+<title language="fr" script="Latn" type="main">Éléments de données et formats d’échange — Échange d’information — Représentation de la date et de l’heure</title>
 
   <uri type="src">https://www.iso.org/standard/40874.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:40874:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/04/08/40874.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO 8601:2004</docidentifier>
   <docidentifier type="iso-reference">ISO 8601:2004(E)</docidentifier>
   <docidentifier type="URN">urn:iso:std:iso:8601:stage-95.99</docidentifier>
   <docnumber>8601</docnumber>
   <date type="published">
-    <on>2004-12</on>
+    <on>2004-12-03</on>
   </date>
   <contributor>
     <role type="publisher"/>
@@ -1793,22 +1764,27 @@
       <uri>www.iso.org</uri>
     </organization>
   </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Processes, data elements and documents in commerce, industry and administration</name>
+
+        <identifier>ISO/TC 154</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
   <edition>3</edition>
   <language>en</language>
-  <language>fr</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">ISO 8601:2004 is applicable whenever representation of dates in the Gregorian calendar, times in the 24-hour timekeeping system, time intervals and recurring time intervals or of the formats of these representations are included in information interchange. It includes
-- calendar dates expressed in terms of calendar year, calendar month and calendar day of the month;
-- ordinal dates expressed in terms of calendar year and calendar day of the year;
-- week dates expressed in terms of calendar year, calendar week number and calendar day of the week;
-- local time based upon the 24-hour timekeeping system;
-- Coordinated Universal Time of day;
-- local time and the difference from Coordinated Universal Time;
-- combination of date and time of day;
-- time intervals;
-- recurring time intervals.
-ISO 8601:2004 does not cover dates and times where words are used in the representation and dates and times where characters are not used in the representation.
-ISO 8601:2004 does not assign any particular meaning or interpretation to any data element that uses representations in accordance with ISO 8601:2004. Such meaning will be determined by the context of the application.</abstract>
+  <abstract language="en" script="Latn">ISO 8601:2004 is applicable whenever representation of dates in the Gregorian calendar, times in the 24-hour timekeeping system, time intervals and recurring time intervals or of the formats of these representations are included in information interchange. It includes calendar dates expressed in terms of calendar year, calendar month and calendar day of the month;ordinal dates expressed in terms of calendar year and calendar day of the year;week dates expressed in terms of calendar year, calendar week number and calendar day of the week;local time based upon the 24-hour timekeeping system;Coordinated Universal Time of day;local time and the difference from Coordinated Universal Time;combination of date and time of day;time intervals;recurring time intervals. ISO 8601:2004 does not cover dates and times where words are used in the representation and dates and times where characters are not used in the representation. ISO 8601:2004 does not assign any particular meaning or interpretation to any data element that uses representations in accordance with ISO 8601:2004. Such meaning will be determined by the context of the application.</abstract>
   <status>
     <stage>95</stage>
     <substage>99</substage>
@@ -1824,28 +1800,11 @@ ISO 8601:2004 does not assign any particular meaning or interpretation to any da
     </owner>
   </copyright>
   <relation type="obsoletes">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 8601:2000</formattedref>
+    <bibitem>
+      <formattedref>ISO 8601:2000</formattedref>
       <docidentifier type="ISO" primary="true">ISO 8601:2000</docidentifier>
-    </bibitem>
-
-  </relation>
-  <relation type="updates">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 8601-1:2019</formattedref>
-      <docidentifier type="ISO" primary="true">ISO 8601-1:2019</docidentifier>
-      <date type="circulated">
-        <on>2019-02-25</on>
-      </date>
-    </bibitem>
-
-  </relation>
-  <relation type="updates">
-    <bibitem type="standard">
-      <formattedref format="text/plain">ISO 8601-2:2019</formattedref>
-      <docidentifier type="ISO" primary="true">ISO 8601-2:2019</docidentifier>
-      <date type="circulated">
-        <on>2019-02-25</on>
+      <date type="published">
+        <on>2000-12-21</on>
       </date>
     </bibitem>
 
@@ -1858,10 +1817,10 @@ ISO 8601:2004 does not assign any particular meaning or interpretation to any da
 <docidentifier type="ISO">ISO 8601-2:—</docidentifier><docnumber>8601-2</docnumber><date type="published"><on>–</on></date><contributor><role type="publisher"/><organization>
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-2)</note><language>en</language><script>Latn</script>
-</bibitem><bibitem id="_7bd72aac-02c2-b09b-db92-72b47ff54db7" type="standard" schema-version="v1.2.9" anchor="RFC5545">
-  <fetched>2026-04-16</fetched>
+</bibitem><bibitem id="_e708b661-c052-2fd3-05b5-bf4113ac2b6c" type="standard" schema-version="v1.5.6" anchor="RFC5545">
+  <fetched>2026-06-16</fetched>
   
-<title type="main" format="text/plain">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
+<title type="main">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
 
   <uri type="src">https://www.rfc-editor.org/info/rfc5545</uri>
   <docidentifier type="IETF" primary="true">RFC 5545</docidentifier>
@@ -1874,7 +1833,7 @@ ISO 8601:2004 does not assign any particular meaning or interpretation to any da
     <role type="editor"/>
     <person>
       
-<name>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">B.</formatted-initials>          <surname language="en" script="Latn">Desruisseaux</surname>          <completename language="en" script="Latn">B. Desruisseaux</completename>       </name>
 
     </person>
   </contributor>
@@ -1882,7 +1841,7 @@ ISO 8601:2004 does not assign any particular meaning or interpretation to any da
     <role type="publisher"/>
     <organization>
       
-<name>RFC Publisher</name>
+<name language="en">RFC Publisher</name>
 
     </organization>
   </contributor>
@@ -1890,53 +1849,117 @@ ISO 8601:2004 does not assign any particular meaning or interpretation to any da
     <role type="authorizer"/>
     <organization>
       
-<name>RFC Series</name>
+<name language="en">RFC Series</name>
 
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name language="en">Internet Engineering Task Force</name>
+
+      <subdivision type="workgroup">
+        
+<name>Calendaring and Scheduling Standards Simplification</name>
+
+        <identifier>calsify</identifier>
+      </subdivision>
+      <abbreviation language="en">IETF</abbreviation>
     </organization>
   </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
+  <abstract language="en" script="Latn">
     <p id="_7d661199-40a0-635e-69af-c3a7f24aea1b">This document defines the iCalendar data format for representing and exchanging calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information, independent of any particular calendar service or protocol. [STANDARDS-TRACK]</p>
 
   </abstract>
+  <status>
+    <stage>PROPOSED STANDARD</stage>
+  </status>
   <series>
     
-<title format="text/plain">RFC</title>
+<title>RFC</title>
 
     <number>5545</number>
   </series>
   <series type="stream">
     
-<title format="text/plain">IETF</title>
+<title>IETF</title>
 
   </series>
-  <keyword>calsify</keyword>
-  <keyword>calsched</keyword>
-  <keyword>calsch</keyword>
-  <keyword>caldav</keyword>
-  <keyword>calendar</keyword>
-  <keyword>calendaring</keyword>
-  <keyword>meeting</keyword>
-  <keyword>event</keyword>
-  <keyword>task</keyword>
-  <keyword>to-do</keyword>
-  <keyword>journal</keyword>
-  <keyword>appointment</keyword>
-  <keyword>agenda</keyword>
-  <keyword>schedule</keyword>
-  <keyword>scheduling</keyword>
-  <keyword>ical</keyword>
-  <keyword>icalendar</keyword>
-  <keyword>itip</keyword>
-  <keyword>imip</keyword>
-  <keyword>text/calendar</keyword>
-  <keyword>ischedule</keyword>
-  <keyword>xCalendar</keyword>
-</bibitem><bibitem id="_40366380-ee1c-6322-8eb9-05c40ea68085" type="standard" schema-version="v1.2.9" anchor="RFC6350">
-  <fetched>2026-04-16</fetched>
+  <keyword>
+    <vocab>calsify</vocab>
+  </keyword>
+  <keyword>
+    <vocab>calsched</vocab>
+  </keyword>
+  <keyword>
+    <vocab>calsch</vocab>
+  </keyword>
+  <keyword>
+    <vocab>caldav</vocab>
+  </keyword>
+  <keyword>
+    <vocab>calendar</vocab>
+  </keyword>
+  <keyword>
+    <vocab>calendaring</vocab>
+  </keyword>
+  <keyword>
+    <vocab>meeting</vocab>
+  </keyword>
+  <keyword>
+    <vocab>event</vocab>
+  </keyword>
+  <keyword>
+    <vocab>task</vocab>
+  </keyword>
+  <keyword>
+    <vocab>to-do</vocab>
+  </keyword>
+  <keyword>
+    <vocab>journal</vocab>
+  </keyword>
+  <keyword>
+    <vocab>appointment</vocab>
+  </keyword>
+  <keyword>
+    <vocab>agenda</vocab>
+  </keyword>
+  <keyword>
+    <vocab>schedule</vocab>
+  </keyword>
+  <keyword>
+    <vocab>scheduling</vocab>
+  </keyword>
+  <keyword>
+    <vocab>ical</vocab>
+  </keyword>
+  <keyword>
+    <vocab>icalendar</vocab>
+  </keyword>
+  <keyword>
+    <vocab>itip</vocab>
+  </keyword>
+  <keyword>
+    <vocab>imip</vocab>
+  </keyword>
+  <keyword>
+    <vocab>text/calendar</vocab>
+  </keyword>
+  <keyword>
+    <vocab>ischedule</vocab>
+  </keyword>
+  <keyword>
+    <vocab>xCalendar</vocab>
+  </keyword>
+</bibitem><bibitem id="_4d457357-85e5-27bc-a05f-08b7e5ec75ea" type="standard" schema-version="v1.5.6" anchor="RFC6350">
+  <fetched>2026-06-16</fetched>
   
-<title type="main" format="text/plain">vCard Format Specification</title>
+<title type="main">vCard Format Specification</title>
 
   <uri type="src">https://www.rfc-editor.org/info/rfc6350</uri>
   <docidentifier type="IETF" primary="true">RFC 6350</docidentifier>
@@ -1949,7 +1972,7 @@ ISO 8601:2004 does not assign any particular meaning or interpretation to any da
     <role type="author"/>
     <person>
       
-<name>          <completename language="en" script="Latn">S. Perreault</completename>       </name>
+<name>                    <formatted-initials language="en" script="Latn">S.</formatted-initials>          <surname language="en" script="Latn">Perreault</surname>          <completename language="en" script="Latn">S. Perreault</completename>       </name>
 
     </person>
   </contributor>
@@ -1957,7 +1980,7 @@ ISO 8601:2004 does not assign any particular meaning or interpretation to any da
     <role type="publisher"/>
     <organization>
       
-<name>RFC Publisher</name>
+<name language="en">RFC Publisher</name>
 
     </organization>
   </contributor>
@@ -1965,35 +1988,57 @@ ISO 8601:2004 does not assign any particular meaning or interpretation to any da
     <role type="authorizer"/>
     <organization>
       
-<name>RFC Series</name>
+<name language="en">RFC Series</name>
 
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name language="en">Internet Engineering Task Force</name>
+
+      <subdivision type="workgroup">
+        
+<name>vCard and CardDAV</name>
+
+        <identifier>vcarddav</identifier>
+      </subdivision>
+      <abbreviation language="en">IETF</abbreviation>
     </organization>
   </contributor>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/html" language="en" script="Latn">
-    <p id="_afa7d3cf-2c56-756c-1e8b-ec8852d29e5b">This document defines the vCard data format for representing and exchanging a variety of information about individuals and other entities (e.g., formatted and structured name and delivery addresses, email address, multiple telephone numbers, photograph, logo, audio clips, etc.). This document obsoletes RFCs 2425, 2426, and 4770, and updates RFC 2739. [STANDARDS-TRACK]</p>
+  <abstract language="en" script="Latn">
+    <p id="_6bca243d-65fd-d537-4634-b82a658cb3fb">This document defines the vCard data format for representing and exchanging a variety of information about individuals and other entities (e.g., formatted and structured name and delivery addresses, email address, multiple telephone numbers, photograph, logo, audio clips, etc.).  This document obsoletes RFCs 2425, 2426, and 4770, and updates RFC 2739. [STANDARDS-TRACK]</p>
 
   </abstract>
+  <status>
+    <stage>PROPOSED STANDARD</stage>
+  </status>
   <relation type="updates">
     <bibitem>
-      <formattedref format="text/plain">RFC2739</formattedref>
+      <formattedref>RFC2739</formattedref>
       <docidentifier type="IETF" primary="true">RFC2739</docidentifier>
     </bibitem>
 
   </relation>
   <series>
     
-<title format="text/plain">RFC</title>
+<title>RFC</title>
 
     <number>6350</number>
   </series>
   <series type="stream">
     
-<title format="text/plain">IETF</title>
+<title>IETF</title>
 
   </series>
-  <keyword>vCard</keyword>
+  <keyword>
+    <vocab>vCard</vocab>
+  </keyword>
 </bibitem>
 
 
