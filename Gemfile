@@ -1,9 +1,16 @@
 source "https://rubygems.org"
 
-gem "metanorma-cli"
+gem "metanorma-cli", github: "metanorma/metanorma-cli", branch: "main"
 gem "relaton", "= 3.0.0.pre.alpha.11"
-gem "relaton-render", "= 3.0.0.pre.alpha.19"
-gem "relaton-bib", "2.2.0.pre.alpha.1"
+gem "relaton-render", "~> 3.0.0.pre.alpha"
 gem "pubid", github: "pubid/pubid", branch: "main"
 gem "moxml", github: "lutaml/moxml", branch: "main"
 gem "leptris", "1.9.317"
+
+# released standoc caps relaton-cli ~> 2.1 against cli 3.0.0.pre floor; main carries the widened floors
+gem "metanorma-standoc", github: "metanorma/metanorma-standoc", branch: "main"
+# released suma pins svg_conform ~> 0.1.0 vs standoc main (suma#127)
+gem "suma", github: "metanorma/suma", branch: "main"
+
+# pre-release line pins (see metanorma release wave)
+gem "isodoc", github: "metanorma/isodoc", branch: "main"
