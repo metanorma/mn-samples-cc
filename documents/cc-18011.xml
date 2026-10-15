@@ -1619,9 +1619,9 @@
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-1)</note><language>en</language><script>Latn</script>
 </bibitem>
-</references><references id="_83e13024-66dd-6e11-6306-b94da932b645" normative="false" obligation="informative">
-<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_6f036588-304c-1fea-457c-e42fab460833" type="standard" schema-version="v1.5.6" anchor="ISOIEC646">
-  <fetched>2026-10-08</fetched>
+</references><references id="_f07a28ff-de6a-6b79-ac2c-731436837bb2" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_2f33c882-2bfe-81ff-cbd5-584605620594" type="standard" schema-version="v1.5.6" anchor="ISOIEC646">
+  <fetched>2026-10-15</fetched>
   
 <title language="en" script="Latn" type="title-intro">Information technology</title>
 
@@ -1817,8 +1817,8 @@
   <place>
     <city>Geneva</city>
   </place>
-</bibitem><bibitem id="_0bf6ebad-18c4-2248-6aeb-c55a7790d1ce" type="standard" schema-version="v1.5.6" anchor="ISO8601">
-  <fetched>2026-10-08</fetched>
+</bibitem><bibitem id="_b466592a-dbec-a7e8-a4e2-d8e85e681374" type="standard" schema-version="v1.5.6" anchor="ISO8601">
+  <fetched>2026-10-15</fetched>
   
 <title language="en" script="Latn" type="title-intro">Data elements and interchange formats</title>
 
@@ -1917,8 +1917,8 @@
 <docidentifier type="ISO">ISO 8601-2:—</docidentifier><docnumber>8601-2</docnumber><date type="published"><on>–</on></date><contributor><role type="publisher"/><organization>
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-2)</note><language>en</language><script>Latn</script>
-</bibitem><bibitem id="_f1c3ac31-60c1-2a4c-5a00-f896682dd6c6" type="standard" schema-version="v1.5.6" anchor="RFC5545">
-  <fetched>2026-10-08</fetched>
+</bibitem><bibitem id="_36729a54-b10e-d08f-6bf9-d75644e84c50" type="standard" schema-version="v1.5.6" anchor="RFC5545">
+  <fetched>2026-10-15</fetched>
   
 <title type="main">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
 
@@ -2056,8 +2056,8 @@
   <keyword>
     <vocab>xCalendar</vocab>
   </keyword>
-</bibitem><bibitem id="_b53b623b-1f7f-d929-387b-320ee4659577" type="standard" schema-version="v1.5.6" anchor="RFC6350">
-  <fetched>2026-10-08</fetched>
+</bibitem><bibitem id="_ace02f85-4f52-37a4-1acc-80b880954347" type="standard" schema-version="v1.5.6" anchor="RFC6350">
+  <fetched>2026-10-15</fetched>
   
 <title type="main">vCard Format Specification</title>
 

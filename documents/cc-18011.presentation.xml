@@ -1658,16 +1658,16 @@ sourcecode .nt {
 
 <references id="_35f0496e-ff1f-f437-b1f5-7d8ab5b38a55" normative="true" obligation="informative" semx-id="_35f0496e-ff1f-f437-b1f5-7d8ab5b38a55" displayorder="6">
 <title id="_2729fe07-7dff-c600-662b-6fb2131af0a8" semx-id="_270c5ee6-077e-f285-ff95-287984a30140">Normative references</title><fmt-title depth="1" id="_8ae07c40-3f7a-a9d4-c024-e3f32fff76f5"><span class="fmt-caption-label"><semx element="autonum" source="_35f0496e-ff1f-f437-b1f5-7d8ab5b38a55">2</semx><span class="fmt-clause-delim">.</span></span><span class="fmt-caption-delim"><tab/></span><semx element="title" source="_2729fe07-7dff-c600-662b-6fb2131af0a8">Normative references</semx></fmt-title><fmt-xref-label><span class="fmt-element-name">Clause</span> <semx element="autonum" source="_35f0496e-ff1f-f437-b1f5-7d8ab5b38a55">2</semx></fmt-xref-label><p id="_49996d2b-65c1-916b-9bbf-42b933aa0025" semx-id="_49996d2b-65c1-916b-9bbf-42b933aa0025">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
-<bibitem anchor="ISO8601-1" id="ISO8601-1" type="standard" semx-id="_3337311c-085b-8a73-b4a4-e4af30c7eb0f"><biblio-tag>ISO 8601-1:—<fn id="_783338be-efe6-9861-52e3-427cbaa4d4fd" reference="1" original-reference="_7fdd7f46-c763-4bf4-9bd2-4b3ae0bc8de7" target="_86dc021e-7a15-5857-1dec-d7971b2c63ac"><p>Under preparation. (Stage at the time of publication ISO/FDIS 8601-1)</p><fmt-fn-label><span class="fmt-caption-label"><sup><semx element="autonum" source="_783338be-efe6-9861-52e3-427cbaa4d4fd">1</semx></sup></span></fmt-fn-label></fn>
+<bibitem anchor="ISO8601-1" id="ISO8601-1" type="standard" semx-id="_3337311c-085b-8a73-b4a4-e4af30c7eb0f"><biblio-tag>ISO 8601-1:—<fn id="_783338be-efe6-9861-52e3-427cbaa4d4fd" reference="1" original-reference="_9532f747-832c-4679-9d14-421fedd6a181" target="_86dc021e-7a15-5857-1dec-d7971b2c63ac"><p>Under preparation. (Stage at the time of publication ISO/FDIS 8601-1)</p><fmt-fn-label><span class="fmt-caption-label"><sup><semx element="autonum" source="_783338be-efe6-9861-52e3-427cbaa4d4fd">1</semx></sup></span></fmt-fn-label></fn>
 , </biblio-tag><formattedref>ISO. <em>Date and time — Representation for information interchange — Part 1: Basic rules</em>.</formattedref>
 <title format="text/plain">Date and time — Representation for information interchange — Part 1: Basic rules</title>
 <docidentifier type="ISO">ISO 8601-1:—</docidentifier><docidentifier scope="biblio-tag">ISO 8601-1:—</docidentifier><docnumber>8601-1</docnumber><date type="published"><on>–</on></date><contributor><role type="publisher"/><organization>
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-1)</note><language>en</language><script>Latn</script>
 </bibitem>
-</references></sections><bibliography><references id="_83e13024-66dd-6e11-6306-b94da932b645" normative="false" obligation="informative" semx-id="_83e13024-66dd-6e11-6306-b94da932b645" displayorder="13">
-<title id="_b1bae69f-7769-efdd-3091-a594f21e3d01" semx-id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><fmt-title depth="1" id="_ef643f91-fb9d-1009-60be-079b7f598293"><semx element="title" source="_b1bae69f-7769-efdd-3091-a594f21e3d01">Bibliography</semx></fmt-title><bibitem id="ISOIEC646" type="standard" schema-version="v1.5.6" anchor="ISOIEC646" semx-id="_6f036588-304c-1fea-457c-e42fab460833"><biblio-tag>[1]<tab/>ISO/IEC 646, </biblio-tag><formattedref>International Organization for Standardization (committee). <em>Information technology — ISO 7-bit coded character set for information interchange</em>. Third edition. Geneva: International Organization for Standardization and International Electrotechnical Commission. <fmt-link target="https://www.iso.org/standard/4777.html">https://www.iso.org/standard/4777.html</fmt-link>.</formattedref>
-  <fetched>2026-10-08</fetched>
+</references></sections><bibliography><references id="_f07a28ff-de6a-6b79-ac2c-731436837bb2" normative="false" obligation="informative" semx-id="_f07a28ff-de6a-6b79-ac2c-731436837bb2" displayorder="13">
+<title id="_b1bae69f-7769-efdd-3091-a594f21e3d01" semx-id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><fmt-title depth="1" id="_ef643f91-fb9d-1009-60be-079b7f598293"><semx element="title" source="_b1bae69f-7769-efdd-3091-a594f21e3d01">Bibliography</semx></fmt-title><bibitem id="ISOIEC646" type="standard" schema-version="v1.5.6" anchor="ISOIEC646" semx-id="_2f33c882-2bfe-81ff-cbd5-584605620594"><biblio-tag>[1]<tab/>ISO/IEC 646, </biblio-tag><formattedref>International Organization for Standardization (committee). <em>Information technology — ISO 7-bit coded character set for information interchange</em>. Third edition. Geneva: International Organization for Standardization and International Electrotechnical Commission. <fmt-link target="https://www.iso.org/standard/4777.html">https://www.iso.org/standard/4777.html</fmt-link>.</formattedref>
+  <fetched>2026-10-15</fetched>
   
 <title language="en" script="Latn" type="title-intro">Information technology</title>
 
@@ -1863,8 +1863,8 @@ sourcecode .nt {
   <place>
     <city>Geneva</city>
   </place>
-</bibitem><bibitem id="ISO8601" type="standard" schema-version="v1.5.6" anchor="ISO8601" semx-id="_0bf6ebad-18c4-2248-6aeb-c55a7790d1ce"><biblio-tag>[2]<tab/>ISO 8601:2004, </biblio-tag><formattedref>International Organization for Standardization (committee). <em>Data elements and interchange formats — Information interchange — Representation of dates and times</em>. Third edition. 2004. Geneva: International Organization for Standardization. <fmt-link target="https://www.iso.org/standard/40874.html">https://www.iso.org/standard/40874.html</fmt-link>.</formattedref>
-  <fetched>2026-10-08</fetched>
+</bibitem><bibitem id="ISO8601" type="standard" schema-version="v1.5.6" anchor="ISO8601" semx-id="_b466592a-dbec-a7e8-a4e2-d8e85e681374"><biblio-tag>[2]<tab/>ISO 8601:2004, </biblio-tag><formattedref>International Organization for Standardization (committee). <em>Data elements and interchange formats — Information interchange — Representation of dates and times</em>. Third edition. 2004. Geneva: International Organization for Standardization. <fmt-link target="https://www.iso.org/standard/40874.html">https://www.iso.org/standard/40874.html</fmt-link>.</formattedref>
+  <fetched>2026-10-15</fetched>
   
 <title language="en" script="Latn" type="title-intro">Data elements and interchange formats</title>
 
@@ -1958,14 +1958,14 @@ sourcecode .nt {
   <place>
     <city>Geneva</city>
   </place>
-</bibitem><bibitem anchor="ISO8601-2" id="ISO8601-2" type="standard" semx-id="_4f51fa62-d485-84e9-03c3-63d3fbe47a72"><biblio-tag>[3]<fn id="_43479172-53fb-82cc-3600-4d1ea68820c4" reference="2" original-reference="_859dc8ab-101f-4529-9fe6-c691ab081bff" target="_24dfc98e-b00a-c6cd-a40d-d98b030fcd3e"><p>Under preparation. (Stage at the time of publication ISO/FDIS 8601-2)</p><fmt-fn-label><span class="fmt-caption-label"><sup><semx element="autonum" source="_43479172-53fb-82cc-3600-4d1ea68820c4">2</semx></sup></span></fmt-fn-label></fn>
+</bibitem><bibitem anchor="ISO8601-2" id="ISO8601-2" type="standard" semx-id="_4f51fa62-d485-84e9-03c3-63d3fbe47a72"><biblio-tag>[3]<fn id="_43479172-53fb-82cc-3600-4d1ea68820c4" reference="2" original-reference="_99661bd0-434a-42ce-a26d-fd4ddac5835c" target="_24dfc98e-b00a-c6cd-a40d-d98b030fcd3e"><p>Under preparation. (Stage at the time of publication ISO/FDIS 8601-2)</p><fmt-fn-label><span class="fmt-caption-label"><sup><semx element="autonum" source="_43479172-53fb-82cc-3600-4d1ea68820c4">2</semx></sup></span></fmt-fn-label></fn>
 <tab/>ISO 8601-2:—, </biblio-tag><formattedref>ISO. <em>Date and time — Representation for information interchange — Part 2: Extensions</em>.</formattedref>
 <title format="text/plain">Date and time — Representation for information interchange — Part 2: Extensions</title><docidentifier type="metanorma-ordinal">[3]</docidentifier>
 <docidentifier type="ISO">ISO 8601-2:—</docidentifier><docidentifier scope="biblio-tag">ISO 8601-2:—</docidentifier><docnumber>8601-2</docnumber><date type="published"><on>–</on></date><contributor><role type="publisher"/><organization>
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-2)</note><language>en</language><script>Latn</script>
-</bibitem><bibitem id="RFC5545" type="standard" schema-version="v1.5.6" anchor="RFC5545" semx-id="_f1c3ac31-60c1-2a4c-5a00-f896682dd6c6"><biblio-tag>[4]<tab/>IETF RFC 5545, </biblio-tag><formattedref>Internet Engineering Task Force (committee). <em>Internet Calendaring and Scheduling Core Object Specification (iCalendar)</em>. 2009. RFC Publisher. <fmt-link target="https://www.rfc-editor.org/info/rfc5545">https://www.rfc-editor.org/info/rfc5545</fmt-link>.</formattedref>
-  <fetched>2026-10-08</fetched>
+</bibitem><bibitem id="RFC5545" type="standard" schema-version="v1.5.6" anchor="RFC5545" semx-id="_36729a54-b10e-d08f-6bf9-d75644e84c50"><biblio-tag>[4]<tab/>IETF RFC 5545, </biblio-tag><formattedref>Internet Engineering Task Force (committee). <em>Internet Calendaring and Scheduling Core Object Specification (iCalendar)</em>. 2009. RFC Publisher. <fmt-link target="https://www.rfc-editor.org/info/rfc5545">https://www.rfc-editor.org/info/rfc5545</fmt-link>.</formattedref>
+  <fetched>2026-10-15</fetched>
   
 <title type="main">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
 
@@ -2103,8 +2103,8 @@ sourcecode .nt {
   <keyword>
     <vocab>xCalendar</vocab>
   </keyword>
-</bibitem><bibitem id="RFC6350" type="standard" schema-version="v1.5.6" anchor="RFC6350" semx-id="_b53b623b-1f7f-d929-387b-320ee4659577"><biblio-tag>[5]<tab/>IETF RFC 6350, </biblio-tag><formattedref>PERREAULT, S. and Internet Engineering Task Force. <em>vCard Format Specification</em>. 2011. RFC Publisher. <fmt-link target="https://www.rfc-editor.org/info/rfc6350">https://www.rfc-editor.org/info/rfc6350</fmt-link>.</formattedref>
-  <fetched>2026-10-08</fetched>
+</bibitem><bibitem id="RFC6350" type="standard" schema-version="v1.5.6" anchor="RFC6350" semx-id="_ace02f85-4f52-37a4-1acc-80b880954347"><biblio-tag>[5]<tab/>IETF RFC 6350, </biblio-tag><formattedref>PERREAULT, S. and Internet Engineering Task Force. <em>vCard Format Specification</em>. 2011. RFC Publisher. <fmt-link target="https://www.rfc-editor.org/info/rfc6350">https://www.rfc-editor.org/info/rfc6350</fmt-link>.</formattedref>
+  <fetched>2026-10-15</fetched>
   
 <title type="main">vCard Format Specification</title>
 
