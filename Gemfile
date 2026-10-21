@@ -5,7 +5,6 @@ gem "relaton", "= 3.0.0.pre.alpha.11"
 gem "relaton-render", "~> 3.0.0.pre.alpha"
 gem "pubid", github: "pubid/pubid", branch: "main"
 gem "moxml", github: "lutaml/moxml", branch: "main"
-gem "leptris", "1.9.317"
 
 # released standoc caps relaton-cli ~> 2.1 against cli 3.0.0.pre floor; main carries the widened floors
 gem "metanorma-standoc", github: "metanorma/metanorma-standoc", branch: "main"
