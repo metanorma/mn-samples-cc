@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/lutaml/moxml.git
-  revision: e1436d10e115092dceb5af5cdecda9b91293e05d
+  revision: 1be29bb0a63533fc8fef4fae7028d5b59c23e6e2
   branch: main
   specs:
-    moxml (0.5.117)
+    moxml (0.5.166)
 
 GIT
   remote: https://github.com/metanorma/isodoc.git
@@ -100,11 +100,11 @@ GIT
 
 GIT
   remote: https://github.com/pubid/pubid.git
-  revision: 1e11aae65086b00c8d98661d7dafc0863b17b168
+  revision: 4be958965b95f79e6c7c8de898cd83f6cd6759a7
   branch: main
   specs:
-    pubid (2.0.0.pre.alpha.27)
-      lutaml-model
+    pubid (2.0.0)
+      lutaml-model (~> 0.8)
       parsanol (>= 1.3.62)
       parslet
 
@@ -161,17 +161,17 @@ GEM
       fractor (~> 0.1)
       thor (~> 1.3)
     camertron-eprun (1.1.1)
-    canon (0.3.79)
+    canon (0.3.117)
       diff-lcs
       json
-      leptris (~> 1.9.314)
-      moxml (~> 0.5.116)
+      leptris (~> 1.9.376)
+      moxml (~> 0.5.149)
       paint
       rainbow
       table_tennis
-      thor
+      thor (~> 1.4)
       unicode-name
-      yeptris (~> 0.6.29)
+      yeptris (~> 0.6.32)
     chemicalml (0.3.0)
       lutaml-model (~> 0.8.0)
     cldr-plurals-runtime-rb (1.2.0)
@@ -197,7 +197,7 @@ GEM
     csv (3.3.6)
     date (3.6.0)
     diff-lcs (2.0.0)
-    domain_name (0.6.20260921)
+    domain_name (0.7.20261007)
     down (5.6.0)
       addressable (~> 2.8)
       base64 (~> 0.3)
@@ -376,7 +376,7 @@ GEM
       net-http-persistent (>= 4.0.4, < 5)
     faraday-retry (2.4.0)
       faraday (~> 2.0)
-    ferrum (0.18.0)
+    ferrum (0.20.0)
       addressable (~> 2.5)
       base64 (~> 0.2)
       concurrent-ruby (~> 1.1)
@@ -437,7 +437,7 @@ GEM
       table_tennis (~> 0.0)
       tbx (~> 0.1)
       thor
-    graphql (2.6.11)
+    graphql (2.6.13)
       base64
       fiber-storage
       logger
@@ -491,21 +491,21 @@ GEM
       rdf (~> 3.3)
       rexml (~> 3.2)
     latex-decode (0.4.2)
-    leptris (1.9.317.0-aarch64-linux)
+    leptris (1.9.384.0-aarch64-linux)
       ffi (~> 1.15)
-    leptris (1.9.317.0-aarch64-linux-musl)
+    leptris (1.9.384.0-aarch64-linux-musl)
       ffi (~> 1.15)
-    leptris (1.9.317.0-arm-linux)
+    leptris (1.9.384.0-arm-linux)
       ffi (~> 1.15)
-    leptris (1.9.317.0-arm-linux-musl)
+    leptris (1.9.384.0-arm-linux-musl)
       ffi (~> 1.15)
-    leptris (1.9.317.0-arm64-darwin)
+    leptris (1.9.384.0-arm64-darwin)
       ffi (~> 1.15)
-    leptris (1.9.317.0-x86_64-darwin)
+    leptris (1.9.384.0-x86_64-darwin)
       ffi (~> 1.15)
-    leptris (1.9.317.0-x86_64-linux)
+    leptris (1.9.384.0-x86_64-linux)
       ffi (~> 1.15)
-    leptris (1.9.317.0-x86_64-linux-musl)
+    leptris (1.9.384.0-x86_64-linux-musl)
       ffi (~> 1.15)
     libpng (1.6.58.6)
       ffi (~> 1.0)
@@ -531,10 +531,10 @@ GEM
       nokogiri
       thor
     logger (1.7.0)
-    lutaml-hal (0.2.6)
+    lutaml-hal (0.2.7)
       faraday (~> 2.0)
       faraday-follow_redirects (~> 0.3)
-      lutaml-model
+      lutaml-model (~> 0.8.114)
       lutaml-store (~> 0.3)
       rainbow (~> 3.0)
     lutaml-lml (0.3.0)
@@ -542,16 +542,16 @@ GEM
       moxml (>= 0.1.24)
       parsanol (~> 1.3.68)
       ruby-graphviz
-    lutaml-model (0.8.96)
-      base64
+    lutaml-model (0.8.136)
+      base64 (>= 0.1.1)
       bigdecimal
       canon
       concurrent-ruby
       liquid (>= 4.0, < 6.0)
-      moxml (~> 0.5.84)
+      moxml (~> 0.5.139)
       ostruct
       rubyzip (~> 3.7)
-      thor
+      thor (~> 1.4)
     lutaml-path (0.1.1)
       lutaml-model (>= 0.8)
       parslet (~> 2)
@@ -563,7 +563,7 @@ GEM
       rubyzip
     marcel (1.0.4)
     matrix (0.4.3)
-    mechanize (2.14.1)
+    mechanize (2.14.2)
       addressable (~> 2.8)
       base64
       domain_name (~> 0.5, >= 0.5.20190701)
@@ -682,7 +682,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2026.1006)
+    mime-types-data (3.2026.1020)
     mini_portile2 (2.8.9)
     minitest (6.0.6)
       drb (~> 2.0)
@@ -724,8 +724,8 @@ GEM
       racc (~> 1.4)
     nokogiri-styles (0.1.2)
       nokogiri
-    oasis-etm (0.2.1)
-      lutaml-model (~> 0.8.0)
+    oasis-etm (0.2.2)
+      lutaml-model (~> 0.8.114)
     octokit (4.25.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
@@ -754,14 +754,14 @@ GEM
       bigdecimal (>= 3.0)
     paint (2.3.0)
     parallel (1.28.0)
-    parsanol (1.3.79-aarch64-linux)
-    parsanol (1.3.79-aarch64-linux-musl)
-    parsanol (1.3.79-arm-linux)
-    parsanol (1.3.79-arm-linux-musl)
-    parsanol (1.3.79-arm64-darwin)
-    parsanol (1.3.79-x86_64-darwin)
-    parsanol (1.3.79-x86_64-linux)
-    parsanol (1.3.79-x86_64-linux-musl)
+    parsanol (1.3.109-aarch64-linux)
+    parsanol (1.3.109-aarch64-linux-musl)
+    parsanol (1.3.109-arm-linux)
+    parsanol (1.3.109-arm-linux-musl)
+    parsanol (1.3.109-arm64-darwin)
+    parsanol (1.3.109-x86_64-darwin)
+    parsanol (1.3.109-x86_64-linux)
+    parsanol (1.3.109-x86_64-linux-musl)
     parslet (2.0.0)
     plane1converter (0.0.1)
     plist (3.7.2)
@@ -816,7 +816,7 @@ GEM
       rexml (~> 3.2)
     readline (0.0.4)
       reline
-    relaton (3.0.0.pre.alpha.11)
+    relaton (3.0.0)
       addressable (~> 2.8)
       algolia (~> 2.3.0)
       base64
@@ -838,7 +838,7 @@ GEM
       loc_mods (~> 0.3.0)
       logger (~> 1.6)
       lutaml-hal (~> 0.2, >= 0.2.5)
-      lutaml-model (~> 0.8.76)
+      lutaml-model (~> 0.8.113)
       lutaml-store (~> 0.3.2)
       mechanize (~> 2.10)
       mini_portile2 (~> 2.8.0)
@@ -846,11 +846,11 @@ GEM
       niso-jats (~> 0.3.4)
       parallel (~> 1.26)
       parslet (~> 2.0.0)
-      pubid (~> 2.0.0.pre.alpha.21)
+      pubid (~> 2.0.0.pre.alpha.62)
       relaton-render (>= 3.0.0.pre.alpha.1, < 4)
       rfcxml (~> 0.4.3)
       rubyzip (~> 3.7)
-      sqlite3 (~> 1.7)
+      sqlite3 (>= 1.7)
       w3c_api (~> 0.3.3)
       yeptris (>= 0.4)
     relaton-bib (2.2.0.pre.alpha.1)
@@ -863,10 +863,11 @@ GEM
       relaton-core (~> 2.2.0.pre.alpha.1)
       relaton-logger (~> 2.2.0.pre.alpha.1)
       rfcxml (~> 0.4.3)
-    relaton-cli (3.0.0.pre.alpha.11)
+    relaton-cli (3.0.0)
       liquid (~> 5)
-      pubid (~> 2.0.0.pre.alpha.13)
-      relaton (= 3.0.0.pre.alpha.11)
+      pubid (~> 2.0.0.pre.alpha.28)
+      relaton (= 3.0.0)
+      relaton-render (>= 3.0.0.pre.alpha.1, < 4)
       thor
       thor-hollaback
     relaton-core (2.2.0.pre.alpha.1)
@@ -880,10 +881,10 @@ GEM
       uuidtools
     relaton-logger (2.2.0.pre.alpha.1)
       logger (~> 1.6)
-    relaton-render (3.0.0.pre.alpha.19)
+    relaton-render (3.0.0)
       htmlentities
       liquid (~> 5)
-      lutaml-model
+      lutaml-model (~> 0.8)
       nokogiri
       twitter_cldr
     reline (0.7.0)
@@ -1040,21 +1041,21 @@ GEM
       lutaml-model (~> 0.8.53)
       nokogiri
     yaml (0.4.0)
-    yeptris (0.6.30.1-aarch64-linux)
+    yeptris (0.6.46.0-aarch64-linux)
       ffi (~> 1.15)
-    yeptris (0.6.30.1-aarch64-linux-musl)
+    yeptris (0.6.46.0-aarch64-linux-musl)
       ffi (~> 1.15)
-    yeptris (0.6.30.1-arm-linux-eabihf)
+    yeptris (0.6.46.0-arm-linux-eabihf)
       ffi (~> 1.15)
-    yeptris (0.6.30.1-arm-linux-musleabihf)
+    yeptris (0.6.46.0-arm-linux-musleabihf)
       ffi (~> 1.15)
-    yeptris (0.6.30.1-arm64-darwin)
+    yeptris (0.6.46.0-arm64-darwin)
       ffi (~> 1.15)
-    yeptris (0.6.30.1-x86_64-darwin)
+    yeptris (0.6.46.0-x86_64-darwin)
       ffi (~> 1.15)
-    yeptris (0.6.30.1-x86_64-linux)
+    yeptris (0.6.46.0-x86_64-linux)
       ffi (~> 1.15)
-    yeptris (0.6.30.1-x86_64-linux-musl)
+    yeptris (0.6.46.0-x86_64-linux-musl)
       ffi (~> 1.15)
 
 PLATFORMS
@@ -1073,13 +1074,12 @@ PLATFORMS
 
 DEPENDENCIES
   isodoc!
-  leptris (= 1.9.317)
   metanorma-cli!
   metanorma-standoc!
   moxml!
   pubid!
-  relaton (= 3.0.0.pre.alpha.11)
-  relaton-render (~> 3.0.0.pre.alpha)
+  relaton (= 3.0.0)
+  relaton-render (~> 3.0)
   suma!
 
 BUNDLED WITH
