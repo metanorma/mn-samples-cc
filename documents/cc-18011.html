@@ -1401,7 +1401,7 @@ pre.sourcecode .nt {
   
   1<span class="fmt-clause-delim">.</span>  Scope
 </a></li>
-<li class="h1"><a href="#_f2194519-a828-4cc3-990b-a3be022990c8">      2<span class="fmt-clause-delim">.</span>  Normative references</a></li>
+<li class="h1"><a href="#_af32ee20-0600-4004-87b3-fa84c3945855">      2<span class="fmt-clause-delim">.</span>  Normative references</a></li>
 <li class="h1"><a href="#tda">      
   
   3<span class="fmt-clause-delim">.</span>  Terms, definitions, symbols and abbreviated terms
@@ -1574,7 +1574,7 @@ pre.sourcecode .nt {
   
   8.7<span class="fmt-clause-delim">.</span>  Involving speculative duration
 </a></li>
-<li class="h1"><a href="#_8a090147-00f5-49ff-a703-a910e83a63bc">      Bibliography</a></li></ul></div>
+<li class="h1"><a href="#_126b47e0-1214-40da-b2a1-d6d2d9797804">      Bibliography</a></li></ul></div>
 
 </nav>
 
@@ -1587,17 +1587,17 @@ pre.sourcecode .nt {
 
 
 
-</div><br /><br /><div id="_ce61ac30-868d-1496-4ed1-ad17630e7324"><h1 class="ForewordTitle" id="_5596a076-5089-42be-8ba7-2073667517a5"><a class="anchor" href="#_ce61ac30-868d-1496-4ed1-ad17630e7324"></a><a class="header" href="#_ce61ac30-868d-1496-4ed1-ad17630e7324">Foreword</a></h1><p id="_978efc4a-4424-2bdd-9f8a-1e4be31eb9a9">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p><p id="_69d40857-4c40-88c8-469b-e0c9a8d8d874">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p><p id="_e821e1fe-2cf4-934e-4567-582480580b1d">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p><p id="_a315c6da-6756-cb39-fc17-d5455e1864c0">In particular the different approval criteria needed for the different types of CalConnect documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p><p id="_080f073a-4f79-f108-5f75-ca6659f38fd4">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p><p id="_882b2a20-4eba-ae6e-3dc1-2ffc96683fc9">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p><p id="_4dff932e-5619-74c4-362a-8ff3eb85d29b">This document was prepared by Technical Committee <i>DATETIME</i>.</p></div><br /><div class="Section3" id="introduction"><h1 class="IntroTitle" id="_d0391048-d9af-432b-b00a-de41e6709094"><a class="anchor" href="#introduction"></a><a class="header" href="#introduction">Introduction</a></h1><p id="_a4dfad46-f99a-aeb9-f694-d8544be1a3ac"><a href="#ISO8601">ISO 8601:2004</a> has been the international standard for date and time representations and is applied widely, including in the  <a href="#RFC5545">IETF RFC 5545</a> and <a href="#RFC6350">IETF RFC 6350</a> standards.</p><p id="_77ed49d7-9ad9-1da1-d501-a4441292a1c3">However, the representations provided in <a href="#ISO8601">ISO 8601:2004</a> require fixed-length digits for time scale components, such as the 4-digit year, does not accept negative values, and does not allow omission of a time scale component that has a zero value.</p><p id="_bd6ac7ed-c261-b119-52e2-8c7544f09776">This document extends the “duration” representation defined in  <a href="#ISO8601">ISO 8601:2004</a> to fulfill the need of a flexible-length representation, called the “explicit form”.</p></div><p class="zzSTDTitle1">Date and time — Explicit representation</p><div id="scope"><h1 id="_c7ac1b1a-aeb6-4bfb-93e2-b50509f71788"><a class="anchor" href="#scope"></a><a class="header" href="#scope">1<span class="fmt-clause-delim">.</span>  Scope</a></h1><p id="_3c0bb35b-0a3d-4bfb-cf95-de64a96948ca">The purpose of this document is to provide:</p><div class="ul_wrap"><ul id="_3a751261-ef4c-3814-d352-5d729148fb57"><li id="_4c6777d2-752f-d88a-a181-f97d0cc7ecc4"><p id="_680064b5-715a-e79a-cc2b-67c5bd61a9b5">a standard, declarative representation of date and time and time scale components called the “explicit form”;</p>
+</div><br /><br /><div id="_ce61ac30-868d-1496-4ed1-ad17630e7324"><h1 class="ForewordTitle" id="_415c1043-74ab-4322-9495-3160dce69646"><a class="anchor" href="#_ce61ac30-868d-1496-4ed1-ad17630e7324"></a><a class="header" href="#_ce61ac30-868d-1496-4ed1-ad17630e7324">Foreword</a></h1><p id="_978efc4a-4424-2bdd-9f8a-1e4be31eb9a9">The Calendaring and Scheduling Consortium (“CalConnect”) is a global non-profit organization with the aim to facilitate interoperability of technologies across user-centric systems and applications.</p><p id="_69d40857-4c40-88c8-469b-e0c9a8d8d874">CalConnect works closely with liaison partners including international organizations such as ISO, OASIS and M3AAWG.</p><p id="_e821e1fe-2cf4-934e-4567-582480580b1d">The procedures used to develop this document and those intended for its further maintenance are described in the CalConnect Directives.</p><p id="_a315c6da-6756-cb39-fc17-d5455e1864c0">In particular the different approval criteria needed for the different types of CalConnect documents should be noted. This document was drafted in accordance with the editorial rules of the CalConnect Directives.</p><p id="_080f073a-4f79-f108-5f75-ca6659f38fd4">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. CalConnect shall not be held responsible for identifying any or all such patent rights. Details of any patent rights identified during the development of the document will be in the Introduction and/or on the CalConnect list of patent declarations received (see www.calconnect.com/patents).</p><p id="_882b2a20-4eba-ae6e-3dc1-2ffc96683fc9">Any trade name used in this document is information given for the convenience of users and does not constitute an endorsement.</p><p id="_4dff932e-5619-74c4-362a-8ff3eb85d29b">This document was prepared by Technical Committee <i>DATETIME</i>.</p></div><br /><div class="Section3" id="introduction"><h1 class="IntroTitle" id="_9ba2e6cf-5064-4ba4-ba7b-4b3f48c02082"><a class="anchor" href="#introduction"></a><a class="header" href="#introduction">Introduction</a></h1><p id="_a4dfad46-f99a-aeb9-f694-d8544be1a3ac"><a href="#ISO8601">ISO 8601:2004</a> has been the international standard for date and time representations and is applied widely, including in the  <a href="#RFC5545">IETF RFC 5545</a> and <a href="#RFC6350">IETF RFC 6350</a> standards.</p><p id="_77ed49d7-9ad9-1da1-d501-a4441292a1c3">However, the representations provided in <a href="#ISO8601">ISO 8601:2004</a> require fixed-length digits for time scale components, such as the 4-digit year, does not accept negative values, and does not allow omission of a time scale component that has a zero value.</p><p id="_bd6ac7ed-c261-b119-52e2-8c7544f09776">This document extends the “duration” representation defined in  <a href="#ISO8601">ISO 8601:2004</a> to fulfill the need of a flexible-length representation, called the “explicit form”.</p></div><p class="zzSTDTitle1">Date and time — Explicit representation</p><div id="scope"><h1 id="_549bdb77-e9a7-4df6-bd80-e389005f3d68"><a class="anchor" href="#scope"></a><a class="header" href="#scope">1<span class="fmt-clause-delim">.</span>  Scope</a></h1><p id="_3c0bb35b-0a3d-4bfb-cf95-de64a96948ca">The purpose of this document is to provide:</p><div class="ul_wrap"><ul id="_3a751261-ef4c-3814-d352-5d729148fb57"><li id="_4c6777d2-752f-d88a-a181-f97d0cc7ecc4"><p id="_680064b5-715a-e79a-cc2b-67c5bd61a9b5">a standard, declarative representation of date and time and time scale components called the “explicit form”;</p>
 </li>
 <li id="_49a3305b-d544-cff3-f456-7ca1d6af5e03"><p id="_8725745c-519f-7a9d-8905-2d420faa7842">a grouped time scale unit mechanism for grouping of date and time; and</p>
 </li>
 <li id="_13cb7f20-ec92-6006-6525-c59759bbc661"><p id="_f06f303b-0294-f3c5-31b4-b1dd6fa6fd1a">new duration representations and mechanics for the calculation of date time formulas involving duration.</p>
 </li>
-</ul></div><p id="_0bbef31d-ef3d-6c55-ed24-c3d6f25c4425">This document only supports date elements from the Gregorian calendar and times from the 24-hour clock.</p><p id="_2614a5d2-2081-085a-3c82-7877b8f75be6">Date and time format representations described in this document utilizes numbers, alphabets and symbols defined in  <a href="#ISOIEC646">ISO/IEC 646</a>. These representations are meant to be both human recognizable and machine readable. Character encoding of the representations is not covered in this document.</p></div><div><h1 id="_f2194519-a828-4cc3-990b-a3be022990c8">2<span class="fmt-clause-delim">.</span>  Normative references</h1>
+</ul></div><p id="_0bbef31d-ef3d-6c55-ed24-c3d6f25c4425">This document only supports date elements from the Gregorian calendar and times from the 24-hour clock.</p><p id="_2614a5d2-2081-085a-3c82-7877b8f75be6">Date and time format representations described in this document utilizes numbers, alphabets and symbols defined in  <a href="#ISOIEC646">ISO/IEC 646</a>. These representations are meant to be both human recognizable and machine readable. Character encoding of the representations is not covered in this document.</p></div><div><h1 id="_af32ee20-0600-4004-87b3-fa84c3945855">2<span class="fmt-clause-delim">.</span>  Normative references</h1>
 <p id="_49996d2b-65c1-916b-9bbf-42b933aa0025">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 <p id="ISO8601-1" class="NormRef">ISO 8601-1:—<a class="FootnoteRef" href="#fn:_86dc021e-7a15-5857-1dec-d7971b2c63ac" id="fnref:1"><sup>1</sup></a>
 , ISO. <i>Date and time — Representation for information interchange — Part 1: Basic rules</i>.</p>
-</div><div id="tda"><h1 id="_13b4827f-9d95-409d-8b4e-a69674a44a71"><a class="anchor" href="#tda"></a><a class="header" href="#tda">3<span class="fmt-clause-delim">.</span>  Terms, definitions, symbols and abbreviated terms</a></h1><p id="_166154fa-39c7-5422-87f1-87a42cd22c6e">For the purposes of this document, the terms and definitions given in <a href="#ISO8601-1">ISO 8601-1:—</a> and the following apply.</p><div id="_3198ec29-6915-df02-b154-cbc8183220aa"><h2 id="_a727ce67-581f-4cc8-99a6-4d24f8c55356"><a class="anchor" href="#_3198ec29-6915-df02-b154-cbc8183220aa"></a><a class="header" href="#_3198ec29-6915-df02-b154-cbc8183220aa">3.1<span class="fmt-clause-delim">.</span>  Terms and definitions</a></h2>
+</div><div id="tda"><h1 id="_cb85e335-33ee-4a7a-b88d-b490cd431ba1"><a class="anchor" href="#tda"></a><a class="header" href="#tda">3<span class="fmt-clause-delim">.</span>  Terms, definitions, symbols and abbreviated terms</a></h1><p id="_166154fa-39c7-5422-87f1-87a42cd22c6e">For the purposes of this document, the terms and definitions given in <a href="#ISO8601-1">ISO 8601-1:—</a> and the following apply.</p><div id="_3198ec29-6915-df02-b154-cbc8183220aa"><h2 id="_a790924c-8d6d-4a66-8f49-c76704985e3d"><a class="anchor" href="#_3198ec29-6915-df02-b154-cbc8183220aa"></a><a class="header" href="#_3198ec29-6915-df02-b154-cbc8183220aa">3.1<span class="fmt-clause-delim">.</span>  Terms and definitions</a></h2>
 
 <p class="Terms" style="text-align:left;" id="term-explicit"><span class="TermNum">3.1.1<span class="fmt-clause-delim">.</span></span> <b><dfn>explicit form</dfn></b></p>
 <p id="_b254cb74-839a-c342-1fbb-02c67df5819b">date and time representation that uses designator symbols to delimit time scale components</p>
@@ -1618,7 +1618,7 @@ pre.sourcecode .nt {
 <p class="Terms" style="text-align:left;" id="term-grouped-unit"><span class="TermNum">3.1.5<span class="fmt-clause-delim">.</span></span> <b><dfn>grouped time scale unit</dfn></b></p>
 <p id="_d1e323c1-7d18-c5ae-45aa-55230b27fa06"><i>time scale unit</i> (<a href="#ISO8601-1">ISO 8601-1:—,  Clause 3.1.1.7</a>) composed of a <i>duration</i> (<a href="#ISO8601-1">ISO 8601-1:—,  Clause 3.1.1.8</a>) expressed by one or more <i>durational units</i> (Clause 3.1.4)</p>
 
-</div><div id="symbols"><h2 id="_4b42e2aa-bce6-4cf2-a26a-90fa67e9b688"><a class="anchor" href="#symbols"></a><a class="header" href="#symbols">3.2<span class="fmt-clause-delim">.</span>  Symbols</a></h2>
+</div><div id="symbols"><h2 id="_77176322-00af-499a-b1a6-edb229cc447d"><a class="anchor" href="#symbols"></a><a class="header" href="#symbols">3.2<span class="fmt-clause-delim">.</span>  Symbols</a></h2>
 
 <div id="symbols-general"><h3><a class="anchor" href="#symbols-general"></a><a class="header" href="#symbols-general">3.2.1<span class="fmt-clause-delim">.</span>  General</a></h3>
 
@@ -1701,10 +1701,10 @@ pre.sourcecode .nt {
 <div class="figdl"><dl id="_9b881258-3280-ed1f-dc35-9e91241ea1cf"><dt id="symbol-_._-_period_-and-___-_comma_"><p>“.” (period) and “,” (comma)</p></dt><dd id="_28df6807-b7cc-323f-1b3e-68c9a08b82b4"><p id="_8a395a29-e2c8-06eb-7768-c2845083da6c">the “.” period and “,” comma characters are decimal signs used to separate the integer part from the decimal fraction of a number.</p>
 </dd><dt id="symbol-___-_solidus_"><p>“/” (solidus)</p></dt><dd id="_e4bcd4f8-d2ab-5d84-6acc-902fc906ff3d"><p id="_7414c55e-58fb-fb91-3c8a-e9ae395fb388">the “/” solidus character separates start and end times in the representation of a time interval, as well as the symbol ‘<tt>R</tt>‘ from the remainder of a recurring time interval representation. A solidus may be replaced with a double hyphen [“—”] by mutual agreement of the communicating partners.</p>
 </dd></dl></div>
-</div></div></div><div id="time-scale-components"><h1 id="_5be09f91-86ce-4492-96ca-6544754c302b"><a class="anchor" href="#time-scale-components"></a><a class="header" href="#time-scale-components">4<span class="fmt-clause-delim">.</span>  Time scale components and units</a></h1><div id="_a14356a1-9762-72b3-7b7f-bf5a89c52e54"><h2 id="_d4653e11-87bd-4e8c-a31d-b70a7a32d157"><a class="anchor" href="#_a14356a1-9762-72b3-7b7f-bf5a89c52e54"></a><a class="header" href="#_a14356a1-9762-72b3-7b7f-bf5a89c52e54">4.1<span class="fmt-clause-delim">.</span>  General</a></h2>
+</div></div></div><div id="time-scale-components"><h1 id="_96e85787-df81-42e2-a85f-bba9e2760c58"><a class="anchor" href="#time-scale-components"></a><a class="header" href="#time-scale-components">4<span class="fmt-clause-delim">.</span>  Time scale components and units</a></h1><div id="_a14356a1-9762-72b3-7b7f-bf5a89c52e54"><h2 id="_8546e420-98e7-4c5a-894d-1c6b5bf6e618"><a class="anchor" href="#_a14356a1-9762-72b3-7b7f-bf5a89c52e54"></a><a class="header" href="#_a14356a1-9762-72b3-7b7f-bf5a89c52e54">4.1<span class="fmt-clause-delim">.</span>  General</a></h2>
 
 <p id="_5fc990c0-434b-6223-8c0f-896216b71689">Additional properties and the explicit forms of time scale units are represented in this clause.</p>
-</div><div id="_4bd5ccb5-0c4d-9f86-4c66-54c5ce12a96c"><h2 id="_ef108e36-5f01-413c-8e74-1c749a393af3"><a class="anchor" href="#_4bd5ccb5-0c4d-9f86-4c66-54c5ce12a96c"></a><a class="header" href="#_4bd5ccb5-0c4d-9f86-4c66-54c5ce12a96c">4.2<span class="fmt-clause-delim">.</span>  Order of time scale units</a></h2>
+</div><div id="_4bd5ccb5-0c4d-9f86-4c66-54c5ce12a96c"><h2 id="_9da46b8d-7d10-42c5-8f07-7f503ae54ff6"><a class="anchor" href="#_4bd5ccb5-0c4d-9f86-4c66-54c5ce12a96c"></a><a class="header" href="#_4bd5ccb5-0c4d-9f86-4c66-54c5ce12a96c">4.2<span class="fmt-clause-delim">.</span>  Order of time scale units</a></h2>
 
 <p id="_6958c47b-632a-a471-cc4d-69342786a5ef">This document refers to an “order” amongst time scale units, which is defined by the duration of a time scale unit relative to other time scale units. For example, since a single calendar month has a duration always greater than a single unit of calendar day, the former is considered of a higher order time scale unit than calendar day, and therefore the latter is also considered of a lower order time scale unit than the former.</p>
 
@@ -1731,7 +1731,7 @@ pre.sourcecode .nt {
 </ol></div>
 
 
-</div><div id="duration-general"><h2 id="_e10facf7-0f03-4f3d-99df-f801a5b9e0f9"><a class="anchor" href="#duration-general"></a><a class="header" href="#duration-general">4.3<span class="fmt-clause-delim">.</span>  Explicit forms</a></h2>
+</div><div id="duration-general"><h2 id="_aefc13a2-7f45-4bf1-a09b-690c8960c92a"><a class="anchor" href="#duration-general"></a><a class="header" href="#duration-general">4.3<span class="fmt-clause-delim">.</span>  Explicit forms</a></h2>
 
 <div id="value-restriction"><h3><a class="anchor" href="#value-restriction"></a><a class="header" href="#value-restriction">4.3.1<span class="fmt-clause-delim">.</span>  Value prefixing</a></h3>
 
@@ -1900,7 +1900,7 @@ pre.sourcecode .nt {
 <div id="_b393f061-841c-7ee7-91b9-2269207ebb7f" class="example"><p class="example-title">EXAMPLE 2</p><p id="_50b2987a-a2a6-b662-433f-523f2436bd0a">‘0C’, in explicit form represents the century spanning the calendar years 00 to 99.</p>
 </div>
 </div>
-</div><div id="negative-values"><h2 id="_3b75b071-1aec-4283-a9ee-784cea9c784b"><a class="anchor" href="#negative-values"></a><a class="header" href="#negative-values">4.4<span class="fmt-clause-delim">.</span>  Negative values</a></h2>
+</div><div id="negative-values"><h2 id="_e7159535-81f2-43da-8411-ae8387b94b84"><a class="anchor" href="#negative-values"></a><a class="header" href="#negative-values">4.4<span class="fmt-clause-delim">.</span>  Negative values</a></h2>
 
 <div id="_0cec9420-bd54-fd48-c335-147e4b620c51"><h3><a class="anchor" href="#_0cec9420-bd54-fd48-c335-147e4b620c51"></a><a class="header" href="#_0cec9420-bd54-fd48-c335-147e4b620c51">4.4.1<span class="fmt-clause-delim">.</span>  General</a></h3>
 
@@ -2044,10 +2044,10 @@ pre.sourcecode .nt {
 <div id="_05b19433-dbcc-c97c-81a2-d29b147341e6" class="example"><p class="example-title">EXAMPLE 4</p><p id="_44d8994f-5faa-5cd5-ff8f-9ee6da7b0d39">‘12CB’ the twelfth century before year one, equivalent to the effect of time interval ‘-1190/-1100’.</p>
 </div>
 </div>
-</div></div><div id="grouping"><h1 id="_36011f5c-f5d7-4adc-ab81-42c8dd230021"><a class="anchor" href="#grouping"></a><a class="header" href="#grouping">5<span class="fmt-clause-delim">.</span>  Grouped time scale units</a></h1><div id="_4bea24e1-2c95-7678-ecff-297c90ef5ec3"><h2 id="_9ea18e29-75e5-42fc-961b-505ef9ce6290"><a class="anchor" href="#_4bea24e1-2c95-7678-ecff-297c90ef5ec3"></a><a class="header" href="#_4bea24e1-2c95-7678-ecff-297c90ef5ec3">5.1<span class="fmt-clause-delim">.</span>  General</a></h2>
+</div></div><div id="grouping"><h1 id="_ca050b98-1d3b-46b2-a538-9e007888003e"><a class="anchor" href="#grouping"></a><a class="header" href="#grouping">5<span class="fmt-clause-delim">.</span>  Grouped time scale units</a></h1><div id="_4bea24e1-2c95-7678-ecff-297c90ef5ec3"><h2 id="_d9dfedf4-fa2c-4e80-a61d-c8bb1db96a55"><a class="anchor" href="#_4bea24e1-2c95-7678-ecff-297c90ef5ec3"></a><a class="header" href="#_4bea24e1-2c95-7678-ecff-297c90ef5ec3">5.1<span class="fmt-clause-delim">.</span>  General</a></h2>
 
 <p id="_a829b54c-7723-ca87-eb46-fabd1bb01f50">A time scale unit can be grouped into a larger composite unit that can each be specifically referred to using representations provided in this clause.</p>
-</div><div id="group-unit-definition"><h2 id="_cd83ca3f-82e7-45d2-96c7-4e3b6b605e45"><a class="anchor" href="#group-unit-definition"></a><a class="header" href="#group-unit-definition">5.2<span class="fmt-clause-delim">.</span>  Unit definition</a></h2>
+</div><div id="group-unit-definition"><h2 id="_663ceca7-c60f-4b47-9530-eba3d8b33a2e"><a class="anchor" href="#group-unit-definition"></a><a class="header" href="#group-unit-definition">5.2<span class="fmt-clause-delim">.</span>  Unit definition</a></h2>
 
 <p id="_c22af38f-5f5a-210b-b91d-73190d63bf45">A grouped time scale unit (“grouped unit”) defines a time scale unit that is a composite of smaller time scale units. Its representation is provided as follows and is denoted as [groupUnit] in this document.</p>
 
@@ -2074,7 +2074,7 @@ pre.sourcecode .nt {
 
 <div id="_3cf34d7c-e296-b5f1-3896-85e94d35125d" class="example"><p class="example-title">EXAMPLE 3</p><p id="_65d6a0be-82e0-7076-9ca5-af49a7cbc58b">‘G2DT6HU’, every unit of the grouped unit is of two days and six hours duration.</p>
 </div>
-</div><div id="group-unit-value"><h2 id="_b51ae957-c692-4f67-8e88-0e8dca3b4084"><a class="anchor" href="#group-unit-value"></a><a class="header" href="#group-unit-value">5.3<span class="fmt-clause-delim">.</span>  Unit value</a></h2>
+</div><div id="group-unit-value"><h2 id="_d1771460-77df-43f0-85ef-e1592a3d039d"><a class="anchor" href="#group-unit-value"></a><a class="header" href="#group-unit-value">5.3<span class="fmt-clause-delim">.</span>  Unit value</a></h2>
 
 <p id="_c7d31abc-c6ce-4745-ec51-4a5f4b9703c1">The value of a grouped time scale unit is given with the following representation. This representation is denoted as [group] in this document.</p>
 
@@ -2109,7 +2109,7 @@ pre.sourcecode .nt {
 
 <div id="_d837e088-569b-3fed-4eae-7ffab94447ce" class="example"><p class="example-title">EXAMPLE 7</p><p id="_d2b057d4-d183-7ed0-628c-361219fa9dd7">‘<tt>2018-GP6M1I</tt>‘ and ‘<tt>2018YGP6M1IM</tt>‘ are date expressions (implied and explicit formats, respectively) of monthly precision that indicates “the first half of 2018”, as specified by the rule “group every 6 months, first group”, and therefore the grouping is specified in the [month] field. The resulting time interval is equivalent to the time interval expression ‘<tt>2018-01-01/2018-06-30</tt>‘.</p>
 </div>
-</div><div id="representations-grouped-general"><h2 id="_a92ceaeb-95b4-45a5-9299-f8c159c1edd6"><a class="anchor" href="#representations-grouped-general"></a><a class="header" href="#representations-grouped-general">5.4<span class="fmt-clause-delim">.</span>  Application within representations</a></h2>
+</div><div id="representations-grouped-general"><h2 id="_ae6dfcbe-47ce-451d-93ec-7b2947c40bf8"><a class="anchor" href="#representations-grouped-general"></a><a class="header" href="#representations-grouped-general">5.4<span class="fmt-clause-delim">.</span>  Application within representations</a></h2>
 
 <div id="_096d192e-9c6c-04c1-87e6-4e0211cbf9c8"><h3><a class="anchor" href="#_096d192e-9c6c-04c1-87e6-4e0211cbf9c8"></a><a class="header" href="#_096d192e-9c6c-04c1-87e6-4e0211cbf9c8">5.4.1<span class="fmt-clause-delim">.</span>  General</a></h3>
 
@@ -2231,10 +2231,10 @@ pre.sourcecode .nt {
 </div>
 </div>
 </div>
-</div></div><div id="explicit"><h1 id="_ad5039d1-aaba-486e-9492-425eec636bd6"><a class="anchor" href="#explicit"></a><a class="header" href="#explicit">6<span class="fmt-clause-delim">.</span>  Explicit representations</a></h1><div id="_a7abedf1-78e8-a971-8268-f7480ddb30a6"><h2 id="_880224d8-4d9d-4373-b86e-89198a64656a"><a class="anchor" href="#_a7abedf1-78e8-a971-8268-f7480ddb30a6"></a><a class="header" href="#_a7abedf1-78e8-a971-8268-f7480ddb30a6">6.1<span class="fmt-clause-delim">.</span>  General</a></h2>
+</div></div><div id="explicit"><h1 id="_83c69182-9ec4-4baa-be15-7f08dcc1c6d1"><a class="anchor" href="#explicit"></a><a class="header" href="#explicit">6<span class="fmt-clause-delim">.</span>  Explicit representations</a></h1><div id="_a7abedf1-78e8-a971-8268-f7480ddb30a6"><h2 id="_62f8e7fd-7baf-4c7f-b03f-1d4289b100ed"><a class="anchor" href="#_a7abedf1-78e8-a971-8268-f7480ddb30a6"></a><a class="header" href="#_a7abedf1-78e8-a971-8268-f7480ddb30a6">6.1<span class="fmt-clause-delim">.</span>  General</a></h2>
 
 <p id="_67dbf884-ca01-7e20-a3da-129c07630db9">This section provides date and time representations using explicit form.</p>
-</div><div id="date-rep"><h2 id="_d04d59bc-be2d-49f2-b868-de1181768a03"><a class="anchor" href="#date-rep"></a><a class="header" href="#date-rep">6.2<span class="fmt-clause-delim">.</span>  Date</a></h2>
+</div><div id="date-rep"><h2 id="_225b1c19-068a-4412-a0cc-973382c23be0"><a class="anchor" href="#date-rep"></a><a class="header" href="#date-rep">6.2<span class="fmt-clause-delim">.</span>  Date</a></h2>
 
 <div id="date-format"><h3><a class="anchor" href="#date-format"></a><a class="header" href="#date-format">6.2.1<span class="fmt-clause-delim">.</span>  General</a></h3>
 
@@ -2273,7 +2273,7 @@ pre.sourcecode .nt {
 <div id="_55c55cf8-d179-db22-752f-ee27930a4797" class="example"><p class="example-title">EXAMPLE</p><p id="_8edbf90f-b770-72bb-1ea7-992a4e97a6c5">‘1985Y15W5K’, calendar year 1985, Friday of the calendar week 15.</p>
 </div>
 </div>
-</div><div id="time-of-day"><h2 id="_7df0d341-c13a-4489-8826-a723a1e12f71"><a class="anchor" href="#time-of-day"></a><a class="header" href="#time-of-day">6.3<span class="fmt-clause-delim">.</span>  Time of day</a></h2>
+</div><div id="time-of-day"><h2 id="_039cdad2-7441-4c43-92bd-18ff780778a0"><a class="anchor" href="#time-of-day"></a><a class="header" href="#time-of-day">6.3<span class="fmt-clause-delim">.</span>  Time of day</a></h2>
 
 <div id="local-time-of-day"><h3><a class="anchor" href="#local-time-of-day"></a><a class="header" href="#local-time-of-day">6.3.1<span class="fmt-clause-delim">.</span>  Local time of day</a></h3>
 
@@ -2302,7 +2302,7 @@ pre.sourcecode .nt {
 
 <p id="_89ecaf6a-5a87-a619-fb14-57d0b80046f1">There is no representation of end of day to prevent ambiguity of the overlapping end of day and the beginning of the next day.</p>
 </div>
-</div><div id="time-shift"><h2 id="_201f8c7d-c2e1-4c6c-9a24-c36d26ac32e1"><a class="anchor" href="#time-shift"></a><a class="header" href="#time-shift">6.4<span class="fmt-clause-delim">.</span>  Time shift</a></h2>
+</div><div id="time-shift"><h2 id="_c022da17-a973-4ecf-97b8-d39fe0469dd8"><a class="anchor" href="#time-shift"></a><a class="header" href="#time-shift">6.4<span class="fmt-clause-delim">.</span>  Time shift</a></h2>
 
 <p id="_c4907d22-22b8-f9f8-979d-335956e06cca">A time shift is used to represent the shift of local standard time against UTC.</p>
 
@@ -2345,7 +2345,7 @@ pre.sourcecode .nt {
 
 <div id="_436c1135-426a-a6ca-9b5f-04bc1aa0876d" class="example"><p class="example-title">EXAMPLE 6</p><p id="_0f4f361d-a8ad-20ce-5fc2-0b7862c6e977">‘Z0H0M’, UTC where the time shift is zero.</p>
 </div>
-</div><div id="_66f52e54-56c6-fce9-0cae-58444ade2784"><h2 id="_ca091787-eaf6-4bd8-8efb-eb65b2645f2f"><a class="anchor" href="#_66f52e54-56c6-fce9-0cae-58444ade2784"></a><a class="header" href="#_66f52e54-56c6-fce9-0cae-58444ade2784">6.5<span class="fmt-clause-delim">.</span>  Date with shift</a></h2>
+</div><div id="_66f52e54-56c6-fce9-0cae-58444ade2784"><h2 id="_7025e9ba-0d96-4b2b-82ef-179751af5c4e"><a class="anchor" href="#_66f52e54-56c6-fce9-0cae-58444ade2784"></a><a class="header" href="#_66f52e54-56c6-fce9-0cae-58444ade2784">6.5<span class="fmt-clause-delim">.</span>  Date with shift</a></h2>
 
 <p id="_d6eb277c-0272-ca06-ec26-ab7aaa7123dc">The complete representation for date with a time shift is as follows.</p>
 
@@ -2354,7 +2354,7 @@ pre.sourcecode .nt {
 
 <div id="_07551f6e-9202-182d-235c-4900ebee30b4" class="example"><p class="example-title">EXAMPLE</p><p id="_4bb97cb6-5823-b64c-65ec-9ee520c42bae">‘1985Y4M12DZ-5H’, calendar year 1985, April 12th with a time shift of 5 hours behind UTC.</p>
 </div>
-</div><div id="local-time-shift"><h2 id="_09afc79a-33ed-48c3-9bd8-d2bc5b1bd2e7"><a class="anchor" href="#local-time-shift"></a><a class="header" href="#local-time-shift">6.6<span class="fmt-clause-delim">.</span>  Time of day with time shift</a></h2>
+</div><div id="local-time-shift"><h2 id="_7c0084c2-50b0-4023-9091-17651c1cdb24"><a class="anchor" href="#local-time-shift"></a><a class="header" href="#local-time-shift">6.6<span class="fmt-clause-delim">.</span>  Time of day with time shift</a></h2>
 
 <p id="_fd5a5c4d-5e5d-086e-810d-2f494e892837">The complete representation for time of day with a time shift is as follows.</p>
 
@@ -2369,7 +2369,7 @@ pre.sourcecode .nt {
 
 <div id="_2daca365-ff9d-7636-26c9-c497de5a3190" class="example"><p class="example-title">EXAMPLE 3</p><p id="_bfefaf9b-95c8-6c85-e717-394a57f215ea">‘T23H20M50SZ8H’, 23:20:50 at local time, which is 8 hours ahead of UTC.</p>
 </div>
-</div><div id="date-and-time-of-day"><h2 id="_a8e22301-1bac-42ca-878d-698b2f8e8cfc"><a class="anchor" href="#date-and-time-of-day"></a><a class="header" href="#date-and-time-of-day">6.7<span class="fmt-clause-delim">.</span>  Date and time of day</a></h2>
+</div><div id="date-and-time-of-day"><h2 id="_27cb88ca-4634-43a2-9916-f908c1f5e965"><a class="anchor" href="#date-and-time-of-day"></a><a class="header" href="#date-and-time-of-day">6.7<span class="fmt-clause-delim">.</span>  Date and time of day</a></h2>
 
 <p id="_ccfeb660-3101-da9c-b529-34a97091c8f8">A time can be expressed by combining a date expression (Clause 6.2) with a time of day expression (Clause 6.3).</p>
 
@@ -2398,7 +2398,7 @@ pre.sourcecode .nt {
 <div id="_3da060ac-3b1d-208b-c745-a17e0d0de878" class="example"><p class="example-title">EXAMPLE</p><p id="_052ec409-2cfa-f373-f5b7-90982209c338">‘1985Y4M12DT23H20M30SZ8H’, calendar year 1985, April 12th, 23:20:30, 8 hours ahead of UTC.</p>
 </div>
 </div>
-</div><div id="_0772c0c2-97fe-1348-f59e-c8cfaabdca2c"><h2 id="_16ce3069-45a1-4f98-90da-cc839777afc4"><a class="anchor" href="#_0772c0c2-97fe-1348-f59e-c8cfaabdca2c"></a><a class="header" href="#_0772c0c2-97fe-1348-f59e-c8cfaabdca2c">6.8<span class="fmt-clause-delim">.</span>  Decade</a></h2>
+</div><div id="_0772c0c2-97fe-1348-f59e-c8cfaabdca2c"><h2 id="_52b34210-59d9-4350-bef5-e18944647197"><a class="anchor" href="#_0772c0c2-97fe-1348-f59e-c8cfaabdca2c"></a><a class="header" href="#_0772c0c2-97fe-1348-f59e-c8cfaabdca2c">6.8<span class="fmt-clause-delim">.</span>  Decade</a></h2>
 
 <p id="_85e8015d-8df7-19b0-6ba2-2ef0031cff2c">The complete representation for decade is as follows.</p>
 
@@ -2407,7 +2407,7 @@ pre.sourcecode .nt {
 
 <div id="_bd98502c-c148-d778-ad36-63697b9851e2" class="example"><p class="example-title">EXAMPLE</p><p id="_63b34f6d-d562-cecb-3dbb-66f7f1511014">‘1880’, the decade 1880s, spanning years from 1880 to 1889.</p>
 </div>
-</div><div id="_51b120ed-1879-be7f-abb3-e0125e0f0e2e"><h2 id="_afdeb6a5-a40c-4501-a83a-8bcaf95bb831"><a class="anchor" href="#_51b120ed-1879-be7f-abb3-e0125e0f0e2e"></a><a class="header" href="#_51b120ed-1879-be7f-abb3-e0125e0f0e2e">6.9<span class="fmt-clause-delim">.</span>  Century</a></h2>
+</div><div id="_51b120ed-1879-be7f-abb3-e0125e0f0e2e"><h2 id="_aa703dc5-47d5-40d5-b44e-950e646dedc8"><a class="anchor" href="#_51b120ed-1879-be7f-abb3-e0125e0f0e2e"></a><a class="header" href="#_51b120ed-1879-be7f-abb3-e0125e0f0e2e">6.9<span class="fmt-clause-delim">.</span>  Century</a></h2>
 
 <p id="_61dde876-8770-b2e3-efbe-08a28a4adb57">The complete representation for century is as follows.</p>
 
@@ -2416,7 +2416,7 @@ pre.sourcecode .nt {
 
 <div id="_5b5dce68-f6c0-2fc6-362e-ed8fc1ef54a8" class="example"><p class="example-title">EXAMPLE</p><p id="_ea8f097e-3098-8463-2cda-7314448b11d6">‘1300’, the century 1300s, spanning years from 1300 to 1399.</p>
 </div>
-</div><div id="representations-omission"><h2 id="_ae2e16a2-4728-4840-b28a-71e4a4d2756e"><a class="anchor" href="#representations-omission"></a><a class="header" href="#representations-omission">6.10<span class="fmt-clause-delim">.</span>  Omission of zero valued components</a></h2>
+</div><div id="representations-omission"><h2 id="_ccd6f68f-651e-46da-b344-5c4dde36eef6"><a class="anchor" href="#representations-omission"></a><a class="header" href="#representations-omission">6.10<span class="fmt-clause-delim">.</span>  Omission of zero valued components</a></h2>
 
 <p id="_28a3f18f-1593-0159-954e-a583fbe79a8a">Time scale components within an explicit form that has a value of <tt>0</tt> may be omitted entirely with its corresponding designator, except when the omission of it affects the indication of precision.</p>
 
@@ -2430,7 +2430,7 @@ pre.sourcecode .nt {
 
 <div id="_d0140112-f208-f1c4-7fba-12f0b37c4410" class="example"><p class="example-title">EXAMPLE 3</p><p id="_2894bb4d-352e-55a1-2344-66b0f2e35617">‘<tt>2018Y8M8DT30M0SZ</tt>‘: indicates the date 8th August 2018 at time 00:30:00 in UTC time of day Since the “hour” component is omitted and “seconds” included, the hour is assumed to be zero, and the expression has seconds precision. This is equivalent to the expression ‘<tt>2018Y08M08DT30M0SZ</tt>‘ in which zero padding is applied to calendar month and calendar day.</p>
 </div>
-</div><div id="representations-precision"><h2 id="_f8d71797-c794-4599-8ba3-f52a24d1833b"><a class="anchor" href="#representations-precision"></a><a class="header" href="#representations-precision">6.11<span class="fmt-clause-delim">.</span>  Indication of precision</a></h2>
+</div><div id="representations-precision"><h2 id="_a917ae58-65e4-4d8a-8b84-92396e26df19"><a class="anchor" href="#representations-precision"></a><a class="header" href="#representations-precision">6.11<span class="fmt-clause-delim">.</span>  Indication of precision</a></h2>
 
 <p id="_4e821170-186f-aa8e-0b82-a315aa547990">The lowest denoted time scale component in a date and time representation indicates the precision level of the representation.</p>
 
@@ -2442,7 +2442,7 @@ pre.sourcecode .nt {
 
 <div id="_55666467-5c9b-3599-e991-ed3f96d5793e" class="example"><p class="example-title">EXAMPLE 3</p><p id="_0fca9401-dbb4-6699-3a7e-4b98b82cb6c7">‘1985Y4M12DT30M’ has clock minute precision, where the clock hour time scale component is a zero-valued omission.</p>
 </div>
-</div><div id="representations-decimal"><h2 id="_5c740c2c-af0e-48b0-9f9d-6e579336b1e9"><a class="anchor" href="#representations-decimal"></a><a class="header" href="#representations-decimal">6.12<span class="fmt-clause-delim">.</span>  Decimal fractions for time</a></h2>
+</div><div id="representations-decimal"><h2 id="_cab9961a-b154-4197-8f7d-4d343f666774"><a class="anchor" href="#representations-decimal"></a><a class="header" href="#representations-decimal">6.12<span class="fmt-clause-delim">.</span>  Decimal fractions for time</a></h2>
 
 <p id="_6afe5415-d962-4b69-d37b-e9aadd33e2e0">A decimal fraction of hour, minute or second may be included in an expression in accordance with <a href="#ISO8601-1">ISO 8601-1:—,  Clause 5.2.1.4</a>.</p>
 
@@ -2454,7 +2454,7 @@ pre.sourcecode .nt {
 
 <div id="_374ddba4-f980-4a96-beaf-bf797a3f85ee" class="example"><p class="example-title">EXAMPLE 3</p><p id="_d05f4387-796d-f70e-5c2a-ac7f29eef645">‘<tt>2018Y8M8DT10H30M15,3S</tt>‘: indicates the date 8th August 2018 at time 10:30:15 plus 300ms with sub-second precision.</p>
 </div>
-</div><div id="representations-reduced-precision"><h2 id="_37688464-e660-4526-ba89-3218ef838b46"><a class="anchor" href="#representations-reduced-precision"></a><a class="header" href="#representations-reduced-precision">6.13<span class="fmt-clause-delim">.</span>  Representations other than complete</a></h2>
+</div><div id="representations-reduced-precision"><h2 id="_4629c072-866f-4f4a-981c-9763cffd7517"><a class="anchor" href="#representations-reduced-precision"></a><a class="header" href="#representations-reduced-precision">6.13<span class="fmt-clause-delim">.</span>  Representations other than complete</a></h2>
 
 <p id="_e9c489aa-192f-84a1-9979-2a9154e4f7a8">Any of the representations given in this clause may be modified for reduced precision (Clause 6.11) and decimal representation (Clause 6.12).</p>
 
@@ -2463,7 +2463,7 @@ pre.sourcecode .nt {
 
 <div id="_528c8317-9bb0-ca10-d125-990b33f537c6" class="example"><p class="example-title">EXAMPLE 2</p><p id="_b7b7a1fb-fe28-355a-1107-341b092d1b8f">‘<tt>2018Y8M8DT30M</tt>‘: indicates the date 8th August 2018 at time 00:30 with minute precision. Since the “hour” component is omitted, it is assumed to be zero because it is of a higher order than the lowest order component specified in the representation (here, “minutes). The omitted “`second” component does not form part of the representation because it is of a lower order than the lowest order component.</p>
 </div>
-</div><div id="time-interval"><h2 id="_1754d61c-1a95-4c44-9b82-ea9768cd14e5"><a class="anchor" href="#time-interval"></a><a class="header" href="#time-interval">6.14<span class="fmt-clause-delim">.</span>  Time interval</a></h2>
+</div><div id="time-interval"><h2 id="_d9c9baa9-45b4-4c6c-842c-1b631fdfd264"><a class="anchor" href="#time-interval"></a><a class="header" href="#time-interval">6.14<span class="fmt-clause-delim">.</span>  Time interval</a></h2>
 
 <div id="_c3990fc3-f837-6f82-39e1-bbd866f35a97"><h3><a class="anchor" href="#_c3990fc3-f837-6f82-39e1-bbd866f35a97"></a><a class="header" href="#_c3990fc3-f837-6f82-39e1-bbd866f35a97">6.14.1<span class="fmt-clause-delim">.</span>  General</a></h3>
 
@@ -2504,12 +2504,12 @@ pre.sourcecode .nt {
 <div id="_84c723e1-29ba-2a92-d92c-f65d4102c86b" class="example"><p class="example-title">EXAMPLE</p><p id="_27abfe41-17e5-687b-2a5c-c98e8fee21e9">‘2018Y1M15DZ5Y0M/2018Y2M20D’ is equivalent to ‘2018Y1M15DZ5Y0M/2018Y2M20DZ5Y0M’ as the ‘Z5H0M’ time shift also applies to the expression after the separator.</p>
 </div>
 </div>
-</div></div><div id="duration"><h1 id="_a49312a2-2025-4bd0-a487-973bade00c76"><a class="anchor" href="#duration"></a><a class="header" href="#duration">7<span class="fmt-clause-delim">.</span>  Explicit duration</a></h1><div id="_0a1b4a84-8912-8208-b8bb-f82772e25d6d"><h2 id="_f4d0c5bc-bec8-442f-9fad-0baf18fc258b"><a class="anchor" href="#_0a1b4a84-8912-8208-b8bb-f82772e25d6d"></a><a class="header" href="#_0a1b4a84-8912-8208-b8bb-f82772e25d6d">7.1<span class="fmt-clause-delim">.</span>  General</a></h2>
+</div></div><div id="duration"><h1 id="_23be6ea9-d163-4de4-99ba-245057ad9c38"><a class="anchor" href="#duration"></a><a class="header" href="#duration">7<span class="fmt-clause-delim">.</span>  Explicit duration</a></h1><div id="_0a1b4a84-8912-8208-b8bb-f82772e25d6d"><h2 id="_3eaf316c-62d1-4fc5-8716-457145e95c6a"><a class="anchor" href="#_0a1b4a84-8912-8208-b8bb-f82772e25d6d"></a><a class="header" href="#_0a1b4a84-8912-8208-b8bb-f82772e25d6d">7.1<span class="fmt-clause-delim">.</span>  General</a></h2>
 
 <p id="_df968aa8-1126-e7f1-3bd9-01053abe40bc">Duration can be expressed by a combination of time scale units in explicit form — years, months, weeks, days, hours, minutes, and seconds.</p>
 
 <p id="_333cd6b2-e1b6-0c3d-eb58-07fac8d53d3a">These time scale components are specified in Clause 4, and are used to specify positive duration.</p>
-</div><div id="duration-combined"><h2 id="_5e15f779-2b43-46c5-8459-5f8cfcbd9974"><a class="anchor" href="#duration-combined"></a><a class="header" href="#duration-combined">7.2<span class="fmt-clause-delim">.</span>  Durational units</a></h2>
+</div><div id="duration-combined"><h2 id="_9a0497ba-285a-4d36-9db5-b7b38169e698"><a class="anchor" href="#duration-combined"></a><a class="header" href="#duration-combined">7.2<span class="fmt-clause-delim">.</span>  Durational units</a></h2>
 
 <p id="_7adff096-c153-4939-191b-a9c01b6a202f">Time scale unit components are used to compose a duration expression, and are defined as “durational units”.</p>
 
@@ -2527,7 +2527,7 @@ pre.sourcecode .nt {
 </ul></div>
 
 <p id="_1e440ffb-c936-57db-c1aa-25e9a1ef1515">Within [durationUnits], time scale components of higher order shall be expressed before those of lower order.</p>
-</div><div id="_5cef08c9-55dc-ca24-6822-f286c7d27ac0"><h2 id="_e492b65c-177c-45f5-9028-be26b3f3caf5"><a class="anchor" href="#_5cef08c9-55dc-ca24-6822-f286c7d27ac0"></a><a class="header" href="#_5cef08c9-55dc-ca24-6822-f286c7d27ac0">7.3<span class="fmt-clause-delim">.</span>  Representations</a></h2>
+</div><div id="_5cef08c9-55dc-ca24-6822-f286c7d27ac0"><h2 id="_eb29ceff-ccdb-47f3-9a2e-c3404f4393fb"><a class="anchor" href="#_5cef08c9-55dc-ca24-6822-f286c7d27ac0"></a><a class="header" href="#_5cef08c9-55dc-ca24-6822-f286c7d27ac0">7.3<span class="fmt-clause-delim">.</span>  Representations</a></h2>
 
 <div id="_f491cef6-7a9a-6a8b-0c9a-e7095bfa1cc5"><h3><a class="anchor" href="#_f491cef6-7a9a-6a8b-0c9a-e7095bfa1cc5"></a><a class="header" href="#_f491cef6-7a9a-6a8b-0c9a-e7095bfa1cc5">7.3.1<span class="fmt-clause-delim">.</span>  General</a></h3>
 
@@ -2613,7 +2613,7 @@ pre.sourcecode .nt {
 <div id="_3cecb840-5de8-bed1-44fd-e64cfaf52aff" class="example"><p class="example-title">EXAMPLE 5</p><p id="_749b4adc-c0ad-8383-f470-314d29e0a19b"><tt>PT10HP2DP3MP1Y</tt> describes a duration of ten hours, two days, three months and one year, to be evaluated in the order as described.</p>
 </div>
 </div>
-</div><div id="_d23b0850-5f97-456f-44d1-7f1d22aa08fa"><h2 id="_a5de45a2-420a-419a-b99d-0a6687cb84cd"><a class="anchor" href="#_d23b0850-5f97-456f-44d1-7f1d22aa08fa"></a><a class="header" href="#_d23b0850-5f97-456f-44d1-7f1d22aa08fa">7.4<span class="fmt-clause-delim">.</span>  Negative duration</a></h2>
+</div><div id="_d23b0850-5f97-456f-44d1-7f1d22aa08fa"><h2 id="_1d854bb0-6671-448c-8409-4b298aee256e"><a class="anchor" href="#_d23b0850-5f97-456f-44d1-7f1d22aa08fa"></a><a class="header" href="#_d23b0850-5f97-456f-44d1-7f1d22aa08fa">7.4<span class="fmt-clause-delim">.</span>  Negative duration</a></h2>
 
 <p id="_4a058e25-35b8-cccc-7ec0-3e988acdeaac">A duration with a negative value represents a duration in the reverse direction of the proceeding time scale.</p>
 
@@ -2622,10 +2622,10 @@ pre.sourcecode .nt {
 
 <div id="_7f0afc44-5ab6-e5ee-c95f-d136e3453089" class="example"><p class="example-title">EXAMPLE 2</p><p id="_9f83df57-292f-c25e-c423-1d6456d40c2e"><tt>-P2DP3MP1Y</tt> describes a negative duration of two days, three months and one year, to be evaluated in the order as described.</p>
 </div>
-</div><div id="duration-fractional"><h2 id="_15490edc-933b-4b1d-8891-0d87659d1900"><a class="anchor" href="#duration-fractional"></a><a class="header" href="#duration-fractional">7.5<span class="fmt-clause-delim">.</span>  Fractional duration</a></h2>
+</div><div id="duration-fractional"><h2 id="_a1d89cf4-f97f-4069-97f6-7d0e0309da73"><a class="anchor" href="#duration-fractional"></a><a class="header" href="#duration-fractional">7.5<span class="fmt-clause-delim">.</span>  Fractional duration</a></h2>
 
 <p id="_8f92b180-72a8-09b4-856c-a3e68abad2bc">A duration representation can be modified to accept a fractional value in place of any [i] specified in a durational time scale component.</p>
-</div><div id="_c5bff03d-2ae5-2433-0bba-1240d2d6989f"><h2 id="_59cb83b7-1f00-4d3b-9e3c-7a733438c7d2"><a class="anchor" href="#_c5bff03d-2ae5-2433-0bba-1240d2d6989f"></a><a class="header" href="#_c5bff03d-2ae5-2433-0bba-1240d2d6989f">7.6<span class="fmt-clause-delim">.</span>  Exact duration</a></h2>
+</div><div id="_c5bff03d-2ae5-2433-0bba-1240d2d6989f"><h2 id="_7cf0bb9b-a35e-4702-b26f-8ab9acfeec9b"><a class="anchor" href="#_c5bff03d-2ae5-2433-0bba-1240d2d6989f"></a><a class="header" href="#_c5bff03d-2ae5-2433-0bba-1240d2d6989f">7.6<span class="fmt-clause-delim">.</span>  Exact duration</a></h2>
 
 <div id="_0bfc379a-8629-812a-43e5-4809ad3f136c"><h3><a class="anchor" href="#_0bfc379a-8629-812a-43e5-4809ad3f136c"></a><a class="header" href="#_0bfc379a-8629-812a-43e5-4809ad3f136c">7.6.1<span class="fmt-clause-delim">.</span>  General</a></h3>
 
@@ -2683,7 +2683,7 @@ pre.sourcecode .nt {
 <div id="_2c62ebe9-6fcd-b43c-c185-7a0947df7adc" class="example"><p class="example-title">EXAMPLE 2</p><p id="_3c2bfc17-39ee-a7a3-f9cb-f7db0ec04485">‘P2016Y12M31DT23H59M’ is considered to have a duration of 61 clock seconds, since the leap second horizon date has already occurred, and it is known that a positive leap second assigned to the calendar year 2016.</p>
 </div>
 </div>
-</div></div><div id="evaluation"><h1 id="_3eed3967-ff03-4409-af42-d44cc00d4f5b"><a class="anchor" href="#evaluation"></a><a class="header" href="#evaluation">8<span class="fmt-clause-delim">.</span>  Evaluation of date and time with duration</a></h1><div id="_f85e43dd-5803-5db3-fac6-0189a6360326"><h2 id="_b0f06df9-df98-49b6-88c4-a31e79f94cf9"><a class="anchor" href="#_f85e43dd-5803-5db3-fac6-0189a6360326"></a><a class="header" href="#_f85e43dd-5803-5db3-fac6-0189a6360326">8.1<span class="fmt-clause-delim">.</span>  General</a></h2>
+</div></div><div id="evaluation"><h1 id="_da8481da-07c4-43db-87e2-3672c948a4cb"><a class="anchor" href="#evaluation"></a><a class="header" href="#evaluation">8<span class="fmt-clause-delim">.</span>  Evaluation of date and time with duration</a></h1><div id="_f85e43dd-5803-5db3-fac6-0189a6360326"><h2 id="_86c4f3f4-76fb-4417-9675-b1623cbfecba"><a class="anchor" href="#_f85e43dd-5803-5db3-fac6-0189a6360326"></a><a class="header" href="#_f85e43dd-5803-5db3-fac6-0189a6360326">8.1<span class="fmt-clause-delim">.</span>  General</a></h2>
 
 <p id="_68fe978e-b541-c7de-0f9d-760303ee8f5a">A date and time representation is modified by a duration in many cases, including the calculation for:</p>
 
@@ -2711,7 +2711,7 @@ pre.sourcecode .nt {
 
 <div id="_60fdcb2a-811a-2fcb-abd7-a757921ee834" class="example"><p class="example-title">EXAMPLE</p><p id="_e5f0ea89-0911-7d8d-1951-80af4bff3e12"><tt>2018Y9M10D + P1D</tt> is a date time formula.</p>
 </div>
-</div><div id="_d9859097-5038-3aa3-de9c-bb5720948905"><h2 id="_3030cc1a-b79c-47fe-b44a-0c1477ef741e"><a class="anchor" href="#_d9859097-5038-3aa3-de9c-bb5720948905"></a><a class="header" href="#_d9859097-5038-3aa3-de9c-bb5720948905">8.2<span class="fmt-clause-delim">.</span>  Prerequisite mechanisms</a></h2>
+</div><div id="_d9859097-5038-3aa3-de9c-bb5720948905"><h2 id="_c6de5b0b-6af4-4a83-b740-2ee2378feadb"><a class="anchor" href="#_d9859097-5038-3aa3-de9c-bb5720948905"></a><a class="header" href="#_d9859097-5038-3aa3-de9c-bb5720948905">8.2<span class="fmt-clause-delim">.</span>  Prerequisite mechanisms</a></h2>
 
 <div id="_d525c7f5-181d-f3c7-d26a-507e9222b0b9"><h3><a class="anchor" href="#_d525c7f5-181d-f3c7-d26a-507e9222b0b9"></a><a class="header" href="#_d525c7f5-181d-f3c7-d26a-507e9222b0b9">8.2.1<span class="fmt-clause-delim">.</span>  Carry-over of overflow in time scale components</a></h3>
 
@@ -2759,7 +2759,7 @@ pre.sourcecode .nt {
 <div id="_1ca2b3be-f091-e446-292b-819e5f61d0ad" class="example"><p class="example-title">EXAMPLE 4</p><p id="_c09785e1-c09e-833c-ac92-ab2d45dc7ef8">The out of bounds expression <tt>2020Y366O</tt>” can be truncated to <tt>2020Y365O</tt>.</p>
 </div>
 </div>
-</div><div id="calculation-simple"><h2 id="_8968a92c-6f66-450e-945b-5b44ab8e81e9"><a class="anchor" href="#calculation-simple"></a><a class="header" href="#calculation-simple">8.3<span class="fmt-clause-delim">.</span>  Simple duration</a></h2>
+</div><div id="calculation-simple"><h2 id="_7d6ce6a0-6fcb-4b8c-8d60-f5a6d8e062da"><a class="anchor" href="#calculation-simple"></a><a class="header" href="#calculation-simple">8.3<span class="fmt-clause-delim">.</span>  Simple duration</a></h2>
 
 <p id="_72a58c46-3d79-4d5e-8019-8dc47c081ad2">A simple duration is a duration expression with only a single time scale component.</p>
 
@@ -2785,7 +2785,7 @@ pre.sourcecode .nt {
 </li>
 </ol></div>
 </div>
-</div><div id="calculation-composite"><h2 id="_969cf889-d429-4f21-a4ad-0abc40799d3b"><a class="anchor" href="#calculation-composite"></a><a class="header" href="#calculation-composite">8.4<span class="fmt-clause-delim">.</span>  Composite duration</a></h2>
+</div><div id="calculation-composite"><h2 id="_953d093a-8489-48f1-9f6e-749b84ca4ec7"><a class="anchor" href="#calculation-composite"></a><a class="header" href="#calculation-composite">8.4<span class="fmt-clause-delim">.</span>  Composite duration</a></h2>
 
 <p id="_339f80bc-97fa-4f0f-fed3-7b6d9c7f913d">The method of evaluating of a date time formula with a composite duration (Clause 7.3.2) is to directly apply the durational units to the date and time representation without truncation, and only applying carry-over at the end.</p>
 
@@ -2811,7 +2811,7 @@ pre.sourcecode .nt {
 </li>
 </ol></div>
 </div>
-</div><div id="calculation-precedence"><h2 id="_a7611ce5-d3e6-43b9-8b88-66abd6599d27"><a class="anchor" href="#calculation-precedence"></a><a class="header" href="#calculation-precedence">8.5<span class="fmt-clause-delim">.</span>  Precedence duration</a></h2>
+</div><div id="calculation-precedence"><h2 id="_5dede35a-e922-478c-a583-82f763cd8aca"><a class="anchor" href="#calculation-precedence"></a><a class="header" href="#calculation-precedence">8.5<span class="fmt-clause-delim">.</span>  Precedence duration</a></h2>
 
 <p id="_f8d8b6b6-ddfb-11c1-4af3-ec9753425db9">The method of evaluating of a date time formula with a precedence duration (Clause 7.3.3) is to apply the durational units one by one to the date and time representation with truncation and carry-over at every step.</p>
 
@@ -2891,7 +2891,7 @@ pre.sourcecode .nt {
 </li>
 </ol></div>
 </div>
-</div><div id="_0fc06107-20d2-ef6d-745f-202900ed7ca1"><h2 id="_0db7b416-6c53-4cf3-97f0-b64300cc24d7"><a class="anchor" href="#_0fc06107-20d2-ef6d-745f-202900ed7ca1"></a><a class="header" href="#_0fc06107-20d2-ef6d-745f-202900ed7ca1">8.6<span class="fmt-clause-delim">.</span>  Involving fractional duration</a></h2>
+</div><div id="_0fc06107-20d2-ef6d-745f-202900ed7ca1"><h2 id="_ffac3518-b00c-4460-8399-dfc049535fe7"><a class="anchor" href="#_0fc06107-20d2-ef6d-745f-202900ed7ca1"></a><a class="header" href="#_0fc06107-20d2-ef6d-745f-202900ed7ca1">8.6<span class="fmt-clause-delim">.</span>  Involving fractional duration</a></h2>
 
 <p id="_378b17e2-f719-61d6-d5fe-39dc77bb1322">When fractional duration (Clause 7.5) is applied to context-dependent durational units (Clause 7.6.2), it is necessary to resolve the fractional duration in context.</p>
 
@@ -2929,7 +2929,7 @@ pre.sourcecode .nt {
 </li>
 </ol></div>
 </div>
-</div><div id="_f58b6e98-55e0-5220-5d2f-bf68af31865d"><h2 id="_e2cda944-5738-4ae1-a87b-2ad9f07758a1"><a class="anchor" href="#_f58b6e98-55e0-5220-5d2f-bf68af31865d"></a><a class="header" href="#_f58b6e98-55e0-5220-5d2f-bf68af31865d">8.7<span class="fmt-clause-delim">.</span>  Involving speculative duration</a></h2>
+</div><div id="_f58b6e98-55e0-5220-5d2f-bf68af31865d"><h2 id="_3fc986d3-65f8-4abd-8b66-94986243f68e"><a class="anchor" href="#_f58b6e98-55e0-5220-5d2f-bf68af31865d"></a><a class="header" href="#_f58b6e98-55e0-5220-5d2f-bf68af31865d">8.7<span class="fmt-clause-delim">.</span>  Involving speculative duration</a></h2>
 
 <p id="_26dbb93c-1b47-8aa5-51ff-2ab1a1ff5f94">As described in Clause 7.6.3, there is no universal rule to calculate leap seconds in advance, since the decision to insert a leap second is driven by a number of dynamic factors and only known when announced by the BIPM.</p>
 
@@ -2979,7 +2979,7 @@ pre.sourcecode .nt {
 </li>
 </ol></div>
 </div>
-</div></div><br /><div><h1 class="Section3" id="_8a090147-00f5-49ff-a703-a910e83a63bc">Bibliography</h1>
+</div></div><br /><div><h1 class="Section3" id="_126b47e0-1214-40da-b2a1-d6d2d9797804">Bibliography</h1>
 <p id="ISOIEC646" class="Biblio">[1]  ISO/IEC 646, International Organization for Standardization (committee). <i>Information technology — ISO 7-bit coded character set for information interchange</i>. Third edition. Geneva: International Organization for Standardization and International Electrotechnical Commission. <a href="https://www.iso.org/standard/4777.html">https://www.iso.org/standard/4777.html</a>.</p><p id="ISO8601" class="Biblio">[2]  ISO 8601:2004, International Organization for Standardization (committee). <i>Data elements and interchange formats — Information interchange — Representation of dates and times</i>. Third edition. 2004. Geneva: International Organization for Standardization. <a href="https://www.iso.org/standard/40874.html">https://www.iso.org/standard/40874.html</a>.</p><p id="ISO8601-2" class="Biblio">[3]<a class="FootnoteRef" href="#fn:_24dfc98e-b00a-c6cd-a40d-d98b030fcd3e" id="fnref:2"><sup>2</sup></a>
   ISO 8601-2:—, ISO. <i>Date and time — Representation for information interchange — Part 2: Extensions</i>.</p><p id="RFC5545" class="Biblio">[4]  IETF RFC 5545, Internet Engineering Task Force (committee). <i>Internet Calendaring and Scheduling Core Object Specification (iCalendar)</i>. 2009. RFC Publisher. <a href="https://www.rfc-editor.org/info/rfc5545">https://www.rfc-editor.org/info/rfc5545</a>.</p><p id="RFC6350" class="Biblio">[5]  IETF RFC 6350, PERREAULT, S. and Internet Engineering Task Force. <i>vCard Format Specification</i>. 2011. RFC Publisher. <a href="https://www.rfc-editor.org/info/rfc6350">https://www.rfc-editor.org/info/rfc6350</a>.</p>
 
