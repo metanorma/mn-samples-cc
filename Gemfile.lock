@@ -98,16 +98,6 @@ GIT
       table_tennis
       thor (>= 0.20)
 
-GIT
-  remote: https://github.com/pubid/pubid.git
-  revision: 4be958965b95f79e6c7c8de898cd83f6cd6759a7
-  branch: main
-  specs:
-    pubid (2.0.0)
-      lutaml-model (~> 0.8)
-      parsanol (>= 1.3.62)
-      parslet
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -795,6 +785,10 @@ GEM
     psych (5.2.6)
       date
       stringio
+    pubid (2.0.0)
+      lutaml-model (~> 0.8)
+      parsanol (>= 1.3.62)
+      parslet
     public_suffix (7.0.5)
     racc (1.8.1)
     rack (3.2.7)
@@ -1077,7 +1071,7 @@ DEPENDENCIES
   metanorma-cli!
   metanorma-standoc!
   moxml!
-  pubid!
+  pubid (~> 2.0)
   relaton (= 3.0.0)
   relaton-render (~> 3.0)
   suma!
