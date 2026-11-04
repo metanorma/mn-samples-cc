@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.0" schema-version="v2.2.0" flavor="cc">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.1" schema-version="v2.3.0" flavor="cc">
 <bibdata type="standard">
 <title language="en" type="main">Date and time — Explicit representation</title>
 <docidentifier primary="true" type="CalConnect">CC/FDS 18011:2018</docidentifier><docnumber>18011</docnumber><date type="published"><on>2018-02-10T00:00:00Z</on></date><date type="updated"><on>2018-02-10T00:00:00Z</on></date><contributor><role type="author"/><organization>
@@ -1619,9 +1619,9 @@
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-1)</note><language>en</language><script>Latn</script>
 </bibitem>
-</references><references id="_d0d75b08-c5b4-9513-56b0-b2473bab82b0" normative="false" obligation="informative">
-<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_e3f74962-7489-24cc-de72-f78878b6afce" type="standard" schema-version="v1.5.6" anchor="ISOIEC646">
-  <fetched>2026-10-29</fetched>
+</references><references id="_d496eb74-cb32-b29a-c3c6-ebcf438f84bb" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_4b7d349e-1351-53ba-fd2e-6ed4384f6e6c" type="standard" schema-version="v1.5.6" anchor="ISOIEC646">
+  <fetched>2026-11-04</fetched>
   
 <title language="en" script="Latn" type="title-intro">Information technology</title>
 
@@ -1644,7 +1644,6 @@
   <uri type="obp">https://www.iso.org/obp/ui/en/#!iso:std:4777:en</uri>
   <uri type="rss">https://www.iso.org/contents/data/standard/00/47/4777.detail.rss</uri>
   <docidentifier type="ISO" primary="true">ISO/IEC 646</docidentifier>
-  <docidentifier type="iso-undated">ISO/IEC 646</docidentifier>
   <docidentifier type="iso-reference">ISO/IEC 646(E)</docidentifier>
   <docidentifier type="URN">urn:iso:std:iso-iec:646:stage-90.93</docidentifier>
   <docnumber>646</docnumber>
@@ -1817,8 +1816,8 @@
   <place>
     <city>Geneva</city>
   </place>
-</bibitem><bibitem id="_188aa7d0-b62f-96fc-724a-c5f57347fa40" type="standard" schema-version="v1.5.6" anchor="ISO8601">
-  <fetched>2026-10-29</fetched>
+</bibitem><bibitem id="_32433d48-9412-9d7c-33d1-7bb24a23bad2" type="standard" schema-version="v1.5.6" anchor="ISO8601">
+  <fetched>2026-11-04</fetched>
   
 <title language="en" script="Latn" type="title-intro">Data elements and interchange formats</title>
 
@@ -1917,8 +1916,8 @@
 <docidentifier type="ISO">ISO 8601-2:—</docidentifier><docnumber>8601-2</docnumber><date type="published"><on>–</on></date><contributor><role type="publisher"/><organization>
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-2)</note><language>en</language><script>Latn</script>
-</bibitem><bibitem id="_20ef0d02-eb21-c0a3-6f41-b31be2c44969" type="standard" schema-version="v1.5.6" anchor="RFC5545">
-  <fetched>2026-10-29</fetched>
+</bibitem><bibitem id="_8a7ba695-2dc6-906e-695a-f5928e3b96af" type="standard" schema-version="v1.5.6" anchor="RFC5545">
+  <fetched>2026-11-04</fetched>
   
 <title type="main">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
 
@@ -1984,11 +1983,6 @@
 <title>RFC</title>
 
     <number>5545</number>
-  </series>
-  <series type="stream">
-    
-<title>IETF</title>
-
   </series>
   <keyword>
     <vocab>calsify</vocab>
@@ -2056,8 +2050,8 @@
   <keyword>
     <vocab>xCalendar</vocab>
   </keyword>
-</bibitem><bibitem id="_36f12d7b-6998-f6ca-1175-7200fa9fbd9f" type="standard" schema-version="v1.5.6" anchor="RFC6350">
-  <fetched>2026-10-29</fetched>
+</bibitem><bibitem id="_f327b073-7991-4752-cd59-d31ea81533e4" type="standard" schema-version="v1.5.6" anchor="RFC6350">
+  <fetched>2026-11-04</fetched>
   
 <title type="main">vCard Format Specification</title>
 
@@ -2130,11 +2124,6 @@
 <title>RFC</title>
 
     <number>6350</number>
-  </series>
-  <series type="stream">
-    
-<title>IETF</title>
-
   </series>
   <keyword>
     <vocab>vCard</vocab>
