@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.1" schema-version="v2.3.0" flavor="cc">
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.2" schema-version="v2.3.0" flavor="cc">
 <bibdata type="standard">
 <title language="en" type="main">Date and time — Explicit representation</title>
 <docidentifier primary="true" type="CalConnect">CC/FDS 18011:2018</docidentifier><docnumber>18011</docnumber><date type="published"><on>2018-02-10T00:00:00Z</on></date><date type="updated"><on>2018-02-10T00:00:00Z</on></date><contributor><role type="author"/><organization>
@@ -14,7 +14,7 @@
 <name>CalConnect</name>
 </organization></owner></copyright><ext><doctype>standard</doctype><flavor>cc</flavor></ext></bibdata>
 <termdocsource bibitemid="ISO8601-1"/><metanorma-extension><semantic-metadata><stage-published>false</stage-published></semantic-metadata>
-<presentation-metadata><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension><boilerplate><copyright-statement>
+<presentation-metadata><output-extensions>xml,html,pdf,rxl,doc</output-extensions><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension><boilerplate><copyright-statement>
 
 <clause id="_7f96b962-6942-8afe-bc72-d12bab856fd0" obligation="normative"><p id="_0b69cd5b-1292-b1e0-ed36-9f2e0a8da28a">© 2018 The Calendaring and Scheduling Consortium, Inc.</p>
 </clause>
@@ -1619,9 +1619,9 @@
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-1)</note><language>en</language><script>Latn</script>
 </bibitem>
-</references><references id="_989e1447-94db-1d92-d482-483619d42bb3" normative="false" obligation="informative">
-<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_19aff334-30b7-efc4-fada-44bcb0d9f664" type="standard" schema-version="v1.5.6" anchor="ISOIEC646">
-  <fetched>2026-11-05</fetched>
+</references><references id="_04b683d0-11cb-e57c-b332-e885082aaf08" normative="false" obligation="informative">
+<title id="_50ceb1e1-516f-2673-d73d-4f0c58b4d023">Bibliography</title><bibitem id="_207dd4de-1b35-0d79-3fef-0da2871a3932" type="standard" schema-version="v1.5.6" anchor="ISOIEC646">
+  <fetched>2026-11-08</fetched>
   
 <title language="en" script="Latn" type="title-intro">Information technology</title>
 
@@ -1816,8 +1816,8 @@
   <place>
     <city>Geneva</city>
   </place>
-</bibitem><bibitem id="_75d99bbb-c431-3670-f77e-edd916fef737" type="standard" schema-version="v1.5.6" anchor="ISO8601">
-  <fetched>2026-11-05</fetched>
+</bibitem><bibitem id="_47382a3d-ab8c-d2e6-5c78-da8d193e1622" type="standard" schema-version="v1.5.6" anchor="ISO8601">
+  <fetched>2026-11-08</fetched>
   
 <title language="en" script="Latn" type="title-intro">Data elements and interchange formats</title>
 
@@ -1916,8 +1916,8 @@
 <docidentifier type="ISO">ISO 8601-2:—</docidentifier><docnumber>8601-2</docnumber><date type="published"><on>–</on></date><contributor><role type="publisher"/><organization>
 <name>ISO</name>
 </organization></contributor><note format="text/plain" type="Unpublished-Status">Under preparation. (Stage at the time of publication ISO/FDIS 8601-2)</note><language>en</language><script>Latn</script>
-</bibitem><bibitem id="_f781ff98-e016-7304-5d05-ac68c1f8aba1" type="standard" schema-version="v1.5.6" anchor="RFC5545">
-  <fetched>2026-11-05</fetched>
+</bibitem><bibitem id="_f4916fbb-60f5-132d-b9e3-967ff8ac4cd6" type="standard" schema-version="v1.5.6" anchor="RFC5545">
+  <fetched>2026-11-08</fetched>
   
 <title type="main">Internet Calendaring and Scheduling Core Object Specification (iCalendar)</title>
 
@@ -2050,8 +2050,8 @@
   <keyword>
     <vocab>xCalendar</vocab>
   </keyword>
-</bibitem><bibitem id="_ff13b09d-ebd9-bc30-aebd-b0f78596b817" type="standard" schema-version="v1.5.6" anchor="RFC6350">
-  <fetched>2026-11-05</fetched>
+</bibitem><bibitem id="_4077605d-dbdc-9c95-11a4-31ab933698ca" type="standard" schema-version="v1.5.6" anchor="RFC6350">
+  <fetched>2026-11-08</fetched>
   
 <title type="main">vCard Format Specification</title>
 
